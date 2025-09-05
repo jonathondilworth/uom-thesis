@@ -175,7 +175,7 @@ def annotate_questions(qs: Sequence[Dict[str, Any]], *, use_biomed: bool, ner_ba
     if use_biomed:
         if not _SCISPACY_AVAILABLE:
             sys.exit("SciSpaCy requested but the library is not installed")
-        model_name = "en_core_sci_sm"
+        model_name = "en_ner_bionlp13cg_md"
         biomed_nlp = load_scispacy_model(model_name)
     else:
         biomed_nlp = None
