@@ -159,7 +159,7 @@ def extract_scispacy_entities(question: str, nlp) -> List[Dict[str, Any]]:
     ]
 
 
-def annotate_questions(qs: Sequence[Dict[str, Any]], *, use_biomed: bool, ner_backend: str, config_path: str | None = None) -> None:
+def annotate_questions(qs: Sequence[Dict[str, Any]], *, use_biomed: bool, ner_backend: str) -> None:
     """
     TODO: doc comment
     """
@@ -205,8 +205,7 @@ def main() -> None:
     annotate_questions(
         questions,
         use_biomed=use_biomed,
-        ner_backend=args.ner.lower(),
-        config_path=args.config,
+        ner_backend=args.ner.lower()
     )
 
     base_name = in_path.stem

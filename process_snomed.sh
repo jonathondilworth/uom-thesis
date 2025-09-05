@@ -10,13 +10,13 @@ echo "Env name is $AUTO_ENV_NAME"
 
 echo ""
 
-echo "[Step 1/] Extracting SNOMED CT entity lexicon (requires HierarchyTransformers) ... "
+echo "[Step 1/4] Extracting SNOMED CT entity lexicon (requires HierarchyTransformers) ... "
 
 echo "" | conda run -n "$AUTO_ENV_NAME" --no-capture-output python load_taxonomy.py
 
 echo "Extracted SNOMED CT entity lexicon."
 
-echo "[Step 2/] Preprocessing SNOMED CT entity lexicon ... "
+echo "[Step 2/4] Preprocessing SNOMED CT entity lexicon ... "
 
 conda run -n "$AUTO_ENV_NAME" --no-capture-output python preprocess_entity_lexicon.py \
   --input ./data/entity_lexicon.json \
@@ -26,7 +26,7 @@ conda run -n "$AUTO_ENV_NAME" --no-capture-output python preprocess_entity_lexic
 
 echo "PRE-PROCESSING DONE!"
 
-echo "[Step 3/] Converting SNOMED OWL to TTL ... "
+echo "[Step 3/4] Converting SNOMED OWL to TTL ... "
 
 alias robot="./robot/bin/robot"
 
@@ -41,7 +41,7 @@ VERY_VERBOSE=1
 
 echo "CONVERSION FINITO!."
 
-echo "[Step 4/] Reasoning to produce inferred view via ELK (requires ROBOT, see bootstrap.sh) ... "
+echo "[Step 4/4] Reasoning to produce inferred view via ELK (requires ROBOT, see bootstrap.sh) ... "
 
 ./robot/bin/robot reason \
   --reasoner ELK \
