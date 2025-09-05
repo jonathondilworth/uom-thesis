@@ -147,7 +147,7 @@ conda run -n "$ENV_NAME" --no-capture-output python -m pip install hierarchy_tra
 
 echo "[Step 9] Install ROBOT for CLI-based reasoning ... "
 
-git clone git@github.com:ontodev/robot.git
+git clone https://github.com/ontodev/robot.git
 cd robot
 mvn clean package
 cd ..
