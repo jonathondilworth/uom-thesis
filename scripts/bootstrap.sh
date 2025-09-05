@@ -31,8 +31,11 @@ echo "CONDA_DIR=$CONDA_DIR | ENV_FILE=$ENV_FILE | REQ_FILE=$REQ_FILE"
 if command -v apt-get >/dev/null 2>&1; then
   echo "[Step 0] Installing prerequisites (curl, ca-certificates) ... "
   DEBIAN_FRONTEND=noninteractive $SUDO apt-get update -yqq
-  DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -yqq curl ca-certificates
+  DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -yqq curl ca-certificates jq
 fi
+
+# if .env doesn't already exist, create it
+touch .env
 
 # --
 # set-up project dependencies
@@ -85,15 +88,9 @@ ENV_NAME="${ENV_NAME:-$(awk -F': *' '/^[[:space:]]*name:[[:space:]]*/ {print $2;
 if [[ -n "${ENV_NAME:-}" ]]; then
   conda env update -n "$ENV_NAME" -f "$ENV_FILE" --prune
 else
-  # if no name in environment.yml let conda pick/create
-  conda env update -f "$ENV_FILE" --prune || true
-  ENV_NAME="$(conda env list --json | python - <<'PY'
-import json,sys,os
-data=json.load(sys.stdin)
-envs=[p for p in data.get('envs',[]) if os.path.basename(p)!='base']
-print(os.path.basename(sorted(envs,key=lambda p: os.path.getmtime(p))[-1]) if envs else '')
-PY
-)"
+  # if no name in environment.yml, exit
+  echo "ERROR: $ENV_FILE does not specify an environment name." >&2
+  exit 1
 fi
 
 # success?

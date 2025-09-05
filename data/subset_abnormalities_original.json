@@ -1,0 +1,709 @@
+[
+  {
+    "internal_id": "mc-09",
+    "source_dataset": "bioasq",
+    "question_id": "6217db763a8413c653000028",
+    "question": "Is Mycobacterium abscessus a human pathogen?",
+    "entity_mention": {
+      "entity_literal": "Mycobacterium abscessus",
+      "start_position": 3,
+      "end_position": 26,
+      "entity_type": "GENE_OR_GENE_PRODUCT"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/113838007",
+      "rdfs:label": "Mycobacteroides abscessus (organism)",
+      "skos:prefLabel": "Mycobacteroides abscessus",
+      "skos:altLabels": [
+        "Mycobacterium abscessus",
+        "Mycobacterium abscessus complex",
+        "Mycobacterium chelonae subsp. abscessus",
+        "Mycobacterium chelonae subspecies abscessus",
+        "Mycobacteroides abscessus complex"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/785918006",
+        "rdfs:label": "Genus Mycobacteroides (organism)",
+        "skos:prefLabel": "Mycobacteroides",
+        "skos:altLabels": [
+          "Genus Mycobacteroides"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/115108002",
+        "rdfs:label": "Family Mycobacteriaceae (organism)",
+        "skos:prefLabel": "Mycobacteriaceae",
+        "skos:altLabels": [
+          "Family Mycobacteriaceae"
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/1285313007",
+        "rdfs:label": "Order Mycobacteriales (organism)",
+        "skos:prefLabel": "Mycobacteriales",
+        "skos:altLabels": [
+          "Order Mycobacteriales"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/243365003",
+        "rdfs:label": "Acid-fast bacillus (organism)",
+        "skos:prefLabel": "Acid-fast bacillus",
+        "skos:altLabels": [
+          "AFB - Acid fast bacillus"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/27471002",
+        "rdfs:label": "Aerobic bacteria (organism)",
+        "skos:prefLabel": "Aerobic bacteria",
+        "skos:altLabels": [
+          "Aerobe"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/314421007",
+        "rdfs:label": "Class Actinomycetes (organism)",
+        "skos:prefLabel": "Actinomycetes",
+        "skos:altLabels": [
+          "Class Actinomycetes"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/409822003",
+        "rdfs:label": "Domain Bacteria (organism)",
+        "skos:prefLabel": "Domain Bacteria",
+        "skos:altLabels": [
+          "Bacteria",
+          "Superkingdom Bacteria"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/409823008",
+        "rdfs:label": "Phylum Actinomycetota (organism)",
+        "skos:prefLabel": "Actinomycetota",
+        "skos:altLabels": [
+          "Phylum Actinobacteria",
+          "Phylum Actinomycetota"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/410607006",
+        "rdfs:label": "Organism (organism)",
+        "skos:prefLabel": "Organism",
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/41146007",
+        "rdfs:label": "Bacterium (organism)",
+        "skos:prefLabel": "Bacterium",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/416455007",
+        "rdfs:label": "Form-bacillus (organism)",
+        "skos:prefLabel": "Form-bacillus",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/785918006",
+        "rdfs:label": "Genus Mycobacteroides (organism)",
+        "skos:prefLabel": "Mycobacteroides",
+        "skos:altLabels": [
+          "Genus Mycobacteroides"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-14",
+    "source_dataset": "mmlu",
+    "question_id": "professional_medicine-150",
+    "question": "A 14-year-old boy is brought to the physician for a physical examination prior to participating in sports. He appears reluctant to remove his shirt for the examination, and says that he is embarrassed because he has grown breasts during the past year. He is at the 50th percentile for height and weight. Physical examination shows bilateral 1.5-cm fibroglandular masses located beneath the nipple-areolar complex and normal penis and testes. Pubic hair development is Tanner stage 3. Serum concentrations of gonadotropic hormones, estrogens, and testosterone are within the reference ranges. Which of the following is the most likely cause of this patient's breast enlargement?",
+    "entity_mention": {
+      "entity_literal": "Tanner stage 3",
+      "start_position": 468,
+      "end_position": 482,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/251808009",
+      "rdfs:label": "Genitalia Tanner Stage 3 (finding)",
+      "skos:prefLabel": "Genitalia Tanner Stage 3",
+      "skos:altLabels": [
+        "Boys genital development - enlargement of penis",
+        "G3 - Genitalia stage 3"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/365401003",
+        "rdfs:label": "Finding of Tanner boys genital development (finding)",
+        "skos:prefLabel": "Tanner boys genital development - finding",
+        "skos:altLabels": [
+          "Finding of Tanner boys genital development"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/15160007",
+        "rdfs:label": "Virilization (finding)",
+        "skos:prefLabel": "Virilisation",
+        "skos:altLabels": [
+          "Masculinisation",
+          "Masculinization",
+          "Virilism"
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/365400002",
+        "rdfs:label": "Finding of puberty stage (finding)",
+        "skos:prefLabel": "Puberty stage - finding",
+        "skos:altLabels": [
+          "Finding of puberty stage"
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/365401003",
+        "rdfs:label": "Finding of Tanner boys genital development (finding)",
+        "skos:prefLabel": "Tanner boys genital development - finding",
+        "skos:altLabels": [
+          "Finding of Tanner boys genital development"
+        ],
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/419070004",
+        "rdfs:label": "Finding of secondary sexual characteristics (finding)",
+        "skos:prefLabel": "Finding of secondary sexual characteristics",
+        "depth": 3
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-18",
+    "source_dataset": "mmlu",
+    "question_id": "anatomy-015",
+    "question": "Which of the following statements is true of the pupillary light reflex?",
+    "entity_mention": {
+      "entity_literal": "pupillary light reflex",
+      "start_position": 49,
+      "end_position": 71,
+      "entity_type": "GENE_OR_GENE_PRODUCT"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/40137007",
+      "rdfs:label": "Pupil light reflex (observable entity)",
+      "skos:prefLabel": "Pupil light reflex",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/363986004",
+        "rdfs:label": "Feature of ocular balance (observable entity)",
+        "skos:prefLabel": "Feature of ocular balance",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/31763002",
+        "rdfs:label": "Ocular motility observable (observable entity)",
+        "skos:prefLabel": "Ocular motility observable",
+        "skos:altLabels": [
+          "Motility of eyes",
+          "Ocular motility"
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/363787002",
+        "rdfs:label": "Observable entity (observable entity)",
+        "skos:prefLabel": "Observable entity",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/363788007",
+        "rdfs:label": "Clinical history/examination observable (observable entity)",
+        "skos:prefLabel": "Clinical history/examination observable",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/363926002",
+        "rdfs:label": "Eye/vision observable (observable entity)",
+        "skos:prefLabel": "Eye/vision observable",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/363986004",
+        "rdfs:label": "Feature of ocular balance (observable entity)",
+        "skos:prefLabel": "Feature of ocular balance",
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-41",
+    "source_dataset": "medqa",
+    "question_id": "1113",
+    "question": "A 15-year-old girl comes to the physician because of a 2-week history of genital lesions. She has no history of serious illness. She is sexually active with 2 male partners and uses condoms inconsistently. Vital signs are within normal limits. Pelvic examination shows multiple hyperkeratotic exophytic papules over the vulva. The lesions turn white on application of 3% acetic acid. Which of the following is most likely to have prevented this patient's condition?",
+    "entity_mention": {
+      "entity_literal": "hyperkeratotic exophytic papules",
+      "start_position": 278,
+      "end_position": 310,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/25694009",
+      "rdfs:label": "Papule (morphologic abnormality)",
+      "skos:prefLabel": "Papule",
+      "skos:altLabels": [
+        "Papula",
+        "Papulae"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/52988006",
+        "rdfs:label": "Lesion (morphologic abnormality)",
+        "skos:prefLabel": "Lesion",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/118956008",
+        "rdfs:label": "Body structure, altered from its original anatomical structure (morphologic abnormality)",
+        "skos:prefLabel": "Morphologically altered structure",
+        "skos:altLabels": [
+          "Body structure, altered from its original anatomical structure",
+          "Morphologic alteration",
+          "Morphologic change"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/123037004",
+        "rdfs:label": "Body structure (body structure)",
+        "skos:prefLabel": "Body structure",
+        "skos:altLabels": [
+          "Body structures"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/49755003",
+        "rdfs:label": "Morphologically abnormal structure (morphologic abnormality)",
+        "skos:prefLabel": "Morphologically abnormal structure",
+        "skos:altLabels": [
+          "Abnormal tissue appearance"
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/52988006",
+        "rdfs:label": "Lesion (morphologic abnormality)",
+        "skos:prefLabel": "Lesion",
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-42",
+    "source_dataset": "pubmedqa",
+    "question_id": "24799031",
+    "question": "Is diffusion-weighted imaging a significant indicator of the development of vascularization in hypovascular hepatocellular lesions?",
+    "entity_mention": {
+      "entity_literal": "hypovascular hepatocellular lesions",
+      "start_position": 95,
+      "end_position": 130,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/25370001",
+      "rdfs:label": "Hepatocellular carcinoma (morphologic abnormality)",
+      "skos:prefLabel": "Hepatocellular carcinoma",
+      "skos:altLabels": [
+        "Hepatocarcinoma",
+        "Hepatoma",
+        "Hepatoma, malignant",
+        "Liver cell carcinoma"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/1186968006",
+        "rdfs:label": "Malignant adenomatous neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Malignant adenomatous neoplasm",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/253016009",
+        "rdfs:label": "Liver tumor morphology (morphologic abnormality)",
+        "skos:prefLabel": "Liver tumor morphology",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/108369006",
+        "rdfs:label": "Neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Neoplasm",
+        "skos:altLabels": [
+          "Tumor",
+          "Tumour"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/115215004",
+        "rdfs:label": "Adenoma AND/OR adenocarcinoma (morphologic abnormality)",
+        "skos:prefLabel": "Adenoma AND/OR adenocarcinoma",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/118285006",
+        "rdfs:label": "Epithelial neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Epithelial neoplasm",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/1186968006",
+        "rdfs:label": "Malignant adenomatous neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Malignant adenomatous neoplasm",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/1187225007",
+        "rdfs:label": "Malignant epithelial neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Malignant epithelial neoplasm",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/118956008",
+        "rdfs:label": "Body structure, altered from its original anatomical structure (morphologic abnormality)",
+        "skos:prefLabel": "Morphologically altered structure",
+        "skos:altLabels": [
+          "Body structure, altered from its original anatomical structure",
+          "Morphologic alteration",
+          "Morphologic change"
+        ],
+        "depth": 10
+      },
+      {
+        "iri": "http://snomed.info/id/123037004",
+        "rdfs:label": "Body structure (body structure)",
+        "skos:prefLabel": "Body structure",
+        "skos:altLabels": [
+          "Body structures"
+        ],
+        "depth": 11
+      },
+      {
+        "iri": "http://snomed.info/id/1240414004",
+        "rdfs:label": "Malignant neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Malignant neoplasm",
+        "skos:altLabels": [
+          "Blastoma",
+          "Cancer",
+          "Malignancy",
+          "Malignant neoplasm morphology",
+          "Malignant tumor",
+          "Malignant tumour",
+          "Unclassified malignant tumor",
+          "Unclassified malignant tumour"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 12
+      },
+      {
+        "iri": "http://snomed.info/id/253016009",
+        "rdfs:label": "Liver tumor morphology (morphologic abnormality)",
+        "skos:prefLabel": "Liver tumor morphology",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/30217000",
+        "rdfs:label": "Proliferation (morphologic abnormality)",
+        "skos:prefLabel": "Proliferation",
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/400177003",
+        "rdfs:label": "Neoplasm and/or hamartoma (morphologic abnormality)",
+        "skos:prefLabel": "Neoplasm and/or hamartoma",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/4147007",
+        "rdfs:label": "Mass (morphologic abnormality)",
+        "skos:prefLabel": "Mass",
+        "skos:altLabels": [
+          "Localised mass",
+          "Localized mass",
+          "Lump"
+        ],
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/416939005",
+        "rdfs:label": "Proliferative mass (morphologic abnormality)",
+        "skos:prefLabel": "Proliferative mass",
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/49755003",
+        "rdfs:label": "Morphologically abnormal structure (morphologic abnormality)",
+        "skos:prefLabel": "Morphologically abnormal structure",
+        "skos:altLabels": [
+          "Abnormal tissue appearance"
+        ],
+        "depth": 9
+      },
+      {
+        "iri": "http://snomed.info/id/52988006",
+        "rdfs:label": "Lesion (morphologic abnormality)",
+        "skos:prefLabel": "Lesion",
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/57697001",
+        "rdfs:label": "Growth alteration (morphologic abnormality)",
+        "skos:prefLabel": "Growth alteration",
+        "skos:altLabels": [
+          "Disturbance of growth"
+        ],
+        "depth": 8
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-43",
+    "source_dataset": "mmlu",
+    "question_id": "college_medicine-138",
+    "question": "Acute Myeloid Leukemia is a malignant cancer in which myeloid progenitor cells become rapidly dividing and retain their semi-stem cell state. Under normal circumstances, which of the following cell types would arise from this stem cell?",
+    "entity_mention": {
+      "entity_literal": "malignant cancer",
+      "start_position": 28,
+      "end_position": 44,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/1240414004",
+      "rdfs:label": "Malignant neoplasm (morphologic abnormality)",
+      "skos:prefLabel": "Malignant neoplasm",
+      "skos:altLabels": [
+        "Blastoma",
+        "Cancer",
+        "Malignancy",
+        "Malignant neoplasm morphology",
+        "Malignant tumor",
+        "Malignant tumour",
+        "Unclassified malignant tumor",
+        "Unclassified malignant tumour"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/108369006",
+        "rdfs:label": "Neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Neoplasm",
+        "skos:altLabels": [
+          "Tumor",
+          "Tumour"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/108369006",
+        "rdfs:label": "Neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Neoplasm",
+        "skos:altLabels": [
+          "Tumor",
+          "Tumour"
+        ],
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/118956008",
+        "rdfs:label": "Body structure, altered from its original anatomical structure (morphologic abnormality)",
+        "skos:prefLabel": "Morphologically altered structure",
+        "skos:altLabels": [
+          "Body structure, altered from its original anatomical structure",
+          "Morphologic alteration",
+          "Morphologic change"
+        ],
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/123037004",
+        "rdfs:label": "Body structure (body structure)",
+        "skos:prefLabel": "Body structure",
+        "skos:altLabels": [
+          "Body structures"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 9
+      },
+      {
+        "iri": "http://snomed.info/id/30217000",
+        "rdfs:label": "Proliferation (morphologic abnormality)",
+        "skos:prefLabel": "Proliferation",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/400177003",
+        "rdfs:label": "Neoplasm and/or hamartoma (morphologic abnormality)",
+        "skos:prefLabel": "Neoplasm and/or hamartoma",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/4147007",
+        "rdfs:label": "Mass (morphologic abnormality)",
+        "skos:prefLabel": "Mass",
+        "skos:altLabels": [
+          "Localised mass",
+          "Localized mass",
+          "Lump"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/416939005",
+        "rdfs:label": "Proliferative mass (morphologic abnormality)",
+        "skos:prefLabel": "Proliferative mass",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/49755003",
+        "rdfs:label": "Morphologically abnormal structure (morphologic abnormality)",
+        "skos:prefLabel": "Morphologically abnormal structure",
+        "skos:altLabels": [
+          "Abnormal tissue appearance"
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/52988006",
+        "rdfs:label": "Lesion (morphologic abnormality)",
+        "skos:prefLabel": "Lesion",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/57697001",
+        "rdfs:label": "Growth alteration (morphologic abnormality)",
+        "skos:prefLabel": "Growth alteration",
+        "skos:altLabels": [
+          "Disturbance of growth"
+        ],
+        "depth": 5
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  }
+]

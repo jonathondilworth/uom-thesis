@@ -1,0 +1,213 @@
+[
+  {
+    "internal_id": "mc-13",
+    "source_dataset": "medqa",
+    "question_id": "0837",
+    "question": "A 56-year-old woman is brought to the emergency department by her husband because of increasing confusion, generalized fatigue, and irritability for the past week. She has been unable to recall her husband's name or their address. She has had insomnia and daytime sleepiness during this period. Her last bowel movement was 3 days ago. One month ago, she underwent a transjugular intrahepatic portal shunt (TIPS) placement. She has alcoholic liver cirrhosis. Current medications include spironolactone and furosemide. She used to drink over a pint of vodka daily but quit 2 months ago. She is oriented to place and person. Her temperature is 37.3°C (99.1°F), pulse is 88/min, and blood pressure is 102/64 mm Hg. Examination shows scleral icterus and jaundice. There are several telangiectasias over the chest and back. Palmar erythema is present. The abdomen is mildly distended and nontender. Shifting dullness is present. There is a flapping tremor of both hands when outstretched and dorsiflexed. Neurologic examination shows no other focal findings. She completes the number connection test slower than the age-normalized standard. Which of the following is the most appropriate next step in management?",
+    "entity_mention": {
+      "entity_literal": "transjugular intrahepatic portal shunt",
+      "start_position": 366,
+      "end_position": 391,
+      "entity_type": "PATHOLOGICAL_FORMATION"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/233445008",
+      "rdfs:label": "Transjugular intrahepatic portosystemic shunt (procedure)",
+      "skos:prefLabel": "Transjugular intrahepatic portosystemic shunt",
+      "skos:altLabels": [
+        "TIPS - Transjugular intrahepatic portosystemic shunt"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/233444007",
+        "rdfs:label": "Portosystemic shunt operation (procedure)",
+        "skos:prefLabel": "Portosystemic shunt operation",
+        "skos:altLabels": [
+          "Liver shunting operation",
+          "Portal shunt"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/233444007",
+        "rdfs:label": "Portosystemic shunt operation (procedure)",
+        "skos:prefLabel": "Portosystemic shunt operation",
+        "skos:altLabels": [
+          "Liver shunting operation",
+          "Portal shunt"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-23",
+    "source_dataset": "pubmedqa",
+    "question_id": "15708048",
+    "question": "Does prior benign prostate biopsy predict outcome for patients treated with radical perineal prostatectomy?",
+    "entity_mention": {
+      "entity_literal": "benign prostate biopsy",
+      "start_position": 11,
+      "end_position": 33,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/65575008",
+      "rdfs:label": "Biopsy of prostate (procedure)",
+      "skos:prefLabel": "Biopsy of prostate",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/86273004",
+        "rdfs:label": "Biopsy (procedure)",
+        "skos:prefLabel": "Biopsy",
+        "skos:altLabels": [
+          "Removal of tissue for diagnostic examination."
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/71388002",
+        "rdfs:label": "Procedure (procedure)",
+        "skos:prefLabel": "Procedure",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-27",
+    "source_dataset": "medqa",
+    "question_id": "0159",
+    "question": "A 9-year-old boy is brought to a physician by his mother for evaluation of generalized weakness, increased urination, and increased thirst. The mother mentions that her boy is always tired, and seems to be getting worse. He prefers watching television rather than going out and playing with other kids. Furthermore, he has had frequent episodes of constipation since birth. Except for frequent cravings for salty foods, the boy eats a regular diet. The patient was delivered healthy and is fully immunized. The medical history is unremarkable, and he takes no medications. He has no siblings. His father is a banker and his mother is a librarian. The pulse is 90/min, the blood pressure is 110/75 mm Hg, and the respiratory rate is 15/min. He is in the bottom 10th percentile for height and weight according to his age. The remainder of the physical examination is unremarkable. He recently had a urinalysis that showed elevated urinary calcium excretion.\nAdditional lab testing results are as follows:\nSerum electrolytes\nSodium 135 mEq/L\nPotassium 3.2 mEq/L\nChloride 95 mEq/L\nPlasma renin activity 10 ng/mL/hr (normal, 0.5–3.3 ng/mL/hr)\nPlasma aldosterone concentration 20 ng/dL (normal, 2–9 ng/dL)\nWhat is the most likely diagnosis?",
+    "entity_mention": {
+      "entity_literal": "plasma aldosterone",
+      "start_position": 1138,
+      "end_position": 1156,
+      "entity_type": "ORGANISM_SUBSTANCE"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/407693005",
+      "rdfs:label": "Plasma aldosterone/renin ratio (procedure)",
+      "skos:prefLabel": "Plasma aldosterone/renin ratio",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/71388002",
+        "rdfs:label": "Procedure (procedure)",
+        "skos:prefLabel": "Procedure",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/71388002",
+        "rdfs:label": "Procedure (procedure)",
+        "skos:prefLabel": "Procedure",
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-35",
+    "source_dataset": "pubmedqa",
+    "question_id": "24270957",
+    "question": "Is combined therapy more effective than growth hormone or hyperbaric oxygen alone in the healing of left ischemic and non-ischemic colonic anastomoses?",
+    "entity_mention": {
+      "entity_literal": "hyperbaric oxygen",
+      "start_position": 58,
+      "end_position": 75,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/18678000",
+      "rdfs:label": "Hyperbaric oxygen therapy (procedure)",
+      "skos:prefLabel": "Hyperbaric oxygen therapy",
+      "skos:altLabels": [
+        "HOT - Hyperbaric oxygen therapy",
+        "Hyperbaric oxygenation"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/243138001",
+        "rdfs:label": "High ambient pressure therapy (procedure)",
+        "skos:prefLabel": "High ambient pressure therapy",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/243138001",
+        "rdfs:label": "High ambient pressure therapy (procedure)",
+        "skos:prefLabel": "High ambient pressure therapy",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/53950000",
+        "rdfs:label": "Respiratory therapy (procedure)",
+        "skos:prefLabel": "Respiratory therapy",
+        "skos:altLabels": [
+          "Pulmonary care",
+          "Respiratory care"
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/71388002",
+        "rdfs:label": "Procedure (procedure)",
+        "skos:prefLabel": "Procedure",
+        "depth": 3
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  }
+]
