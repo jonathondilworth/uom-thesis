@@ -6,12 +6,21 @@ set -euo pipefail
 #  - ensure appropriate error handling (script should fail gracefully)
 #  - errors and graceful failure should propagate to the build pipeline
 
+# load environment variables (export -> load .env -> re-import)
+
+set -a
+. .env
+set +a
+
+# sanity check
+echo "Env name is $AUTO_ENV_NAME"
+
+echo ""
+
 echo "Preparing project data files (this may take a moment or two!) ..."
 
 echo "Note, you must have set NHS_API_KEY in .env and have neccesary dependencies installed ... "
 echo "..for dependencies, see: environment.yml, requirements.txt, openjdk-17-jdk"
-
-echo "\n"
 
 echo "STARTING ..."
 
@@ -19,13 +28,12 @@ echo "DOWNLOADING: snomed-owl-toolkit-5.3.0-executable.jar ..."
 
 wget -q https://github.com/IHTSDO/snomed-owl-toolkit/releases/download/5.3.0/snomed-owl-toolkit-5.3.0-executable.jar
 
-echo "\nOKAY!"
+echo "OKAY!"
 
 echo "DOWNLOADING: SNOMED CT RF2 (latest release) ..."
 
 # relies on NHS_API_KEY=... in '.env'
-snomed_version="$(python get_snomed.py | tail -n 1)"
-
+snomed_version="$(conda run -n "$AUTO_ENV_NAME" --no-capture-output python get_snomed.py | tail -n 1)"
 echo "OKAY!"
 
 rf2_zip="./data/SnomedCT_InternationalRF2_PRODUCTION_${snomed_version}T120000Z.zip"
