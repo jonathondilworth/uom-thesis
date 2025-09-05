@@ -1,112 +1,71 @@
-#!/usr/bin/env python3
-"""
-load_taxonomy.py
-----------------
-
-TODO
-"""
-
-# imports
-
 from __future__ import annotations
-from typing import Literal, overload
+from pathlib import Path
+import argparse
 
 from deeponto.onto import Ontology
 from deeponto.onto.taxonomy import OntologyTaxonomy
 from deeponto.utils.file_utils import create_path
+
 from HierarchyTransformers.src.hierarchy_transformers.datasets.construct import HierarchyDatasetConstructor
 
-from pathlib import Path
+# utils:
 
-# utils
+def get_full_path(rel_path: str) -> str:
+    """Expand and resolve a relative path to an absolute path string"""
+    return str(Path(rel_path).expanduser().resolve())
 
-@overload
-def relative_to_absolute(path: Path | str, return_str: Literal[True]) -> str: ...
+# script:
 
-@overload
-def relative_to_absolute(path: Path | str, return_str: Literal[False]) -> Path: ...
+def main() -> None:
+    
+    parser = argparse.ArgumentParser(
+        description="Construct HiT training dataset and/or save SNOMED entity lexicon"
+    )
+    
+    # use: ./data/hit_dataset to compile training data to expected location
+    parser.add_argument(
+        "--training-data",
+        type=str,
+        default=None,
+        help="Path to write HiT training data, default: None (doesn't compile training data)",
+    )
 
-def relative_to_absolute(path: str | Path, return_str: bool=True) -> str | Path:
-    """
-    I find it outrageous how much boilerplate is required for linter compliance
-    (...for such a simple function)
-    """
-    abs_path: Path = Path(path).expanduser().resolve()
-    return str(abs_path) if return_str else abs_path
+    parser.add_argument(
+        "--entity-lexicon",
+        type=str,
+        default="./data",
+        help="Dir to write entity lexicon JSON file, default: ./data (entity_lexicon.json)",
+    )
 
+    parser.add_argument(
+        "--ontology",
+        type=str,
+        default="./data/snomedct-international.owl",
+        help="Path to the ontology OWL file, default: ./data/snomedct-international.owl",
+    )
 
-# flags # TODO: accept via argparse \w defaults
-CONSTRUCT_HIT_TRAINING_DATASET_FLAG = False
-CONSTRUCT_AND_SAVE_ENTITY_LEXICON_FLAG = True
-CONSTRUCT_AND_SAVE_TRIPPLE_STORE = False # TODO: implement
+    parser.add_argument(
+        "--infer",
+        action="store_true",
+        help="Use reasoning (elk) instead of structural taxonomy (bool)",
+    )
 
-# data dirs # TODO: accept via argparse \w defaults
-DATA_DIR = "./data"
-#HIT_DATA_DIR = "./data/hit_dataset"
-HIT_DATA_DIR = "./data/hit_dataset_minified"
+    args = parser.parse_args()
+    
+    reasoner = "elk" if args.infer else "struct"
 
-# file names # TODO: accept via argparse \w defaults
-#ONTOLOGY_FILE_NAME = "snomedct-international.owl"
-#SRC_ENTITY_LEXICON_FILE_NAME = "entity_lexicon.json"
-#TARGET_ENTITY_LEXICON_FILE_NAME = "snomed_entity_lexicon.json"
+    snomed_ontology = Ontology(get_full_path(args.ontology), reasoner_type=reasoner)
+    snomed_taxonomy = OntologyTaxonomy(snomed_ontology, reasoner_type=reasoner)
 
-ONTOLOGY_FILE_NAME = "./data/snomed_inferred_direct_aug.ttl"
-SRC_ENTITY_LEXICON_FILE_NAME = "entity_lexicon.json"
-TARGET_ENTITY_LEXICON_FILE_NAME = "inferred_snomed_entity_lexicon.json"
+    hit_data_constructor = HierarchyDatasetConstructor(snomed_taxonomy)
 
+    if args.training_data:
+        hit_data_constructor.construct(get_full_path(args.training_data))
 
-# produce fully qualified (absolute) paths for data processing
-ONTOLOGY_ABS_PATH = relative_to_absolute(
-    f"{DATA_DIR}/{ONTOLOGY_FILE_NAME}", 
-    return_str=True
-)
-SRC_ENTITY_LEXICON_ABS_PATH = relative_to_absolute(
-    f"{DATA_DIR}/{SRC_ENTITY_LEXICON_FILE_NAME}",
-    return_str=False # !important: see .save_entity_lexicon
-)
-TARGET_ENTITY_LEXICON_ABS_PATH = relative_to_absolute(
-    f"{DATA_DIR}/{TARGET_ENTITY_LEXICON_FILE_NAME}",
-    return_str=False # !important: see .save_entity_lexicon
-)
-HIT_DATASET_ABS_PATH = relative_to_absolute(
-    f"{HIT_DATA_DIR}", 
-    return_str=True
-)
-DATA_DIR_ABS_PATH = relative_to_absolute(
-    f"{DATA_DIR}",
-    return_str=True
-)
-# ^ I know, it's not pythonic. TODO: fix
-
-# script (main) # TODO: implement script properly
-
-snomed_ontology = Ontology(ONTOLOGY_ABS_PATH, reasoner_type="elk")
-snomed_taxonomy = OntologyTaxonomy(snomed_ontology, reasoner_type="elk")
-hit_data_constructor = HierarchyDatasetConstructor(snomed_taxonomy)
+    if args.entity_lexicon:
+        create_path(get_full_path(args.entity_lexicon))
+        hit_data_constructor.save_entity_lexicon(get_full_path(args.entity_lexicon))
 
 
-if CONSTRUCT_HIT_TRAINING_DATASET_FLAG:
-    """
-    TODO: add comment
-    """
-    #hit_data_constructor.construct("./data/hit_dataset")
-    hit_data_constructor.construct("./data/hit_dataset_minified")
-
-if CONSTRUCT_AND_SAVE_ENTITY_LEXICON_FLAG:
-    """
-    See: deeponto.utils.file_utils.create_path, @params: parents: bool, exist_ok: bool
-    TODO: add comment
-    """
-    create_path(DATA_DIR)
-    hit_data_constructor.save_entity_lexicon(DATA_DIR)
-    assert SRC_ENTITY_LEXICON_ABS_PATH.exists()
-    SRC_ENTITY_LEXICON_ABS_PATH.rename(TARGET_ENTITY_LEXICON_ABS_PATH)
-    if (TARGET_ENTITY_LEXICON_ABS_PATH.exists()):
-        print("Success: SNOMED Entity Lexicon created!") # TODO: replace with logger
-
-
-# TODO: Implement
-if CONSTRUCT_AND_SAVE_TRIPPLE_STORE:
-    pass
-
-# TODO: file: restructure & refactor
+if __name__ == "__main__":
+    main()
