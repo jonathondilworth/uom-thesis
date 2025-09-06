@@ -20,7 +20,7 @@ echo "DONE."
 
 echo "[Step 2/4] Extracting questions from './data/benchmark.json ... "
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python load_benchmark_extract_questions.py \
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/load_benchmark_extract_questions.py \
     --input "./data/benchmark.json" \
     --output-dir "./data"
 
@@ -30,13 +30,13 @@ echo "[Step 3/4] Preparing SpaCy dependencies for running NER on './data/benchma
 
 conda run -n "$AUTO_ENV_NAME" --no-capture-output python -m spacy download en_core_web_sm
 
-pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bionlp13cg_md-0.5.4.tar.gz --no-deps
+conda run -n "$AUTO_ENV_NAME" --no-capture-output pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bionlp13cg_md-0.5.4.tar.gz --no-deps
 
 echo "Success!"
 
 echo "[Step 4/4] Running NER on './data/benchmark-questions.json to build ./data/benchmark-questions-with-entities.json ... "
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python load_questions_and_extract_entities.py \
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/load_questions_and_extract_entities.py \
     --input ./data/benchmark-questions.json \
     --output-dir ./data \
     --extract-biomed \

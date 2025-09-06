@@ -11,7 +11,7 @@ echo "STARTING ..."
 
 echo "[Step 1/3] Loading IRIs from annotations ... "
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python extract_iris_from_annotations.py \
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/extract_iris_from_annotations.py \
   --input ./data/manually-annotated.json
 
 echo "IRIs written to ./data/dataset_iri_list.json."
@@ -28,7 +28,7 @@ for iri in $(jq -r '.[]' "$INPUT_JSON"); do
 
     echo "Processing $iri_id ..."
 
-    conda run -n "$AUTO_ENV_NAME" --no-capture-output python snomed_ancestors.py \
+    conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/snomed_ancestors.py \
         --input ./data/snomed_inferred_hasse.ttl \
         --iri "$iri" \
         --json-out "./data_out/${iri_id}.json" \
@@ -39,7 +39,7 @@ done
 
 echo "[Step 3/3] Merging ancestors into final evaluation dataset  ... "
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python merge_ancestors.py \
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/merge_ancestors.py \
   --input-json ./data/manually-annotated.json \
   --merge-dir ./data_out \
   --output-dir ./data

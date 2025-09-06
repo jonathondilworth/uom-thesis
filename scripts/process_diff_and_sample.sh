@@ -12,13 +12,13 @@ echo ""
 
 echo "[Step 1/4] Loading SNOMED CT pre-processed entity lexicon and extracting the label set ... "
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python entity_lexicon_to_label_mappings.py
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/entity_lexicon_to_label_mappings.py
 
 echo "Extracted SNOMED CT label set from SNOMED CT entity lexicon."
 
 echo "[Step 2/4] Loading MIRAGE entities and constructing the OOV entity list (no duplicates) ... "
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python process_MIRAGE_get_entity_list.py \
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/process_MIRAGE_get_entity_list.py \
   --input ./data/benchmark-questions-entities.jsonl \
   --output ./data
 
@@ -26,7 +26,7 @@ echo "Extracted MIRAGE entity set from MIRAGE benchmark-questions-entities.jsonl
 
 echo "[Step 3/4] Computing lexically disjoint entity set/list (strings-diff.json) between SNOMED and MIRAGE ... "
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python compute_normalised_inter_and_diff.py \
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/compute_normalised_inter_and_diff.py \
   --input ./data/label_verbalisations.json \
   --compare ./data/MIRAGE-entity-list.json \
   --output-diff ./data
@@ -39,7 +39,7 @@ echo "[SAMPLING PROCEDURE] Sampling is set to: $SAMPLING_PROCEDURE"
 
 echo "[SAMPLING PROCEDURE] Sampling N=$SAMPLE_N OOV strings"
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python sample.py \
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/sample.py \
   --input ./data/strings-diff.json \
   --procedure $SAMPLING_PROCEDURE \
   --n $SAMPLE_N

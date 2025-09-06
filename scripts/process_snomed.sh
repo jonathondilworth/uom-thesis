@@ -12,13 +12,13 @@ echo ""
 
 echo "[Step 1/4] Extracting SNOMED CT entity lexicon (requires HierarchyTransformers) ... "
 
-echo "" | conda run -n "$AUTO_ENV_NAME" --no-capture-output python load_taxonomy.py
+echo "" | conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/load_taxonomy.py
 
 echo "Extracted SNOMED CT entity lexicon."
 
 echo "[Step 2/4] Preprocessing SNOMED CT entity lexicon ... "
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python preprocess_entity_lexicon.py \
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/preprocess_entity_lexicon.py \
   --input ./data/entity_lexicon.json \
   --output ./data/preprocessed_entity_lexicon.json \
   --strip-parens \

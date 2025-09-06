@@ -33,7 +33,7 @@ echo "OKAY!"
 echo "DOWNLOADING: SNOMED CT RF2 (latest release) ..."
 
 # relies on NHS_API_KEY=... in '.env'
-snomed_version="$(conda run -n "$AUTO_ENV_NAME" --no-capture-output python get_snomed.py | tail -n 1)"
+snomed_version="$(conda run -n "$AUTO_ENV_NAME" --no-capture-output ./scripts/python get_snomed.py | tail -n 1)"
 echo "OKAY!"
 
 rf2_zip="./data/SnomedCT_InternationalRF2_PRODUCTION_${snomed_version}T120000Z.zip"
