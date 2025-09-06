@@ -151,17 +151,20 @@ cd ..
 
 # -- IMPORTANT: write the $ENV_NAME to the .env file (enables the remaining build scripts to run)
 
-echo "AUTO_ENV_NAME=$ENV_NAME" >> .env
+# echo "AUTO_ENV_NAME=$ENV_NAME" >> .env # adds a duplicate AUTO_ENV_NAME if one already exists
 
-# alternatively, overwrite if it already exists (for now, we'll leave as is)
+# better approach likely is only write if not already set:
+if ! grep -q '^AUTO_ENV_NAME=' .env 2>/dev/null; then
+  echo "AUTO_ENV_NAME=$ENV_NAME" >> .env
+fi
 
-# if grep -q '^ENV_NAME=' .env 2>/dev/null; then
-#   sed -i "s/^ENV_NAME=.*/ENV_NAME=$ENV_NAME/" .env
-# else
-#   echo "ENV_NAME=$ENV_NAME" >> .env
-# fi
+# for later scripts, we require setting the SAMPLING_PROCEDURE
+# default to deterministic, but if set to random, do not overwrite
+if ! grep -q '^SAMPLING_PROCEDURE=' .env 2>/dev/null; then
+  echo "SAMPLING_PROCEDURE=deterministic" >> .env
+fi
 
-# -- FINITO.
+# fin!
 
 echo "DONE!"
 
