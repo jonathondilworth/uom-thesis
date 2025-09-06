@@ -29,7 +29,7 @@ echo "[Step 3/4] Computing lexically disjoint entity set/list (strings-diff.json
 conda run -n "$AUTO_ENV_NAME" --no-capture-output python compute_normalised_inter_and_diff.py \
   --input ./data/label_verbalisations.json \
   --compare ./data/MIRAGE-entity-list.json \
-  --diff ./data
+  --output-diff ./data
 
 echo "Disjoint lexical mentions written to 'strings-diff.json' in './data'."
 

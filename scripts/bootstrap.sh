@@ -164,6 +164,11 @@ if ! grep -q '^SAMPLING_PROCEDURE=' .env 2>/dev/null; then
   echo "SAMPLING_PROCEDURE=deterministic" >> .env
 fi
 
+# same for the number of samples (default=50)
+if ! grep -q '^SAMPLE_N=' .env 2>/dev/null; then
+  echo "SAMPLE_N=50" >> .env
+fi
+
 # fin!
 
 echo "DONE!"
