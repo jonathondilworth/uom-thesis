@@ -6,7 +6,7 @@ from deeponto.onto import Ontology
 from deeponto.onto.taxonomy import OntologyTaxonomy
 from deeponto.utils.file_utils import create_path
 
-from HierarchyTransformers.src.hierarchy_transformers.datasets.construct import HierarchyDatasetConstructor
+from hierarchy_transformers.datasets.construct import HierarchyDatasetConstructor
 
 # utils:
 

@@ -34,9 +34,6 @@ if command -v apt-get >/dev/null 2>&1; then
   DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -yqq curl ca-certificates jq
 fi
 
-# if .env doesn't already exist, create it
-touch .env
-
 # --
 # set-up project dependencies
 # --
@@ -140,7 +137,6 @@ conda run -n "$ENV_NAME" --no-capture-output python -m pip install deeponto
 
 # now we should already have all the dependencies we need for packages:
 conda run -n "$ENV_NAME" --no-capture-output python -m pip install scispacy --no-deps
-conda run -n "$ENV_NAME" --no-capture-output python -m pip install hierarchy_transformers --no-deps
 
 echo "[Step 9] Install ROBOT for CLI-based reasoning ... "
 
@@ -156,17 +152,6 @@ cd ..
 # better approach likely is only write if not already set:
 if ! grep -q '^AUTO_ENV_NAME=' .env 2>/dev/null; then
   echo "AUTO_ENV_NAME=$ENV_NAME" >> .env
-fi
-
-# for later scripts, we require setting the SAMPLING_PROCEDURE
-# default to deterministic, but if set to random, do not overwrite
-if ! grep -q '^SAMPLING_PROCEDURE=' .env 2>/dev/null; then
-  echo "SAMPLING_PROCEDURE=deterministic" >> .env
-fi
-
-# same for the number of samples (default=50)
-if ! grep -q '^SAMPLE_N=' .env 2>/dev/null; then
-  echo "SAMPLE_N=50" >> .env
 fi
 
 # fin!

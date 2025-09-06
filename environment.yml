@@ -1,4 +1,4 @@
-name: msc-new-env
+name: knowledge-retrieval-env
 
 channels:
   - rapidsai

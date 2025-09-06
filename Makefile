@@ -1,7 +1,11 @@
 SHELL := /usr/bin/env bash
 .DEFAULT_GOAL := all
 
-.PHONY: env snomed eval hit ont clean docker-build-eval docker all default docker
+.PHONY: init env snomed eval hit ont clean docker-build-eval docker all default docker
+
+init:
+	@echo "[INIT] Initialising project enviornment variables and .env"
+	./scripts/init.sh
 
 env:
 	@echo "[ENV] Bootstrapping environment dependencies..."
@@ -34,10 +38,10 @@ clean:
 docker-build-eval: env snomed eval
 	@echo "[DOCKER-BUILD-EVAL] Environment setup & finished building evaluation data..."
 
-docker: env
+docker: init env
 	@echo "[DOCKER] Finished environment setup"
 
-all: env snomed eval hit ont
+all: init env snomed eval hit ont
 	@echo "[ALL] Finished full pipeline!"
 
 default: all
