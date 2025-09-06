@@ -11,10 +11,10 @@ MANUAL="${DATA_DIR}/manually-annotated.json"
 MANUAL_ALT="${DATA_DIR}/manually-annotated-2.json"
 
 # sanity check
-echo "Annotation procedure is ${ANNOTATION_PROCEDURE:-<unset>}"
+echo "Annotation procedure is ${SAMPLING_PROCEDURE:-<unset>}"
 echo ""
 
-if [[ "${ANNOTATION_PROCEDURE:-}" == "deterministic" ]]; then
+if [[ "${SAMPLING_PROCEDURE:-}" == "deterministic" ]]; then
   echo "[Step 1/1] Verifying deterministic annotation procedure ... "
   if [[ -f "$MANUAL" ]]; then
     echo "[VERIFICATION PROCEDURE] Manually Annotated Exists... DONE!"
@@ -24,10 +24,10 @@ if [[ "${ANNOTATION_PROCEDURE:-}" == "deterministic" ]]; then
     exit 1
   fi
 
-elif [[ "${ANNOTATION_PROCEDURE:-}" == "random" ]]; then
+elif [[ "${SAMPLING_PROCEDURE:-}" == "random" ]]; then
   echo "[Step 1/2] Checking for '${READY}' ... "
   if [[ ! -f "$READY" ]]; then
-    echo "[WARING] ANNOTATION_PROCEDURE=random, but '${READY}' does not exist."
+    echo "[WARING] SAMPLING_PROCEDURE=random, but '${READY}' does not exist."
     exit 1
   fi
 
@@ -50,6 +50,6 @@ elif [[ "${ANNOTATION_PROCEDURE:-}" == "random" ]]; then
   exit 0
 
 else
-  echo "[WARN] ANNOTATION_PROCEDURE must be 'deterministic' or 'random' (got: '${ANNOTATION_PROCEDURE:-<unset>}')."
+  echo "[WARN] SAMPLING_PROCEDURE must be 'deterministic' or 'random' (got: '${SAMPLING_PROCEDURE:-<unset>}')."
   exit 1
 fi
