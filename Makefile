@@ -1,7 +1,7 @@
 SHELL := /usr/bin/env bash
 .DEFAULT_GOAL := all
 
-.PHONY: init env snomed eval hit ont clean docker-build-eval docker all default docker
+.PHONY: init env snomed process-snomed process-mirage sample build-eval eval hit ont clean docker-build-eval docker all default docker
 
 init:
 	@echo "[INIT] Initialising project enviornment variables and .env"
@@ -15,8 +15,25 @@ snomed:
 	@echo "[SNOMED] Downloading SNOMED CT (ensure NHS_API_KEY is set in .env)"
 	./scripts/download_snomed.sh
 
+process-snomed:
+	@echo "[PROCESS-SNOMED] Processing SNOMED CT..."
+	./scripts/process_snomed.sh
+
+process-mirage:
+	@echo "[PROCESS-MIRAGE] Processing MIRAGE..."
+	./scripts/download_and_process_mirage.sh
+
+sample:
+	@echo "[SAMPLE] Sampling processed datasets (SNOMED CT and MIRAGE)..."
+	./scripts/process_diff_and_sample.sh
+	./verify-annotaton.sh
+
+build-eval:
+	@echo "[BUILD-EVAL] Building evaluation data..."
+	./scripts/build_eval_data.sh
+
 eval:
-	@echo "[EVAL] Building evaluation dataset..."
+	@echo "[EVAL] Building evaluation dataset from scracth..."
 	./scripts/process_snomed.sh
 	./scripts/download_and_process_mirage.sh
 	./scripts/process_diff_and_sample.sh

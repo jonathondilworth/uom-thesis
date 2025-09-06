@@ -8,6 +8,10 @@ set +a
 # sanity check
 echo "Env name is $AUTO_ENV_NAME"
 
+echo "Project root is: $project_root"
+
+export PYTHONPATH="$project_root/lib${PYTHONPATH:+:$PYTHONPATH}"
+
 echo ""
 
 echo "[Step 1/4] Extracting SNOMED CT entity lexicon (requires HierarchyTransformers) ... "
