@@ -28,7 +28,7 @@ for iri in $(jq -r '.[]' "$INPUT_JSON"); do
 
     echo "Processing $iri_id ..."
 
-    python snomed_ancestors.py \
+    conda run -n "$AUTO_ENV_NAME" --no-capture-output python snomed_ancestors.py \
         --input ./data/snomed_inferred_hasse.ttl \
         --iri "$iri" \
         --json-out "./data_out/${iri_id}.json" \
