@@ -396,13 +396,7 @@ class ELNormalizedData:
             # determine the type of the axiom
             axiom_type = verbalizer.onto.get_axiom_type(axiom)
             if axiom_type == 'SubClassOf':
-                # <- J.D Changes: getting lots of verbalisation errors
-                # possibly because a reasoner has not been ran over this instance of SNOMED?
-                # TODO: investigate and resolve issue...
-                # <- NOTES
                 import sys
-                print(axiom)
-                # sys.exit()
                 try:
                     verb_result = verbalizer.verbalise_class_subsumption_axiom(axiom)
                 except Exception as e: # accepts Exception to then raise
