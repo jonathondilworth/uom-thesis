@@ -40,13 +40,21 @@ eval:
 	./scripts/verify-annotation.sh
 	./scripts/build_eval_data.sh
 
-hit:
+hit-data:
 	@echo "[HIT] Building HiT dataset (running pipeline)..."
 	./scripts/build_hit_data.sh
 
-ont:
+ont-data:
 	@echo "[ONT] Building OnT dataset (running pipeline)..."
 	./scripts/build_ont_data.sh
+
+hit-train:
+	@echo "[HIT] Starting HiT training..."
+	./scripts/train_hit.sh
+
+ont-train:
+	@echo "[ONT] Starting OnT training..."
+	./scripts/train_ont.sh
 
 clean:
 	@echo "[CLEAN] Removing generated data..."
