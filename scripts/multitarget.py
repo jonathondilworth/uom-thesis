@@ -31,6 +31,47 @@ from hierarchy_transformers import HierarchyTransformer
 from OnT.OnT import OntologyTransformer
 from sentence_transformers import SentenceTransformer
 
+# TEMP: TODO fix
+
+from functools import reduce
+from typing import Any
+import math
+
+
+def obj_max_depth(x: int, obj: Any, key: str = "depth") -> int:
+  return x if x > obj[key] else obj[key]
+
+
+def discounted_cumulative_gain():
+  pass
+
+
+def dcg_exp_relevancy_at_pos(relevancy: int, rank_position: int) -> float:
+  if relevancy <= 0:
+    return float(0.0)
+  numerator = (2**relevancy) - 1
+  denominator = math.log2(rank_position + 1)
+  return float(numerator / denominator)
+
+
+def add(a, b, key='dcg'):
+  return a + b[key]
+
+
+def compute_ndcg_at_k(results: list[tuple[int, str, float, str]], targets_with_dcg_exp: list[dict], k: int = 20) -> float:
+  relevance_map = {target['iri']: target['relevance'] for target in targets_with_dcg_exp}
+  dcg = 0.0
+  for rank, (idx, iri, score, label) in enumerate(results[:k], start=1):
+    rel = relevance_map.get(iri, 0)
+    dcg += dcg_exp_relevancy_at_pos(rel, rank)
+  ideal_dcg = sum(target['dcg'] for target in targets_with_dcg_exp[:k])
+  if ideal_dcg == 0:
+    return 0.0
+  
+  return dcg / ideal_dcg
+
+# END TEMP
+
 embeddings_dir = "./embeddings"
 
 common_map = Path(f"{embeddings_dir}/entity_mappings.json")
