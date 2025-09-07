@@ -56,19 +56,15 @@ fi
 # we also need to pull down models for end-to-end reproducability:
 # pretrained encoders (ANATOMY, GALEN, GO):
 if ! grep -q '^ONT_PRETRAINED_MODEL_URL=' .env 2>/dev/null; then
-  echo "Setting ONT_PRETRAINED_MODEL_URL (.env) to: https://drive.google.com/file/d/1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR/view?usp=drive_link"
-  echo "ONT_PRETRAINED_MODEL_URL=https://drive.google.com/file/d/1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR/view?usp=drive_link" >> .env
+  echo "Setting ONT_PRETRAINED_MODEL_URL (.env) to: https://drive.google.com/file/d/1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR/view"
+  echo "ONT_PRETRAINED_MODEL_URL=https://drive.google.com/file/d/1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR/view" >> .env
 fi
-
-# # # IMPORTANT : TODO # # #
 
 # SNOMED TUNED ENCODERS:
-if ! grep -q '^SNOMED_MODELS_URL=' .env 2>/dev/null; then
+if ! grep -q '^SNOMED_MODELS_URL=https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view' .env 2>/dev/null; then
   echo "Setting SNOMED_MODELS_URL (.env) to: TODO"
-  echo "SNOMED_MODELS_URL=TODO" >> .env
+  echo "SNOMED_MODELS_URL=https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view" >> .env
 fi
-
-# # # IMPORTANT : TODO # # #
 
 # since most people running this build script are unlikely to have a copy of SNOMED / a SNOMED license
 # a copy is hosted (I presume, under a valid license) @ https://zenodo.org/doi/10.5281/zenodo.10511042
