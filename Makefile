@@ -60,6 +60,10 @@ models:
 	@echo "[MODELS] Fetching both SNOMED-tuned and pretrained encoders ..."
 	./scripts/download_models.sh
 
+embeddings:
+	@echo "[EMBEDDINGS] Generating embeddings ... "
+	./scripts/produce_embeddings.sh
+
 clean:
 	@echo "[CLEAN] Removing generated data..."
 	./scripts/clean.sh
