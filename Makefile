@@ -101,6 +101,12 @@ docker-run-dry:
 docker-make:
 	docker run --rm -it --env-file ./.env -v $$PWD:/work -w /work uom-thesis-dev make
 
+docker-single-target:
+	docker run --rm -it --env-file ./.env -v $$PWD:/work -w /work uom-thesis-dev bash -lc "make init; make env; make snomed; make process-snomed; make process-mirage; make models; make embeddings; make single-target;"
+
+docker-multi-target:
+	docker run --rm -it --env-file ./.env -v $$PWD:/work -w /work uom-thesis-dev bash -lc "make init; make env; make snomed; make process-snomed; make process-mirage; make models; make embeddings; make multi-target;"
+
 all: init env snomed eval hit-data ont-data
 	@echo "[ALL] Finished running data prep pipeline!"
 
