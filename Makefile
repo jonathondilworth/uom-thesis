@@ -64,6 +64,10 @@ embeddings:
 	@echo "[EMBEDDINGS] Generating embeddings ... "
 	./scripts/produce_embeddings.sh
 
+single-target:
+	@echo "[SINGLE-TARGET] Running single target experiments ... "
+	./scripts/single_target.sh
+
 clean:
 	@echo "[CLEAN] Removing generated data..."
 	./scripts/clean.sh

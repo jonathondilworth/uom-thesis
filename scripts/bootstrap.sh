@@ -134,6 +134,7 @@ conda run -n "$ENV_NAME" --no-capture-output python -m pip install sentencepiece
 conda run -n "$ENV_NAME" --no-capture-output python -m pip install pysbd
 conda run -n "$ENV_NAME" --no-capture-output python -m pip install geoopt
 conda run -n "$ENV_NAME" --no-capture-output python -m pip install deeponto
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install latextable
 
 # now we should already have all the dependencies we need for packages:
 conda run -n "$ENV_NAME" --no-capture-output python -m pip install scispacy --no-deps
