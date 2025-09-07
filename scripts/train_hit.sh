@@ -16,8 +16,8 @@ echo ""
 
 echo "[Step 1/1] Starting HiT trainer (requires HierarchyTransformers) ... "
 
-conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./lib/hierarchy_transformers/scripts/training/training_hit.py \
-  -c ./lib/hierarchy_transformers/scripts/training/hit/config_hit.yaml
+conda run -n "$AUTO_ENV_NAME" --no-capture-output python -m ./lib/hierarchy_transformers/scripts/train_hit.py \
+  -c ./lib/hierarchy_transformers/scripts/config.yaml
 
 echo "Training DONE!"
 

@@ -24,6 +24,12 @@ from deeponto.utils import create_path, load_file, set_seed
 from sentence_transformers.training_args import SentenceTransformerTrainingArguments
 from yacs.config import CfgNode
 
+#from .datasets import load_hf_dataset, load_zenodo_dataset
+#from .evaluation import HierarchyTransformerEvaluator
+#from .losses import HierarchyTransformerLoss
+#from .models import HierarchyTransformer
+#from .models.hierarchy_transformer.hit_trainer import HierarchyTransformerTrainer
+
 from hierarchy_transformers.datasets import load_hf_dataset, load_zenodo_dataset
 from hierarchy_transformers.evaluation import HierarchyTransformerEvaluator
 from hierarchy_transformers.losses import HierarchyTransformerLoss
