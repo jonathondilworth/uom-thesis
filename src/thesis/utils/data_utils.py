@@ -110,7 +110,7 @@ def xs_of_all_questions(benchmark_data: dict, allowable_datasets: list[str] = ['
 
 
 def get_question_entity_mentions(entity_mention_data: dict, dataset: str, question_id: str):
-    for question in entity_mention_data["questions"]:
+    for question in entity_mention_data:
         if question['source_dataset'] == dataset and question['question_id'] == question_id:
             return question['entities'] # warning: it is possible to be []
 
