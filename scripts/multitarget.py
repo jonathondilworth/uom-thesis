@@ -22,8 +22,7 @@ from thesis.utils.math_functools import (
   batch_euclidian_l2_distance,
   batch_poincare_dist_with_adaptive_curv_k,
   entity_subsumption,
-  concept_subsumption,
-  macro_pr_curve
+  concept_subsumption
 )
 from thesis.utils.data_utils import load_json
 from thesis.utils.query_utils import QueryObjectMapping, QueryResult
@@ -69,6 +68,79 @@ def compute_ndcg_at_k(results: list[tuple[int, str, float, str]], targets_with_d
     return 0.0
   
   return dcg / ideal_dcg
+
+
+from typing import Iterable, Tuple, List
+
+
+def average_precision_binary(rels: Iterable[int], total_relevant: int | None = None) -> float:
+    rels = [1 if r > 0 else 0 for r in rels]
+    if total_relevant is None:
+        # AP over the full ranking (or AP@K using seen rels as denominator)
+        total_relevant = sum(rels)
+    if total_relevant == 0:
+        return 0.0
+    hits = 0
+    cum_prec = 0.0
+    for k, r in enumerate(rels, start=1):
+        if r:
+            hits += 1
+            cum_prec += hits / k
+    return cum_prec / total_relevant
+
+
+def pr_points_from_binary(
+    rels: Iterable[int], total_relevant: int | None = None
+) -> tuple[np.ndarray, np.ndarray]:
+    rels = np.asarray([1 if r > 0 else 0 for r in rels], dtype=int)
+    if total_relevant is None:
+        total_relevant = int(rels.sum())  # fallback
+    if total_relevant == 0:
+        return np.array([]), np.array([])
+    hits_cum = np.cumsum(rels)
+    hit_mask = rels == 1
+    ranks = np.nonzero(hit_mask)[0] + 1   # 1-based ranks of hits
+    precisions = hits_cum[hit_mask] / ranks.astype(float)
+    recalls    = hits_cum[hit_mask] / float(total_relevant)
+    return recalls, precisions
+
+
+def interpolate_precision(recall: np.ndarray, precision: np.ndarray, recall_grid: np.ndarray) -> np.ndarray:
+  if recall.size == 0:
+    return np.zeros_like(recall_grid, dtype=float)
+  # sort recall, ensuring monotonicity
+  order = np.argsort(recall)
+  r = recall[order] # recall in asc (smallest -> largest)
+  p = precision[order] # precision @ i : \forall i \in r(ecall)
+  # non-increasing precision (cumulative maxima) from right to left
+  p_right_max = p.copy()
+  # i <- arg (position) \in prec, reversed in desc
+  for i in range(len(p_right_max) - 2, -1, -1):
+    if p_right_max[i] < p_right_max[i + 1]:
+        p_right_max[i] = p_right_max[i + 1]
+  # ^ yields (recall, max(precision)) @ k : \forall k \in \{r_0, r_1, \cdot r_n\} \leftarrow \text{recall}
+  # i.e. p, r : p -> max(p), r -> r \forall r \in R (r*)
+  interp = np.zeros_like(recall_grid, dtype=float)
+  for i, rg in enumerate(recall_grid):
+      # find first index where recall >= rg
+      idx = np.searchsorted(r, rg, side="left")
+      if idx < len(p_right_max):
+          interp[i] = p_right_max[idx]
+      else:
+          interp[i] = 0.0
+  return interp
+
+
+def macro_pr_curve(all_query_rels: list[tuple[Iterable[int], int]], recall_points: int = 101) -> tuple[np.ndarray, np.ndarray]:
+    recall_grid = np.linspace(0.0, 1.0, recall_points)
+    acc = np.zeros_like(recall_grid, dtype=float)
+    Q = len(all_query_rels)
+    if Q == 0:
+        return recall_grid, acc
+    for rels, total_relevant in all_query_rels:
+        r, p = pr_points_from_binary(rels, total_relevant=total_relevant)
+        acc += interpolate_precision(r, p, recall_grid)
+    return recall_grid, acc / Q
 
 # END TEMP
 
