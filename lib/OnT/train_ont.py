@@ -31,9 +31,10 @@ from src.hierarchy_transformers.evaluation import OnTEvaluator
 from src.hierarchy_transformers.losses import HierarchyTransformerLoss, LogicalConstraintLoss
 from src.hierarchy_transformers.models.hierarchy_transformer import OntologyTransformer, HierarchyTransformer, HierarchyTransformerTrainer
 
+import wandb
+
 logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(sys.stderr)])
 logger = logging.getLogger(__name__)
-
 
 @click.command()
 @click.option("-c", "--config_file", type=click.Path(exists=True))

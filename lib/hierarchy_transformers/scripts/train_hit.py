@@ -24,6 +24,7 @@ from deeponto.utils import create_path, load_file, set_seed
 from sentence_transformers.training_args import SentenceTransformerTrainingArguments
 from yacs.config import CfgNode
 
+# if running in module mode:
 #from .datasets import load_hf_dataset, load_zenodo_dataset
 #from .evaluation import HierarchyTransformerEvaluator
 #from .losses import HierarchyTransformerLoss
@@ -36,13 +37,13 @@ from hierarchy_transformers.losses import HierarchyTransformerLoss
 from hierarchy_transformers.models import HierarchyTransformer
 from hierarchy_transformers.models.hierarchy_transformer.hit_trainer import HierarchyTransformerTrainer
 
+import wandb
+
 logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(sys.stderr)])
 logger = logging.getLogger(__name__)
 
 from pathlib import Path
 import json
-
-import wandb
 
 @click.command()
 @click.option("-c", "--config_file", type=click.Path(exists=True))

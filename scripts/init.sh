@@ -45,4 +45,10 @@ if ! grep -q '^project_root=' .env 2>/dev/null; then
   echo "project_root=$project_root" >> .env
 fi
 
+# if the user has not provided any preference for wandb.ai (weights and biases) -- simply disable by default:
+# set WANDB_MODE=['online', 'offline', 'disabled', 'shared']
+if ! grep -q '^WANDB_MODE=' .env 2>/dev/null; then
+  echo "WANDB_MODE=disabled" >> .env
+fi
+
 echo "[INFO] Initialisation finished."
