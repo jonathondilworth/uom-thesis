@@ -1,10 +1,10 @@
-from retrievers import (
+from thesis.utils.retrievers import (
   BaseRetriever,
   SBERTRetriever,
   HiTRetriever,
   OnTRetriever
 )
-from gpu_retrievers import (
+from thesis.utils.gpu_retrievers import (
     GPUHiTRetriever,
     GPUOnTRetriever
 )
@@ -33,13 +33,13 @@ DTYPE = torch.bfloat16 if torch.cuda.is_available() else torch.float32
 
 ### END GEN
 
-from math_functools import (
+from thesis.utils.math_functools import (
   batch_cosine_similarity,
   batch_poincare_dist_with_adaptive_curv_k,
   entity_subsumption,
   concept_subsumption
 )
-from llm_utils import (
+from thesis.utils.llm_utils import (
   MistralLLM,
   BaseEntitySelector,
   SimilarityEntitySelector,
@@ -48,7 +48,7 @@ from llm_utils import (
   chat_prompt_template_no_rag,
   chat_prompt_template_with_axioms
 )
-from harness_utils import (
+from thesis.utils.harness_utils import (
   QATestHarness
 )
 

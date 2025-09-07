@@ -72,6 +72,22 @@ multi-target:
 	@echo "[MULTI-TARGET] Running multiple target experiments ... "
 	./scripts/multitarget.sh
 
+no-rag:
+	@echo "[NO-RAG] Running no rag experiment ... "
+	./scripts/no-rag.sh
+
+sbert-rag:
+	@echo "[SBERT-RAG] Running SBERT rag experiment ... "
+	./scrips/sbert-rag.sh
+
+hit-rag:
+	@echo "[HiT-RAG] Running HiT rag experiment ... "
+	./scripts/hit-rag.sh
+
+ont-rag:
+	@echo "[OnT-RAG] Running OnT rag experiment ... "
+	./scripts/ont-rag.sh
+
 clean:
 	@echo "[CLEAN] Removing generated data..."
 	./scripts/clean.sh
