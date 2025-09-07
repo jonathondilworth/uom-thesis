@@ -1,6 +1,10 @@
 # syntax=docker/dockerfile:1
-FROM ubuntu:22.04
+# FROM ubuntu:22.04
 
+FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
+
+ENV CUDA_HOME=/usr/local/cuda
+ENV PATH=/usr/local/cuda/bin:${PATH}
 ENV DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \

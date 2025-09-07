@@ -35,6 +35,26 @@ if command -v apt-get >/dev/null 2>&1; then
 fi
 
 # --
+# CUDA & CONTAINER COMPATABILITY CHECK
+# --
+
+IN_CONTAINER=0
+
+if [[ -f "/.dockerenv" ]] || grep -qaE 'docker|containerd|kubepods' /proc/1/cgroup 2>/dev/null; then
+  IN_CONTAINER=1
+fi
+
+HAS_NVCC=0
+
+if command -v nvcc >/dev/null 2>&1; then
+  HAS_NVCC=1
+elif [[ -x "/usr/local/cuda/bin/nvcc" ]]; then
+  export CUDA_HOME="/usr/local/cuda"
+  export PATH="/usr/local/cuda/bin:${PATH}"
+  HAS_NVCC=1
+fi
+
+# --
 # set-up project dependencies
 # --
 
@@ -129,7 +149,16 @@ fi
 echo "[Step 8] Install final python packages ... "
 
 conda run -n "$ENV_NAME" --no-capture-output python -m pip install phonemizer
-conda run -n "$ENV_NAME" --no-capture-output python -m pip install flash_attn
+
+if [[ "$HAS_NVCC" -eq 1 ]]; then
+  echo "nvcc found; attempting flash_attn build ... "
+  conda run -n "$ENV_NAME" --no-capture-output python -m pip install --no-build-isolation flash_attn==2.8.3 || {
+    echo "[WARN] flash_attn build failed; continuing without it ... "
+  }
+else
+  echo "[WARN] No CUDA toolchain found (nvcc missing). Skipping flash_attn."
+fi
+
 conda run -n "$ENV_NAME" --no-capture-output python -m pip install sentencepiece
 conda run -n "$ENV_NAME" --no-capture-output python -m pip install pysbd
 conda run -n "$ENV_NAME" --no-capture-output python -m pip install geoopt
@@ -157,7 +186,7 @@ fi
 
 # Additional step (register the vendor forks in lib and project src in ./src/thesis)
 
-conda run -n "$ENV_NAME" --no-capture-output pip install -e ."
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install -e .
 
 # fin!
 
