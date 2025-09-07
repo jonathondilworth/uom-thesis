@@ -66,7 +66,7 @@ np.save(f"{embeddings_dir}/sbert-plm-embeddings.npy", sbert_plm_embeddings)
 
 # HiT SNOMED 25 (Full)
 
-hit_snomed_25_model_fp = '../models/snomed_models/HiT-mixed-SNOMED-25/final'
+hit_snomed_25_model_fp = './models/snomed_models/HiT-mixed-SNOMED-25/final'
 hit_snomed_25_encoder = HierarchyTransformer.from_pretrained(hit_snomed_25_model_fp)
 hit_snomed_25_embeddings = hit_snomed_25_encoder.encode(
     entity_verbalisation_list,
@@ -77,7 +77,7 @@ np.save(f"{embeddings_dir}/hit-snomed-25-embeddings.npy", hit_snomed_25_embeddin
 
 # OnT GALEN
 
-ont_galen_23_pred_model_fp = "../models/models/prediction/OnTr-all-MiniLM-L12-v2-GALEN"
+ont_galen_23_pred_model_fp = "./models/models/prediction/OnTr-all-MiniLM-L12-v2-GALEN"
 ont_galen_23_pred_encoder = OntologyTransformer.load(ont_galen_23_pred_model_fp)
 ont_galen_23_pred_embeddings = ont_galen_23_pred_encoder.encode_concept(
     entity_verbalisation_list,
@@ -88,7 +88,7 @@ np.save(f"{embeddings_dir}/ont-galen-23-pred-embeddings.npy", ont_galen_23_pred_
 
 # ANATOMY
 
-ont_anatomy_23_pred_model_fp = "../models/models/prediction/OnTr-all-MiniLM-L12-v2-ANATOMY"
+ont_anatomy_23_pred_model_fp = "./models/models/prediction/OnTr-all-MiniLM-L12-v2-ANATOMY"
 ont_anatomy_23_pred_encoder = OntologyTransformer.load(ont_anatomy_23_pred_model_fp)
 ont_anatomy_23_pred_embeddings = ont_anatomy_23_pred_encoder.encode_concept(
     entity_verbalisation_list,
@@ -99,7 +99,7 @@ np.save(f"{embeddings_dir}/ont-anatomy-23-pred-embeddings.npy", ont_anatomy_23_p
 
 # Gene Ontology (GO)
 
-ont_gene_ontology_23_pred_model_fp = "../models/models/prediction/OnTr-all-MiniLM-L12-v2-GO"
+ont_gene_ontology_23_pred_model_fp = "./models/models/prediction/OnTr-all-MiniLM-L12-v2-GO"
 ont_gene_ontology_23_pred_encoder = OntologyTransformer.load(ont_gene_ontology_23_pred_model_fp)
 ont_gene_ontology_23_pred_embeddings = ont_gene_ontology_23_pred_encoder.encode_concept(
     entity_verbalisation_list,
@@ -110,7 +110,7 @@ np.save(f"{embeddings_dir}/ont-go-23-pred-embeddings.npy", ont_gene_ontology_23_
 
 # SNOMED CT 2025 (Full)
 
-ontr_snomed_25_uni_model_fp = '../models/snomed_models/OnTr-snomed25-uni'
+ontr_snomed_25_uni_model_fp = './models/snomed_models/OnTr-snomed25-uni'
 ontr_snomed_25_uni_encoder = OntologyTransformer.load(ontr_snomed_25_uni_model_fp)
 ont_snomed_25_embeddings = ontr_snomed_25_uni_encoder.encode_concept(
     entity_verbalisation_list,
@@ -121,7 +121,7 @@ np.save(f"{embeddings_dir}/ont-snomed-25-embeddings.npy", ont_snomed_25_embeddin
 
 # SNOMED CT 2025 (M-64)
 
-ontr_snomed_minified_model_fp = '../models/snomed_models/OnTr-minified-64'
+ontr_snomed_minified_model_fp = './models/snomed_models/OnTr-minified-64'
 ontr_snomed_encoder = OntologyTransformer.load(ontr_snomed_minified_model_fp)
 ont_snomed_minified_embeddings = ontr_snomed_encoder.encode_concept(
     entity_verbalisation_list,
@@ -132,7 +132,7 @@ np.save(f"{embeddings_dir}/ont-snomed-minified-embeddings.npy", ont_snomed_minif
 
 # SNOMED CT 2025 (M-128)
 
-ontr_snomed_minified_128_model_fp = '../models/snomed_models/OnTr-m-128'
+ontr_snomed_minified_128_model_fp = './models/snomed_models/OnTr-m-128'
 ontr_snomed_m_128_encoder = OntologyTransformer.load(ontr_snomed_minified_128_model_fp)
 ont_snomed_minified_128_embeddings = ontr_snomed_m_128_encoder.encode_concept(
     entity_verbalisation_list,
@@ -143,7 +143,7 @@ np.save(f"{embeddings_dir}/ont-snomed-minified-128-embeddings.npy", ont_snomed_m
 
 # SNOMED CT 2025 (M-32)
 
-ontr_snomed_minified_32_model_fp = '../models/snomed_models/OnTr-m-32'
+ontr_snomed_minified_32_model_fp = './models/snomed_models/OnTr-m-32'
 ontr_snomed_m_32_encoder = OntologyTransformer.load(ontr_snomed_minified_32_model_fp)
 ont_snomed_minified_32_embeddings = ontr_snomed_m_32_encoder.encode_concept(
     entity_verbalisation_list,
