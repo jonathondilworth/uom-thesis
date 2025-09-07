@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 
 import numpy as np
 
-from thesis.utils.data_utils import load_json, save_json
+from thesis.utils.data_utils import load_json, save_json, strip_parens
 from hierarchy_transformers import HierarchyTransformer
 from OnT.OnT import OntologyTransformer
 
