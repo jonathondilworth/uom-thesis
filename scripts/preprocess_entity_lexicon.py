@@ -67,6 +67,9 @@ def preprocess(data: dict, to_lower: bool, remove_parens: bool) -> dict:
             else:
                 entry["name"] = entry["label"][0]
             entry.pop("label")
+        if isinstance(labels, string):
+            # the instance in which label = "owl:Thing"
+            entry["name"] = "owl:Thing"
     return data
 
 # script: main
