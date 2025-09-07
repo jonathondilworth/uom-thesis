@@ -50,14 +50,14 @@ USE_GPU_RETRIEVER = True
 # BOOTSTRAP: encoder, retriever & entity selector
 ##################################################
 
-common_map = Path("./embeddings/axiom-mappings.json") # *entity mappings
-common_verbalisations = Path("./embeddings/axiom-verbalisations.json") # rdfs:label(s) & verbs
+common_map = Path("./embeddings/entity_mappings.json") # *entity mappings
+common_verbalisations = Path("./embeddings/verbalisations.json") # rdfs:label(s) & verbs
 embeddings_dir = "./embeddings" # dir for embeddings
 
 if not USE_GPU_RETRIEVER:
 
     # fine-tuned embedding model, for embedding entity mentions
-    retriever_model_fp = hit_SNOMED25_model_path = Path('./models/HiT-mixed-SNOMED-25/final')
+    retriever_model_fp = hit_SNOMED25_model_path = Path('./models/snomed_models/HiT-mixed-SNOMED-25/final')
 
     # accepts an entity mention &
     # 1. produces an embedding
@@ -73,7 +73,7 @@ if not USE_GPU_RETRIEVER:
 
 else:
 
-    retriever_model_fp = hit_SNOMED25_model_path = Path('./models/HiT-mixed-SNOMED-25/final')
+    retriever_model_fp = hit_SNOMED25_model_path = Path('./models/snomed_models/HiT-mixed-SNOMED-25/final')
 
     hit_retriever = GPUHiTRetriever(
         embeddings_fp=Path(f"{embeddings_dir}/hit-snomed-25-embeddings.npy"),
@@ -114,8 +114,8 @@ mistral_llm.register_prompt_template_fn("mirage_mcqa_axiom_rag_chat", chat_promp
 # ideally, we would load from config (TODO: load cfgNode \w yacs or hydra)
 tests = QATestHarness(
   Path("./data/MIRAGE/benchmark.json"), 
-  Path("./data/MIRAGE/benchmark-questions-entities-BIOMED-bionlp13cg.json"), 
-  Path("./data/MIRAGE/benchmark-questions-entities-HEAD.json")
+  Path("./data/MIRAGE/benchmark-questions-entities"), 
+  Path("./data/MIRAGE/benchmark-questions-entities")
 ).set_shuffle_question_options(True).set_permute_question_options(
   True
 ).set_retrieval_k(100).set_append_k(10).set_top_k(1).set_use_rag(True).register_retriever(
