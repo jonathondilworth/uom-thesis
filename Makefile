@@ -1,7 +1,7 @@
 SHELL := /usr/bin/env bash
 .DEFAULT_GOAL := all
 
-.PHONY: init env snomed process-snomed process-mirage sample build-eval eval hit ont clean docker-build-eval docker all default docker
+.PHONY: init env snomed process-snomed process-mirage sample build-eval eval hit-train hit-data ont-train ont-data clean docker-build-eval docker all default docker
 
 init:
 	@echo "[INIT] Initialising project enviornment variables and .env"
@@ -55,6 +55,10 @@ hit-train:
 ont-train:
 	@echo "[ONT] Starting OnT training..."
 	./scripts/train_ont.sh
+
+models:
+	@echo "[MODELS] Fetching both SNOMED-tuned and pretrained encoders ..."
+	./scripts/download_models.sh
 
 clean:
 	@echo "[CLEAN] Removing generated data..."
