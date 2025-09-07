@@ -68,6 +68,10 @@ single-target:
 	@echo "[SINGLE-TARGET] Running single target experiments ... "
 	./scripts/single_target.sh
 
+multi-target:
+	@echo "[MULTI-TARGET] Running multiple target experiments ... "
+	./scripts/multitarget.sh
+
 clean:
 	@echo "[CLEAN] Removing generated data..."
 	./scripts/clean.sh
