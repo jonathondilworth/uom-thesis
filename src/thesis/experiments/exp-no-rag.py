@@ -96,7 +96,7 @@ mistral_llm.register_prompt_template_fn("mirage_mcqa_axiom_rag_chat", chat_promp
 
 # ideally, we would load from config (TODO: load cfgNode \w yacs or hydra)
 tests = QATestHarness(
-  Path("./data/benchmark.json"), 
+  Path("./data/benchmark.json"),
   Path("./data/benchmark-questions-entities"),
   Path("./data/benchmark-questions-entities")
 ).set_shuffle_question_options(True).set_permute_question_options(
