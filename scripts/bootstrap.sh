@@ -154,6 +154,10 @@ if ! grep -q '^AUTO_ENV_NAME=' .env 2>/dev/null; then
   echo "AUTO_ENV_NAME=$ENV_NAME" >> .env
 fi
 
+# Additional step (register the vendor forks in lib and project src in ./src/thesis)
+
+conda run -n "$ENV_NAME" --no-capture-output pip install -e ."
+
 # fin!
 
 echo "DONE!"
