@@ -15,6 +15,8 @@ set +a
 # sanity check
 echo "Env name is $AUTO_ENV_NAME"
 
+# grab the ALT snomed URL (in case we need to obtain the public SNOMED 2023 OWL file)
+ALT_URL="${ALT_SNOMED_ONTOLOGY_URL:-}"
 
 # conda check (runnable in this shell)
 if ! command -v conda >/dev/null 2>&1; then
@@ -25,15 +27,25 @@ if ! command -v conda >/dev/null 2>&1; then
   fi
 fi
 
-
 echo ""
 
 echo "Preparing project data files (this may take a moment or two!) ..."
 
-echo "Note, you must have set NHS_API_KEY in .env and have neccesary dependencies installed ... "
-echo "..for dependencies, see: environment.yml, requirements.txt, openjdk-17-jdk"
+echo "Note, you do not have set NHS_API_KEY in .env an older, publicly available SNOMED version will be downloaded ... "
+echo ""
+echo "requires dependencies... see: environment.yml, requirements.txt, openjdk-17-jdk"
 
 echo "STARTING ..."
+
+# IF ALT_URL is set, then we can SKIP:
+
+if [[ -n "$ALT_URL" ]]; then
+  echo "[INFO] ALT_SNOMED_ONTOLOGY_URL is set. Skipping NHS TRUD download pipeline."
+  echo "[INFO] Falling back to Zenodo copy from 2023."
+  ./scripts/download_snomed_fallback.sh
+  echo "COMPLETED! Check './data' dir for snomedct-international.owl"
+  exit 0
+fi
 
 echo "DOWNLOADING: snomed-owl-toolkit-5.3.0-executable.jar ..."
 
