@@ -66,7 +66,7 @@ docker-build-eval: env snomed eval
 docker: init env
 	@echo "[DOCKER] Finished environment setup"
 
-all: init env snomed eval hit ont
-	@echo "[ALL] Finished full pipeline!"
+all: init env snomed eval hit-data ont-data
+	@echo "[ALL] Finished running data prep pipeline!"
 
 default: all
