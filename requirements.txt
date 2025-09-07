@@ -95,7 +95,6 @@ more-itertools==10.7.0
 mpld3==0.5.10
 munkres==1.1.4
 nmslib-metabrainz==2.1.3
-numpy==1.26.4
 nvidia-cublas-cu12==12.9.1.4
 nvidia-cuda-runtime-cu12==12.9.79
 omegaconf==2.3.0

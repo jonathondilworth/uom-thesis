@@ -7,8 +7,8 @@ channels:
   - defaults
 
 dependencies:
-  # base
-  - python>=3.11
+  # base, pin to 3.11, as previously >=3.11 kept requiring packages to be built from source
+  - python=3.11
   - mamba
   - pip
 

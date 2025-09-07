@@ -60,11 +60,14 @@ clean:
 	@echo "[CLEAN] Removing generated data..."
 	./scripts/clean.sh
 
-docker-build-eval: env snomed eval
-	@echo "[DOCKER-BUILD-EVAL] Environment setup & finished building evaluation data..."
+docker-build:
+	docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t uom-thesis-dev .
 
-docker: init env
-	@echo "[DOCKER] Finished environment setup"
+docker-run-dry:
+	docker run --rm -it --env-file ./.env -v $$PWD:/work -w /work uom-thesis-dev
+
+docker-make:
+	docker run --rm -it --env-file ./.env -v $$PWD:/work -w /work uom-thesis-dev make
 
 all: init env snomed eval hit-data ont-data
 	@echo "[ALL] Finished running data prep pipeline!"
