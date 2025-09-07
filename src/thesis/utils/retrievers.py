@@ -10,11 +10,11 @@ from sentence_transformers import SentenceTransformer
 from scipy.sparse import coo_matrix, csr_matrix
 from typing import Union, Callable, Union, Any, override, overload
 
-from data_utils import parallel_tokenise
-from math_functools import batch_poincare_dist_with_adaptive_curv_k, batch_euclidian_l2_distance
+from thesis.utils.data_utils import parallel_tokenise
+from thesis.utils.math_functools import batch_poincare_dist_with_adaptive_curv_k, batch_euclidian_l2_distance
 from hierarchy_transformers import HierarchyTransformer
 from OnT.OnT import OntologyTransformer
-from query_utils import QueryResult
+from thesis.utils.query_utils import QueryResult
 
 import numpy as np
 import json

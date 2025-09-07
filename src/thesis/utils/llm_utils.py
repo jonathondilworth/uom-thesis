@@ -15,7 +15,7 @@ from logits_processor_zoo.transformers import (
   CiteFromPromptLogitsProcessor,
   MultipleChoiceLogitsProcessor,
 )
-from retrievers import BaseRetriever, QueryResult
+from thesis.utils.retrievers import BaseRetriever, QueryResult
 from copy import copy, deepcopy
 import torch
 import random

@@ -1,10 +1,10 @@
 import torch
 from pathlib import Path
-from data_utils import (
+from thesis.utils.data_utils import (
   load_json,
   merge_entity_mentions,
 )
-from llm_utils import (
+from thesis.utils.llm_utils import (
   MistralLLM,
   BaseEntitySelector,
   SimilarityEntitySelector,
@@ -14,14 +14,14 @@ from llm_utils import (
   chat_prompt_template_no_rag,
   chat_prompt_template_with_axioms
 )
-from retrievers import (
+from thesis.utils.retrievers import (
   BaseRetriever,
   BaseModelRetriever,
   SBERTRetriever,
   HiTRetriever,
   OnTRetriever
 )
-from math_functools import (
+from thesis.utils.math_functools import (
   batch_cosine_similarity,
   batch_poincare_dist_with_adaptive_curv_k,
   entity_subsumption,

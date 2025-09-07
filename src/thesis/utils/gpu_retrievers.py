@@ -9,7 +9,7 @@ from hierarchy_transformers import HierarchyTransformer
 from OnT.OnT import OntologyTransformer
 from sentence_transformers import SentenceTransformer
 
-from retrievers import (
+from thesis.utils.retrievers import (
     BaseRetriever
 )
 
