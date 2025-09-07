@@ -1,0 +1,18 @@
+[project]
+name = "thesis-repo"
+version = "0.0.1"
+requires-python = ">=3.11"
+description = "thesis src and vendor forks"
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["thesis", "hierarchy_transformers", "OnT"]
+
+[tool.setuptools."package-dir"]
+thesis = "src/thesis"
+hierarchy_transformers = "lib/hierarchy_transformers"
+OnT = "lib/OnT"

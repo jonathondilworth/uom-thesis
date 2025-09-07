@@ -9,8 +9,8 @@ if [[ -f .env ]]; then
 fi
 
 MODELS_DIR="./models"
-SNOMED_URL="${SNOMED_MODELS_URL:-https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view}"
-ONT_URL="${ONT_PRETRAINED_MODEL_URL:-https://drive.google.com/file/d/1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR/view}"
+SNOMED_URL="${SNOMED_MODELS_URL:-https://drive.google.com/uc?id=1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT}"
+ONT_URL="${ONT_PRETRAINED_MODEL_URL:-https://drive.google.com/uc?id=1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR}"
 
 mkdir -p "$MODELS_DIR"
 

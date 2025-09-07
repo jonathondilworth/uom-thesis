@@ -25,11 +25,11 @@ from deeponto.utils import create_path, load_file, set_seed
 from sentence_transformers.training_args import SentenceTransformerTrainingArguments
 from yacs.config import CfgNode
 
-from src.hierarchy_transformers.datasets import load_hf_dataset, load_local_dataset
-from src.hierarchy_transformers.evaluation import HierarchyTransformerEvaluator
-from src.hierarchy_transformers.evaluation import OnTEvaluator
-from src.hierarchy_transformers.losses import HierarchyTransformerLoss, LogicalConstraintLoss
-from src.hierarchy_transformers.models.hierarchy_transformer import OntologyTransformer, HierarchyTransformer, HierarchyTransformerTrainer
+from hierarchy_transformers.datasets import load_hf_dataset, load_local_dataset
+from hierarchy_transformers.evaluation import HierarchyTransformerEvaluator
+from hierarchy_transformers.evaluation import OnTEvaluator
+from hierarchy_transformers.losses import HierarchyTransformerLoss, LogicalConstraintLoss
+from hierarchy_transformers.models.hierarchy_transformer import OntologyTransformer, HierarchyTransformer, HierarchyTransformerTrainer
 
 import wandb
 
