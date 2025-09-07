@@ -31,7 +31,7 @@ echo "CONDA_DIR=$CONDA_DIR | ENV_FILE=$ENV_FILE | REQ_FILE=$REQ_FILE"
 if command -v apt-get >/dev/null 2>&1; then
   echo "[Step 0] Installing prerequisites (curl, ca-certificates) ... "
   DEBIAN_FRONTEND=noninteractive $SUDO apt-get update -yqq
-  DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -yqq curl ca-certificates jq wget
+  DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -yqq curl ca-certificates jq wget unzip
 fi
 
 # --
