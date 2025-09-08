@@ -1,8 +1,8 @@
 from thesis.utils import data_utils
 
 def test_strip_parens_basic():
-    assert data_utils.strip_parens("example string (with parens)") == "example string "
-    assert data_utils.strip_parens("Type 2 diabetes (disorder)") == "Type 2 diabetes "
+    assert data_utils.strip_parens("example string (with parens)") == "example string"
+    assert data_utils.strip_parens("Type 2 diabetes (disorder)") == "Type 2 diabetes"
 
 def test_naive_tokenise():
     # naive_tokenise

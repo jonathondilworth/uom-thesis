@@ -82,7 +82,7 @@ no-rag:
 
 sbert-rag:
 	@echo "[SBERT-RAG] Running SBERT rag experiment ... "
-	./scrips/sbert-rag.sh
+	./scripts/sbert-rag.sh
 
 hit-rag:
 	@echo "[HiT-RAG] Running HiT rag experiment ... "
