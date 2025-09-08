@@ -96,6 +96,10 @@ clean:
 	@echo "[CLEAN] Removing generated data..."
 	./scripts/clean.sh
 
+tests:
+	@echo "[TESTS] Running tests..."
+	pytest
+
 docker-build:
 	docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t uom-thesis-dev .
 
