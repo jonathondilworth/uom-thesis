@@ -13,9 +13,10 @@
 # limitations under the License.
 from __future__ import annotations
 
-from .load import load_hf_dataset, load_zenodo_dataset
+from .load import load_hf_dataset, load_zenodo_dataset, load_local_dataset
 
 __all__ = [
     "load_hf_dataset",
     "load_zenodo_dataset",
+    "load_local_dataset",
 ]

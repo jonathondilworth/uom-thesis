@@ -20,6 +20,8 @@ from .hyper_cone_loss import (
     HyperbolicEntailmentConeTripletLoss,
 )
 from .poincare_embed_loss import PoincareEmbeddingStaticLoss
+from .logical_constraint_loss import LogicalConstraintLoss
+
 
 __all__ = [
     "HierarchyTransformerLoss",
@@ -28,5 +30,6 @@ __all__ = [
     "HyperbolicEntailmentConeLoss",
     "HyperbolicEntailmentConeStaticLoss",
     "HyperbolicEntailmentConeTripletLoss",
+    "LogicalConstraintLoss",
     "PoincareEmbeddingStaticLoss",
 ]

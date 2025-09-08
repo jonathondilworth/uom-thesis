@@ -1,5 +1,5 @@
 # dataset from local path
-dataset_path: "./data/ont_data/OnT" 
+dataset_path: "./data/ont_dataset/OnT" 
 dataset_name: "ont-full-32"
 
 # pre-trained models from Hugging Face

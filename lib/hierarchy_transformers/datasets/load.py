@@ -15,11 +15,54 @@ from __future__ import annotations
 
 import logging
 import os
+import json 
 
 from datasets import Dataset, load_dataset
 from tqdm import tqdm
 
 logger = logging.getLogger(__name__)
+
+
+
+
+def load_local_dataset(
+    path: str,
+):
+    """Load a local HiT dataset."""
+
+    datafiles = dict()
+    for split in ["train", "val", "test", "concept_names", "train_conj", "train_exist", "train_test", "role_inverse"]:
+        if split in ['train', 'train_conj', 'train_exist']:
+            split_path = os.path.join(path, f"{split}.jsonl")
+            split_list = []
+            # read the jsonl file, each line is a dict, all consist a list
+            with open(split_path, "r") as f:
+                for line in f.readlines():
+                    current_dict = json.loads(line)
+                    if split == 'train':
+                        child, parent, neg_list = current_dict['child'], current_dict['parent'], current_dict['negative']
+                        split_list += [{"child": child, "parent": parent, "negative": neg} for neg in neg_list[:1]]
+                    else:
+                        split_list.append(current_dict)
+            datafiles[split] = Dataset.from_list(split_list)
+        else:
+            split_path = os.path.join(path, f"{split}.json")
+            if split == 'train_test' and not os.path.exists(split_path):
+                continue
+            with open(split_path, "r") as f:
+                dataset = json.load(f)
+            if split == 'concept_names':
+                num_concept = len(dataset)
+                data_list = [{"name": dataset[str(i)]} for i in range(num_concept)]
+                datafiles[split] = Dataset.from_list(data_list)
+            elif split == 'role_inverse':
+                data_list = [{"role": k , "inverse": dataset[k]} for k in dataset.keys()]
+                datafiles[split] = Dataset.from_list(data_list)
+            else:
+                datafiles[split] = dataset
+
+    return datafiles
+
 
 
 def load_hf_dataset(path: str, name: str | None = None, **config_kwargs):

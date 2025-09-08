@@ -15,8 +15,12 @@ from __future__ import annotations
 
 from .hit import HierarchyTransformer
 from .hit_trainer import HierarchyTransformerTrainer
+from .ont import OntologyTransformer
+from . import hyperbolic
 
 __all__ = [
     "HierarchyTransformer",
     "HierarchyTransformerTrainer",
+    "OntologyTransformer",
+    "hyperbolic",
 ]

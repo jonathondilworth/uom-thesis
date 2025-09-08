@@ -16,9 +16,13 @@ from __future__ import annotations
 from .hit_eval import HierarchyTransformerEvaluator
 from .sbert_eval import SentenceTransformerEvaluator
 from .static_embed_eval import PoincareStaticEmbeddingEvaluator
+from .ont_eval import OnTEvaluator
+from .w2v_eval import w2vEvaluator
 
 __all__ = [
     "HierarchyTransformerEvaluator",
     "SentenceTransformerEvaluator",
     "PoincareStaticEmbeddingEvaluator",
+    "OnTEvaluator",
+    "w2vEvaluator",
 ]

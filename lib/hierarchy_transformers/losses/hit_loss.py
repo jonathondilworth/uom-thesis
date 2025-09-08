@@ -76,6 +76,20 @@ class HierarchyTransformerLoss(torch.nn.Module):
             "centri_loss": centri_loss,
         }
 
+
+    def from_tensor(self, rep_anchor, rep_positive, rep_negative):
+        # compute and combine hyperbolic clustering and centripetal losses
+        cluster_loss = self.cluster_loss(rep_anchor, rep_positive, rep_negative)
+        centri_loss = self.centri_loss(rep_anchor, rep_positive, rep_negative)
+        combined_loss = self.cluster_weight * cluster_loss + self.centri_weight * centri_loss
+
+        return {
+            "loss": combined_loss,
+            "cluster_loss": cluster_loss,
+            "centri_loss": centri_loss,
+        }
+
+
     @property
     def citation(self) -> str:
         return format_citation(
