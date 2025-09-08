@@ -1,0 +1,44 @@
+{
+  "os":  "Linux-6.11.0-26-generic-x86_64-with-glibc2.39",
+  "python":  "CPython 3.12.11",
+  "startedAt":  "2025-07-12T16:08:30.757988Z",
+  "args":  [
+    "--config_file",
+    "HierarchyTransformers/scripts/training/hit/config_hit.yaml"
+  ],
+  "program":  "/home/jon/msc-thesis-monorepo/implementation/pipeline_10_07_25/HierarchyTransformers/scripts/training/hit/training_hit.py",
+  "codePath":  "implementation/pipeline_10_07_25/HierarchyTransformers/scripts/training/hit/training_hit.py",
+  "codePathLocal":  "HierarchyTransformers/scripts/training/hit/training_hit.py",
+  "git":  {
+    "remote":  "git@github.com:jonathondilworth/msc-thesis-monorepo.git",
+    "commit":  "8ee62646c823fbeb3f35b6d40e8d6e2744c3cb6c"
+  },
+  "email":  "jonathon.dilworth@postgrad.manchester.ac.uk",
+  "root":  "/home/jon/msc-thesis-monorepo/implementation/pipeline_10_07_25",
+  "host":  "jon-ubnt",
+  "executable":  "/home/jon/anaconda3/envs/msc-new-env/bin/python",
+  "cpu_count":  16,
+  "cpu_count_logical":  32,
+  "gpu":  "NVIDIA RTX 4000 SFF Ada Generation",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "1966736678912",
+      "used":  "798307090432"
+    }
+  },
+  "memory":  {
+    "total":  "98827509760"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA RTX 4000 SFF Ada Generation",
+      "memoryTotal":  "21469593600",
+      "cudaCores":  6144,
+      "architecture":  "Ada",
+      "uuid":  "GPU-bdf6f9f0-ecbb-57f6-c072-73048accf260"
+    }
+  ],
+  "cudaVersion":  "12.8",
+  "writerId":  "9j1ir00d1hddqwcekhio2vlf4opcqt5l"
+}

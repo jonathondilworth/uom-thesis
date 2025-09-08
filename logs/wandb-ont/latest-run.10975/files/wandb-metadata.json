@@ -1,0 +1,44 @@
+{
+  "os":  "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+  "python":  "CPython 3.12.11",
+  "startedAt":  "2025-07-11T20:28:54.970450Z",
+  "args":  [
+    "--config_file",
+    "config.yaml"
+  ],
+  "program":  "/root/OnT/train_ont.py",
+  "codePath":  "train_ont.py",
+  "codePathLocal":  "train_ont.py",
+  "git":  {
+    "remote":  "git@github.com:HuiYang1997/OnT.git",
+    "commit":  "86f5040c3976bba8b9a37c06056f893c1eeb1763"
+  },
+  "email":  "jonathon.dilworth@postgrad.manchester.ac.uk",
+  "root":  "/root/OnT",
+  "host":  "ml-ai-ubuntu-gpu-h100x1-80gb-nyc2",
+  "executable":  "/root/miniforge3/envs/msc-env/bin/python",
+  "cpu_count":  20,
+  "cpu_count_logical":  20,
+  "gpu":  "NVIDIA H100 80GB HBM3",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "749062754304",
+      "used":  "61846691840"
+    }
+  },
+  "memory":  {
+    "total":  "253344677888"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA H100 80GB HBM3",
+      "memoryTotal":  "85520809984",
+      "cudaCores":  16896,
+      "architecture":  "Hopper",
+      "uuid":  "GPU-4f5803e3-e81b-5935-238f-be8a80619c26"
+    }
+  ],
+  "cudaVersion":  "12.9",
+  "writerId":  "jpl6gvmn1qk6j2ei6130saj54j94u54c"
+}

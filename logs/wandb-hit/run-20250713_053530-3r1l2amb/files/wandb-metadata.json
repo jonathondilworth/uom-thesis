@@ -1,0 +1,47 @@
+{
+  "os":  "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+  "python":  "CPython 3.12.11",
+  "startedAt":  "2025-07-13T04:35:30.694338Z",
+  "args":  [
+    "--config_file",
+    "HierarchyTransformers/scripts/training/hit/config_hit.yaml"
+  ],
+  "program":  "/home/jon/pipeline_10_07_25/HierarchyTransformers/scripts/training/hit/training_hit.py",
+  "codePath":  "HierarchyTransformers/scripts/training/hit/training_hit.py",
+  "codePathLocal":  "HierarchyTransformers/scripts/training/hit/training_hit.py",
+  "email":  "jonathon.dilworth@postgrad.manchester.ac.uk",
+  "root":  "/home/jon/pipeline_10_07_25",
+  "host":  "ubnt-ngpu-box",
+  "executable":  "/home/jon/miniforge3/envs/msc-new-env/bin/python",
+  "cpu_count":  48,
+  "cpu_count_logical":  96,
+  "gpu":  "NVIDIA RTX A5000",
+  "gpu_count":  2,
+  "disk":  {
+    "/":  {
+      "total":  "982240026624",
+      "used":  "289874288640"
+    }
+  },
+  "memory":  {
+    "total":  "134514667520"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA RTX A5000",
+      "memoryTotal":  "25757220864",
+      "cudaCores":  8192,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-c4db3a41-dc16-21b2-3239-b8a7164bdb99"
+    },
+    {
+      "name":  "NVIDIA RTX A5000",
+      "memoryTotal":  "25757220864",
+      "cudaCores":  8192,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-c5faf962-ebde-862a-7552-54e8515294ef"
+    }
+  ],
+  "cudaVersion":  "12.2",
+  "writerId":  "x7n3qm9npve5s8uanpcn41bpwpoddiu8"
+}

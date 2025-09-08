@@ -1,0 +1,246 @@
+Model: BoW Lexical TFIDF
+ mAP: 	  0.09
+ MRR*:   0.28
+ nDCG@10: 0.23
+ PR-AUC:  0.02
+ mPR-AUC: 0.09
+ R@100:   0.27
+------------------------------------------------------------
+Model: BoW Lexical BM25
+ mAP: 	  0.10
+ MRR*:   0.31
+ nDCG@10: 0.26
+ PR-AUC:  0.02
+ mPR-AUC: 0.11
+ R@100:   0.26
+------------------------------------------------------------
+Model: SBERT SNOMED25 cos-sim
+ mAP: 	  0.19
+ MRR*:   0.55
+ nDCG@10: 0.45
+ PR-AUC:  0.06
+ mPR-AUC: 0.19
+ R@100:   0.41
+------------------------------------------------------------
+Model: SBERT SNOMED25 d_l2
+ mAP: 	  0.19
+ MRR*:   0.55
+ nDCG@10: 0.45
+ PR-AUC:  0.06
+ mPR-AUC: 0.19
+ R@100:   0.41
+------------------------------------------------------------
+Model: HiT SNOMED25(F) d_k
+ mAP: 	  0.17
+ MRR*:   0.42
+ nDCG@10: 0.34
+ PR-AUC:  0.05
+ mPR-AUC: 0.17
+ R@100:   0.56
+------------------------------------------------------------
+/tmp/ipykernel_1138624/614224191.py:8: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /home/conda/feedstock_root/build_artifacts/libtorch_1750199048837/work/torch/csrc/utils/tensor_numpy.cpp:203.)
+  parent_emb_t = torch.Tensor(parent_emd)
+Model: HiT SNOMED25(F) s_e
+ mAP: 	  0.25
+ MRR*:   0.48
+ nDCG@10: 0.35
+ PR-AUC:  0.08
+ mPR-AUC: 0.26
+ R@100:   0.59
+------------------------------------------------------------
+Model: OnTr GALEN(P) d_k
+ mAP: 	  0.21
+ MRR*:   0.56
+ nDCG@10: 0.46
+ PR-AUC:  0.07
+ mPR-AUC: 0.21
+ R@100:   0.48
+------------------------------------------------------------
+Model: OnTr GALEN(P) s_c
+ mAP: 	  0.21
+ MRR*:   0.54
+ nDCG@10: 0.46
+ PR-AUC:  0.07
+ mPR-AUC: 0.21
+ R@100:   0.48
+------------------------------------------------------------
+Model: OnTr ANATOMY(P) d_k
+ mAP: 	  0.24
+ MRR*:   0.67
+ nDCG@10: 0.53
+ PR-AUC:  0.06
+ mPR-AUC: 0.24
+ R@100:   0.47
+------------------------------------------------------------
+Model: OnTr ANATOMY(P) s_c
+ mAP: 	  0.24
+ MRR*:   0.65
+ nDCG@10: 0.51
+ PR-AUC:  0.06
+ mPR-AUC: 0.24
+ R@100:   0.48
+------------------------------------------------------------
+Model: OnTr GO(P) d_k
+ mAP: 	  0.19
+ MRR*:   0.53
+ nDCG@10: 0.41
+ PR-AUC:  0.05
+ mPR-AUC: 0.19
+ R@100:   0.47
+------------------------------------------------------------
+Model: OnTr GO(P) s_c
+ mAP: 	  0.19
+ MRR*:   0.52
+ nDCG@10: 0.41
+ PR-AUC:  0.05
+ mPR-AUC: 0.20
+ R@100:   0.46
+------------------------------------------------------------
+Model: OnTr SNO-25(F-64) d_k
+ mAP: 	  0.18
+ MRR*:   0.56
+ nDCG@10: 0.44
+ PR-AUC:  0.05
+ mPR-AUC: 0.18
+ R@100:   0.38
+------------------------------------------------------------
+Model: OnTr SNO-25(F-64) s_c
+ mAP: 	  0.16
+ MRR*:   0.52
+ nDCG@10: 0.42
+ PR-AUC:  0.05
+ mPR-AUC: 0.16
+ R@100:   0.36
+------------------------------------------------------------
+Model: OnTr SNO-25(M-32) d_k
+ mAP: 	  0.21
+ MRR*:   0.62
+ nDCG@10: 0.49
+ PR-AUC:  0.06
+ mPR-AUC: 0.22
+ R@100:   0.50
+------------------------------------------------------------
+Model: OnTr SNO-25(M-32) s_c
+ mAP: 	  0.23
+ MRR*:   0.58
+ nDCG@10: 0.45
+ PR-AUC:  0.07
+ mPR-AUC: 0.23
+ R@100:   0.57
+------------------------------------------------------------
+Model: OnTr SNO-25(M-64) d_k
+ mAP: 	  0.22
+ MRR*:   0.63
+ nDCG@10: 0.50
+ PR-AUC:  0.06
+ mPR-AUC: 0.22
+ R@100:   0.51
+------------------------------------------------------------
+Model: OnTr SNO-25(M-64) s_c
+ mAP: 	  0.22
+ MRR*:   0.54
+ nDCG@10: 0.44
+ PR-AUC:  0.07
+ mPR-AUC: 0.22
+ R@100:   0.58
+------------------------------------------------------------
+Model: OnTr SNO-25(M-128) d_k
+ mAP: 	  0.21
+ MRR*:   0.64
+ nDCG@10: 0.51
+ PR-AUC:  0.06
+ mPR-AUC: 0.22
+ R@100:   0.49
+------------------------------------------------------------
+Model: OnTr SNO-25(M-128) s_c
+ mAP: 	  0.22
+ MRR*:   0.56
+ nDCG@10: 0.46
+ PR-AUC:  0.07
+ mPR-AUC: 0.22
+ R@100:   0.56
+------------------------------------------------------------
+Model: Mixed SNO-25(F-HOS) d_m
+ mAP: 	  0.19
+ MRR*:   0.50
+ nDCG@10: 0.40
+ PR-AUC:  0.06
+ mPR-AUC: 0.19
+ R@100:   0.53
+------------------------------------------------------------
+Model: Mixed SNO-25(M-32-128) d_m
+ mAP: 	  0.22
+ MRR*:   0.65
+ nDCG@10: 0.51
+ PR-AUC:  0.06
+ mPR-AUC: 0.22
+ R@100:   0.50
+------------------------------------------------------------
+All results saved to ../data/oov_entity_mentions_multi_relevant_targets_weight_w035_50_queries.json
+Macro PR AUC plot data dumped to ../data/oov_entity_mentions_multi_target_WEIGHTED_w035_50_q__PR_AUC_POINTS_4_PLOT.json
+Printing table: 
+
+
+Model       Variant        Metric    mAP    MRR*   nDCG@10   PR-AUC   R@100
+===========================================================================
+BoW     Lexical            TFIDF     0.09   0.28    0.23      0.09    0.27 
+BoW     Lexical            BM25      0.10   0.31    0.26      0.11    0.26 
+SBERT   SNOMED25           cos-sim   0.19   0.55    0.45      0.19    0.41 
+SBERT   SNOMED25           d_l2      0.19   0.55    0.45      0.19    0.41 
+HiT     SNOMED25(F)        d_k       0.17   0.42    0.34      0.17    0.56 
+HiT     SNOMED25(F)        s_e       0.25   0.48    0.35      0.26    0.59 
+OnTr    GALEN(P)           d_k       0.21   0.56    0.46      0.21    0.48 
+OnTr    GALEN(P)           s_c       0.21   0.54    0.46      0.21    0.48 
+OnTr    ANATOMY(P)         d_k       0.24   0.67    0.53      0.24    0.47 
+OnTr    ANATOMY(P)         s_c       0.24   0.65    0.51      0.24    0.48 
+OnTr    GO(P)              d_k       0.19   0.53    0.41      0.19    0.47 
+OnTr    GO(P)              s_c       0.19   0.52    0.41      0.20    0.46 
+OnTr    SNO-25(F-64)       d_k       0.18   0.56    0.44      0.18    0.38 
+OnTr    SNO-25(F-64)       s_c       0.16   0.52    0.42      0.16    0.36 
+OnTr    SNO-25(M-32)       d_k       0.21   0.62    0.49      0.22    0.50 
+OnTr    SNO-25(M-32)       s_c       0.23   0.58    0.45      0.23    0.57 
+OnTr    SNO-25(M-64)       d_k       0.22   0.63    0.50      0.22    0.51 
+OnTr    SNO-25(M-64)       s_c       0.22   0.54    0.44      0.22    0.58 
+OnTr    SNO-25(M-128)      d_k       0.21   0.64    0.51      0.22    0.49 
+OnTr    SNO-25(M-128)      s_c       0.22   0.56    0.46      0.22    0.56 
+Mixed   SNO-25(F-HOS)      d_m       0.19   0.50    0.40      0.19    0.53 
+Mixed   SNO-25(M-32-128)   d_m       0.22   0.65    0.51      0.22    0.50 
+
+
+ Printing LaTeX: 
+
+
+\begin{table}[H]
+	\caption[Multi target performance of OOV mentions, lambda=0.35]{Performance of fetching multiple relevant entities using OOV mentions with lambda=0.35 (50 Queries)}
+	\begin{center}
+		\begin{tabular}{lllccccc}
+			\toprule
+			Model & Variant & Metric & mAP & MRR* & nDCG@10 & PR-AUC & R@100 \\
+			\midrule
+			BoW & Lexical & TFIDF & 0.09 & 0.28 & 0.23 & 0.09 & 0.27 \\
+			BoW & Lexical & BM25 & 0.10 & 0.31 & 0.26 & 0.11 & 0.26 \\
+			SBERT & SNOMED25 & cos-sim & 0.19 & 0.55 & 0.45 & 0.19 & 0.41 \\
+			SBERT & SNOMED25 & d_l2 & 0.19 & 0.55 & 0.45 & 0.19 & 0.41 \\
+			HiT & SNOMED25(F) & d_k & 0.17 & 0.42 & 0.34 & 0.17 & 0.56 \\
+			HiT & SNOMED25(F) & s_e & 0.25 & 0.48 & 0.35 & 0.26 & 0.59 \\
+			OnTr & GALEN(P) & d_k & 0.21 & 0.56 & 0.46 & 0.21 & 0.48 \\
+			OnTr & GALEN(P) & s_c & 0.21 & 0.54 & 0.46 & 0.21 & 0.48 \\
+			OnTr & ANATOMY(P) & d_k & 0.24 & 0.67 & 0.53 & 0.24 & 0.47 \\
+			OnTr & ANATOMY(P) & s_c & 0.24 & 0.65 & 0.51 & 0.24 & 0.48 \\
+			OnTr & GO(P) & d_k & 0.19 & 0.53 & 0.41 & 0.19 & 0.47 \\
+			OnTr & GO(P) & s_c & 0.19 & 0.52 & 0.41 & 0.20 & 0.46 \\
+			OnTr & SNO-25(F-64) & d_k & 0.18 & 0.56 & 0.44 & 0.18 & 0.38 \\
+			OnTr & SNO-25(F-64) & s_c & 0.16 & 0.52 & 0.42 & 0.16 & 0.36 \\
+			OnTr & SNO-25(M-32) & d_k & 0.21 & 0.62 & 0.49 & 0.22 & 0.50 \\
+			OnTr & SNO-25(M-32) & s_c & 0.23 & 0.58 & 0.45 & 0.23 & 0.57 \\
+			OnTr & SNO-25(M-64) & d_k & 0.22 & 0.63 & 0.50 & 0.22 & 0.51 \\
+			OnTr & SNO-25(M-64) & s_c & 0.22 & 0.54 & 0.44 & 0.22 & 0.58 \\
+			OnTr & SNO-25(M-128) & d_k & 0.21 & 0.64 & 0.51 & 0.22 & 0.49 \\
+			OnTr & SNO-25(M-128) & s_c & 0.22 & 0.56 & 0.46 & 0.22 & 0.56 \\
+			Mixed & SNO-25(F-HOS) & d_m & 0.19 & 0.50 & 0.40 & 0.19 & 0.53 \\
+			Mixed & SNO-25(M-32-128) & d_m & 0.22 & 0.65 & 0.51 & 0.22 & 0.50 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\label{tab:multi-target-oov-weighted}
+\end{table}
