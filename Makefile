@@ -72,6 +72,10 @@ multi-target:
 	@echo "[MULTI-TARGET] Running multiple target experiments ... "
 	./scripts/multitarget.sh
 
+verb-axioms:
+	@echo "[VERB-AXIOMS] Verbalising axioms for RAG ... "
+	./scripts/verbalise_axioms.sh
+
 no-rag:
 	@echo "[NO-RAG] Running no rag experiment ... "
 	./scripts/no-rag.sh
