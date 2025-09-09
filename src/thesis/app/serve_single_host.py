@@ -26,7 +26,13 @@ from thesis.utils.data_utils import (
     parallel_tokenise
 )
 
-from thesis.utils.llm_utils import ApproximateNearestNeighbourEntitySelector, MistralLLM, chat_prompt_template_no_rag, chat_prompt_template_with_axioms
+from thesis.utils.llm_utils import (
+    ApproximateNearestNeighbourEntitySelector,
+    MistralLLM, 
+    chat_prompt_template_no_rag, 
+    chat_prompt_template_with_axioms
+)
+
 from thesis.utils.retrievers import (
     TFIDFRetriever,
     BM25Retriever,
@@ -242,9 +248,6 @@ def extract_scispacy_entities(question: str, nlp) -> List[Dict[str, Any]]:
 
 # BOOTSTRAP: LLM (END)
 
-
-
-
 # # ideally, we would load from config (TODO: load cfgNode \w yacs or hydra)
 # tests = QATestHarness(
 #   Path("./data/benchmark.json"),
@@ -259,8 +262,6 @@ def extract_scispacy_entities(question: str, nlp) -> List[Dict[str, Any]]:
 # ).register_llm(
 #   mistral_llm # type: ignore
 # )
-
-
 
 # app
 
@@ -322,7 +323,12 @@ def my_map(fn: Callable, xs: list):
 
 # map :: (a -> b) -> [a] -> [b]
 def map_query_result_to_retrieval_items(results: list[QueryResult]) -> list[SingleRetrievalItem]:
-    return [SingleRetrievalItem(*result) for result in results]
+    return [SingleRetrievalItem(
+        rank=result[0],
+        id=result[1],
+        score=result[2],
+        text=result[3]
+    ) for result in results]
 
 # END CHANGES
 
@@ -437,6 +443,10 @@ class QuestionRequest(BaseModel):
   question: str
   retrieval_method: str
   score_function: str
+  max_new_tokens: int = 128
+  temperature: float = 0.3
+  top_k: int = 40
+  top_p: float = 0.85
 
 class QuestionResponse(BaseModel):
   generated_text: str
@@ -464,6 +474,19 @@ def question(req: QuestionRequest):
 
     axiom_verbalisations = [fetch_verbalisation(result.id) for result in entity_results]
 
+    # temporary work around for obtaining the length .. hacky and inefficient!
+    custom_prompt = mistral_llm.produce_template_prompt(
+        "axiom_rag_chat", 
+        {
+            "question": req.question, 
+            "axioms": axiom_verbalisations
+        }
+    )
+    custom_prompt_length = len(custom_prompt)
+
+    print("Custom Prompt: ")
+    print(custom_prompt)
+
     llm_response = mistral_llm.generate_inject_template(
         # name of the template fn
         "axiom_rag_chat",
@@ -473,11 +496,11 @@ def question(req: QuestionRequest):
             "axioms": axiom_verbalisations
         },
         # arguments to LLM generate function (e.g. max_new_tokens, etc)
-        max_new_tokens = req.get("max_new_tokens", 128),
+        max_new_tokens = req.max_new_tokens,
         do_sample = True,
-        temperature = req.get("temperature", 0.3),
-        top_k = req.get("top_k", 40),
-        top_p = req.get("top_p", 0.85)
+        temperature = req.temperature,
+        top_k = req.top_k,
+        top_p = req.top_p
     ) # generate
 
     print("Full LLM Response: ")
@@ -486,7 +509,7 @@ def question(req: QuestionRequest):
 
     # remove the original question from the response
 
-    processed_response = llm_response[len(req.question):]
+    processed_response = llm_response[custom_prompt_length:]
 
     print("Processed Response: ")
     print(processed_response)

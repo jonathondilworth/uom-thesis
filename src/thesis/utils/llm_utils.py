@@ -208,6 +208,11 @@ class MistralLLM:
     prompt = template_fn(**template_args)
     return self.generate(prompt, **kwargs)
   
+  def produce_template_prompt(self, template_key: str, template_args: dict, **kwargs):
+    template_fn = self._callable_prompt_templates[template_key]
+    prompt = template_fn(**template_args)
+    return prompt
+  
   def generate_constrain_logits(self, prompt: str, logits_processor_list: list | None = None, max_tokens: int = 1000, **kwargs):
     if logits_processor_list is None:
       logits_processor_list = []
