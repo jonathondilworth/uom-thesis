@@ -182,13 +182,62 @@ ner_categories = [
     "PER"
 ]
 
-nlp = spacy.load("en_core_sci_sm")
+import sys
+from typing import Dict, List, Any
+
+try:
+    import spacy
+except ImportError as e:
+    sys.exit("spaCy is required for entity extraction")
+
+_SCISPACY_AVAILABLE = False
+
+try:
+    import scispacy
+    from spacy.util import get_package_path
+except ImportError:
+    pass
+else:
+    _SCISPACY_AVAILABLE = True
+
+def load_scispacy_model(model_name: str = "en_ner_bionlp13cg_md"):
+    """
+    SciSpaCy models are ordinary spaCy packages; tries to download & install model if not found
+    :model_name name of the scispacy model to load/download+load
+    """
+    try:
+        return spacy.load(model_name, disable=["parser", "textcat"])
+    except OSError:
+        print(f"[SciSpaCy] Downloading model {model_name}", file=sys.stderr)
+        from spacy.cli import download # type: ignore
+        download(model_name)
+        return spacy.load(model_name, disable=["parser", "textcat"])
+
+nlp = load_scispacy_model()
+
+if not nlp:
+    nlp = spacy.load("en_core_sci_sm")
 
 def extract_med_entities(q: str):
     return [
       {
         "entity_literal": x.text
       } for x in (nlp(q)).ents
+    ]
+
+def extract_scispacy_entities(question: str, nlp) -> List[Dict[str, Any]]:
+    """
+    TODO: doc comment
+    """
+    doc = nlp(question)
+    return [
+        {
+            "entity_literal": ent.text,
+            "start_position": ent.start_char,
+            "end_position": ent.end_char,
+            "entity_type": ent.label_,
+        }
+        for ent in doc.ents
     ]
 
 # BOOTSTRAP: LLM (END)
