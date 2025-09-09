@@ -48,6 +48,7 @@ dvc-task==0.40.2
 einops==0.8.1
 entrypoints==0.4
 evaluate==0.4.5
+fastapi
 fire==0.7.0
 flair==0.15.1
 Flask==3.1.1
