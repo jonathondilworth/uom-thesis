@@ -149,6 +149,7 @@ def render_verbalisation(graph: Graph, axiom) -> str:
         on_property = next(graph.objects(axiom, OWL.onProperty), None)
         some_values_from = next(graph.objects(axiom, OWL.someValuesFrom), None)
         constituents = []
+        dl = []
         if on_property is not None and some_values_from is not None:
             constituents.append(f"{format(graph, on_property)} some {render_verbalisation(graph, some_values_from)}")
         if constituents:
@@ -171,6 +172,38 @@ def render_verbalisation(graph: Graph, axiom) -> str:
     return format(graph, axiom)
 
 
+def render_description_logic_string(graph: Graph, axiom) -> str:
+    """transform a subset of OWL axioms to a basic description logic string"""
+    if isinstance(axiom, URIRef) or not isinstance(axiom, BNode):
+        return format(graph, axiom)
+    
+    # owl:Restriction
+    if (axiom, RDF.type, OWL.Restriction) in graph:
+        on_property = next(graph.objects(axiom, OWL.onProperty), None)
+        some_values_from = next(graph.objects(axiom, OWL.someValuesFrom), None)
+        dl = []
+        if on_property is not None and some_values_from is not None:
+            dl.append(f" ∃{format(graph, on_property)}.{render_description_logic_string(graph, some_values_from)} ")
+        if dl:
+            return f" ⊓ ".join(dl)
+        # else:
+        return format(graph, axiom)
+
+    # owl:intersectionOf (RDF list)
+    collection = next(graph.objects(axiom, OWL.intersectionOf), None)
+    if collection is not None:
+        items = []
+        while collection and collection != RDF.nil:
+            head = next(graph.objects(collection, RDF.first), None)
+            if head is not None:
+                items.append(render_description_logic_string(graph, head))
+            collection = next(graph.objects(collection, RDF.rest), None)
+        return " ⊓ ".join(items)
+
+    # fallback, anonymous expression:
+    return format(graph, axiom)
+
+
 def build_axiom_verb_json(graph: Graph, nodes, subclass_edges, equivalence_edges):
     """builds a handy JSON data structure to hold axiom definitions/verbalisatins for (later) RAG"""
     parents_map = map_antecedents(subclass_edges)
@@ -187,9 +220,13 @@ def build_axiom_verb_json(graph: Graph, nodes, subclass_edges, equivalence_edges
         # get every equiv class and materialise its verbalised class expression
         equivalents = [equiv for equiv in equivalents_map.get(iri_node, set()) if equiv != iri_node]
         equivalent_to_xs = [render_verbalisation(graph, equiv) for equiv in equivalents]
+        dl_equivalent_to_xs = [render_description_logic_string(graph, equiv) for equiv in equivalents]
+        # DL 
         # verbalisations
         verbal_subclass = [f"is a type of {name}" for name in subsumed_by_xs]
         verbal_equiv = [f"defined as {expr}" for expr in equivalent_to_xs]
+        dl_subclass = [f"⊑ {name}" for name in subsumed_by_xs]
+        dl_equiv = [f"≡ {expr}" for expr in dl_equivalent_to_xs]
         # build data structure ready for downstream RAG
         json_struct[iri_str] = {
             "label": node_label,
@@ -199,6 +236,8 @@ def build_axiom_verb_json(graph: Graph, nodes, subclass_edges, equivalence_edges
                 "subclass_of": verbal_subclass,
                 "equivalent_to": verbal_equiv,
             },
+            "dl_subclass_of": dl_subclass,
+            "dl_equivalent_to": dl_equiv
         }
     # finally:
     return json_struct

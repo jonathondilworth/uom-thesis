@@ -134,6 +134,21 @@ def fetch_verbalisation(concept_iri: str) -> str:
     print("[WARNING] Cannot find subclass axioms or equiv axioms! Returning empty string!")
     return ""
 
+def fetch_description_logic_string(concept_iri: str) -> str:
+    snomed_concept = GLOBAL_VERBALISATIONS[concept_iri]
+    if not snomed_concept:
+      return ""
+    label = snomed_concept['label'] # rdfs_label
+    subclass_dl_strs = snomed_concept.get("dl_subclass_of", [])[:1]
+    equiv_dl_strs = snomed_concept.get("dl_equivalent_to", [])[:1]
+    if len(subclass_dl_strs) > 0:
+        return subclass_dl_strs[0]
+    if len(equiv_dl_strs) > 0:
+        return equiv_dl_strs[0]
+    # else:
+    print("[WARNING] Cannot find subclass axioms or equiv axioms for DL String!! Returning empty string!")
+    return ""
+
 def custom_prompt_with_axioms(question: str, axioms: list[str], **kwargs) -> str:
   """produce a biomedical MCQA prompt for RAG, discards additional kwargs (e.g. answer)"""
   if not axioms:
@@ -374,6 +389,21 @@ def search(req: RetrievalRequest):
     centri_weight = 0.35 # default
     if req.weight:
         centri_weight = req.weight
+    
+    print("CENTRI WEIGHT. ", centri_weight)
+    print("REQUEST WEIGHT. ", req.weight)
+
+    print("Processing request for search with params:")
+    print(f"Query String: {req.query}")
+    print(f"Retrieval Method: {req.retrieval_method}")
+    print(f"Score Function: {req.score_function}")
+    print(f"Centripetal Weight (Depth Bias): {centri_weight}")
+    print(f"Retrieve Top K: {req.top_k}")
+
+    # TODO: Add Support for Mixed Models
+    # Mainly not provided here due to time constraints associated with building out a UI
+    # that allows for custom model mixtures + associated backend engineering work (deviation
+    # from the existing mixed model retrievers)
 
     match req.retrieval_method:
         case "tf-idf":
@@ -447,9 +477,17 @@ class QuestionRequest(BaseModel):
   temperature: float = 0.3
   top_k: int = 40
   top_p: float = 0.85
-
+  # TODO: This is possible, but it's not super straight
+  # forward to implement from a UI perspective...
+  # and we can't rely on the input being sensible
+  # (and predictably parsing it)
+  # ^^^ to see examples of this, see the rag exp .py files.
+  limit_to_single_character_response: bool = False
+  
 class QuestionResponse(BaseModel):
   generated_text: str
+  prompt: str
+  context: str
 
 # LLM Question @ <address>/question
 @app.post("/question", response_model=QuestionResponse)
@@ -472,7 +510,8 @@ def question(req: QuestionRequest):
     print("Entity Results: ")
     print(entity_results)
 
-    axiom_verbalisations = [fetch_verbalisation(result.id) for result in entity_results]
+    axiom_verbalisations = [f"{result.text} {fetch_verbalisation(result.id)}" for result in entity_results]
+    axiom_description_logics = [f"{result.text} {fetch_description_logic_string(result.id)}" for result in entity_results]
 
     # temporary work around for obtaining the length .. hacky and inefficient!
     custom_prompt = mistral_llm.produce_template_prompt(
@@ -528,7 +567,13 @@ def question(req: QuestionRequest):
 
     # END OF OLD CODE
 
-    json_encoded_response = jsonable_encoder(processed_response)
+    response_object = {
+        "generated_text": processed_response,
+        "prompt": custom_prompt,
+        "context": f"{axiom_verbalisations[0]} .. DL: {axiom_description_logics[0]}"
+    }
+
+    json_encoded_response = jsonable_encoder(response_object)
     return JSONResponse(content=json_encoded_response, status_code=200)
 
     # if we get here then something went wrong!
