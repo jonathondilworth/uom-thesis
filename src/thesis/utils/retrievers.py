@@ -10,7 +10,7 @@ from sentence_transformers import SentenceTransformer
 from scipy.sparse import coo_matrix, csr_matrix
 from typing import Union, Callable, Union, Any, override, overload
 
-from thesis.utils.data_utils import parallel_tokenise
+from thesis.utils.data_utils import parallel_tokenise, naive_tokenise
 from thesis.utils.math_functools import batch_poincare_dist_with_adaptive_curv_k, batch_euclidian_l2_distance
 from hierarchy_transformers import HierarchyTransformer
 from OnT.OnT import OntologyTransformer
@@ -230,138 +230,124 @@ class SBERTRetriever(BaseModelRetriever):
 
 
 
-
-# Everything below here is a mess (actally, this file more broadly is a mess), TODO: fix
-
 class BM25Retriever(BaseRetriever):
     
-    _bm25: BM25Okapi
-    _tokenizer: Callable[[str], Sequence[str]]
+  _bm25: BM25Okapi
 
-    @validate_call
-    def __init__(self, verbalisations_fp: Path, meta_map_fp: Path, *, 
-                 tokenizer: Callable[[str], Sequence[str]] | None = None, 
-                 k1: float = 1.3, b: float = 0.7) -> None:
-        # k1 should be tuned between 0.5 and 2 in increments of 0.1
-        # b should be tuned between 0 and 1 in increments of 0.05
-        super().__init__(verbalisations_fp, meta_map_fp)
+  @validate_call
+  def __init__(self, verbalisations_fp: Path, meta_map_fp: Path, k1: float = 1.3, b: float = 0.7):
+    super().__init__(verbalisations_fp, meta_map_fp)
+    self._tokenised_verbalisations = parallel_tokenise(self._verbalisations, workers=4)
+    self._bm25 = BM25Okapi(self._tokenised_verbalisations, k1=k1, b=b)
 
-        if tokenizer is None:
-          tokenizer = lambda text: text.lower().split()
-        self._tokenizer = tokenizer
+  @classmethod
+  def build_from_index(cls, index_fp: Path | str):
+    pass
 
-        def _resolve_verbalisation(v):
-          if isinstance(v, str):
-            return v
-          if isinstance(v, dict) and "verbalisation" in v:
-            return v["verbalisation"]
-          raise ValueError("Could not resolve a verbalisation string.")
+  def save_index(self, index_fp: Path | str):
+    if isinstance(index_fp, Path):
+      index_fp = str(index_fp.expanduser().resolve())
+    with open(index_fp, "wb") as fp:
+      pickle.dump({
+        "index": self._bm25,
+        "verbalisations": self._verbalisations,
+        "meta_map": self._meta_map
+      }, fp, protocol=pickle.HIGHEST_PROTOCOL)
+    print("Saved BM25 index to disk.")
+    
+  def load_index(self, index_fp: Path | str):
+    if isinstance(index_fp, Path):
+      index_fp = str(index_fp.expanduser().resolve())
+    with open(index_fp, "rb") as fp:
+      bm25_bin = pickle.load(fp)
+    self._bm25 = bm25_bin['index']
+    self._verbalisations = bm25_bin['verbalisations']
+    self._meta_map = bm25_bin['meta_map']
 
-        tokenised_corpus = [
-          self._tokenizer(_resolve_verbalisation(v))
-          for v in self._verbalisations
-        ]
-
-        self._bm25 = BM25Okapi(tokenised_corpus, k1=k1, b=b)
-
-    def retrieve(self, query_string: str, *, top_k: int | None = None, **kwargs) -> list[QueryResult]:
-      tokens = self._tokenizer(query_string)
-      scores = self._bm25.get_scores(tokens)
-      if top_k is not None:
-        top_idx = np.argsort(scores)[::-1][:top_k]
-      else:
-        top_idx = np.argsort(scores)[::-1]
-      results: list[QueryResult] = []
-      for rank, idx in enumerate(top_idx):
-        iri = self._meta_map[idx]["iri"]
-        verbalisation = (
-          self._verbalisations[idx] if isinstance(self._verbalisations[idx], str)
-          else self._verbalisations[idx]["verbalisation"]
+  def retrieve(self, query_string: str, *, top_k: int | None = None, **kwargs) -> list[QueryResult]:
+    tokens = naive_tokenise(query_string)
+    scores = self._bm25.get_scores(tokens)
+    if top_k is not None:
+      top_idx = np.argsort(scores)[::-1][:top_k]
+    else:
+      top_idx = np.argsort(scores)[::-1]
+    results = []
+    for rank, idx in enumerate(top_idx):
+      iri = self._meta_map[idx]['iri']
+      verbalisation = self._verbalisations[idx]
+      results.append(
+        QueryResult(
+          rank=rank,
+          iri=iri,
+          score=float(scores[idx]),
+          verbalisation=verbalisation
         )
-        results.append(
-          QueryResult(
-              rank=rank,
-              iri=iri,
-              score=float(scores[idx]),
-              verbalisation=verbalisation,
-          )
-        )
-      return results
+      )
+    return results
+
 
 
 class TFIDFRetriever(BaseRetriever):
     
-    _vectorizer: TfidfVectorizer
-    _inverted_index: dict[str, list[tuple[int, float]]]
-    _tfidf_matrix: csr_matrix
-    _tokenizer: Callable[[str], Sequence[str]] | None
+  _vectorizer: TfidfVectorizer
+  _inverted_index: dict[str, list[tuple[int, float]]]
+  _tfidf_matrix: "scipy.sparse.csr_matrix"
+  _tokenizer: Callable[[str], Sequence[str]] | None
 
-    @validate_call
-    def __init__(self, verbalisations_fp: Path, meta_map_fp: Path, *,
-        lowercase: bool = True, stop_words: str | None = "english",
-        ngram_range: tuple[int, int] = (1, 1),
-        tokenizer: Callable[[str], Sequence[str]] | None = None,
-        max_features: int | None = None,
-    ) -> None:
-        
-        super().__init__(verbalisations_fp, meta_map_fp)
+  @validate_call
+  def __init__(self, verbalisations_fp: Path, meta_map_fp: Path, *,
+    lowercase: bool = True, stop_words: str | None = "english",
+    ngram_range: tuple[int, int] = (1, 1),
+    tokenizer: Callable[[str], Sequence[str]] | None = None,
+    max_features: int | None = None,
+  ) -> None:
+    super().__init__(verbalisations_fp, meta_map_fp)
+    self._vectorizer = TfidfVectorizer(
+      stop_words="english",
+      use_idf=True,
+      smooth_idf=True,
+      # norm="l2"
+      norm=None
+    )
+    doc_term_matrix = self._vectorizer.fit_transform(self._verbalisations)
+    vocab = self._vectorizer.get_feature_names_out()
+    inverted_index: dict[str, list[tuple[int, float]]] = {term: [] for term in vocab}
+    coo = coo_matrix(doc_term_matrix)
 
-        def _resolve(v):
-            if isinstance(v, str):
-                return v
-            if isinstance(v, dict) and "verbalisation" in v:
-                return v["verbalisation"]
-            raise ValueError("Unexpected verbalisation item: %r" % v)
+    for row, col, score in zip(coo.row, coo.col, coo.data):
+      inverted_index[str(vocab[col])].append((int(row), float(score)))
+    for postings in inverted_index.values():
+      postings.sort(key=lambda x: x[1], reverse=True)
 
-        corpus: list[str] = [_resolve(v) for v in self._verbalisations]
+    self._inverted_index = inverted_index
 
-        self._vectorizer = TfidfVectorizer(
-          stop_words="english",
-          use_idf=True,
-          smooth_idf=True,
-          # norm="l2"
-          norm=None
+  def retrieve(self, query_string: str, *, top_k: int | None = None, **kwargs) -> list[QueryResult]:
+    query_vec = self._vectorizer.transform([query_string])
+    vocab = self._vectorizer.get_feature_names_out()        
+    q_weights = {
+      vocab[col]: float(val)
+      for col, val in zip(query_vec.indices, query_vec.data) # type: ignore
+      if val > 0.0
+    }
+    tfidf_scores = aggregate_posting_scores(q_weights, self._inverted_index)
+    if top_k:
+      tfidf_top = topk(tfidf_scores, top_k)
+    else:
+      tfidf_top = topk(tfidf_scores, len(tfidf_scores))
+    results: list[QueryResult] = []
+    for rank, (doc_id, score) in enumerate(tfidf_top, 1):
+      iri = self._meta_map[doc_id]['iri']
+      verbalisation = self._meta_map[doc_id]['verbalisation']
+      results.append(
+        QueryResult(
+          rank=rank,
+          iri=iri,
+          score=float(score),
+          verbalisation=verbalisation,
         )
-        doc_term_matrix = self._vectorizer.fit_transform(corpus)
-        vocab = self._vectorizer.get_feature_names_out()
-        inverted_index: dict[str, list[tuple[int, float]]] = {term: [] for term in vocab}
-        coo = coo_matrix(doc_term_matrix)
-        
-        for row, col, score in zip(coo.row, coo.col, coo.data):
-          inverted_index[str(vocab[col])].append((int(row), float(score)))
-        
-        for postings in inverted_index.values():
-          postings.sort(key=lambda x: x[1], reverse=True)
+      )
+    return results
 
-        self._inverted_index = inverted_index
-
-    def retrieve(self, query_string: str, *, top_k: int | None = None, **kwargs) -> list[QueryResult]:
-        query_vec = self._vectorizer.transform([query_string])
-        vocab = self._vectorizer.get_feature_names_out()
-        q_weights = {
-            vocab[col]: float(val)
-            for col, val in zip(query_vec.indices, query_vec.data) # type: ignore
-            if val > 0.0
-        }
-        tfidf_scores = aggregate_posting_scores(q_weights, self._inverted_index)
-        if top_k:
-          tfidf_top = topk(tfidf_scores, top_k)
-        else:
-          tfidf_top = topk(tfidf_scores, len(tfidf_scores))
-        
-        results: list[QueryResult] = []
-        for rank, (doc_id, score) in enumerate(tfidf_top, 1):
-          iri = self._meta_map[doc_id]['iri']
-          verbalisation = self._meta_map[doc_id]['verbalisation']
-          results.append(
-            QueryResult(
-              rank=rank,
-              iri=iri,
-              score=float(score),
-              verbalisation=verbalisation,
-            )
-          )
-        return results
 
 
 def mixed_product_distance(d_hit: np.ndarray, d_ont: np.ndarray, d_sbert: np.ndarray, 
