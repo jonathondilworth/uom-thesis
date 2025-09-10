@@ -1,7 +1,9 @@
 SHELL := /usr/bin/env bash
 .DEFAULT_GOAL := all
 
-.PHONY: init env snomed process-snomed process-mirage sample build-eval eval hit-train hit-data ont-train ont-data clean docker-build-eval docker all default docker
+IMAGE ?= uom-thesis:gpu
+
+.PHONY: init env snomed process-snomed process-mirage sample build-eval eval hit-train hit-data ont-train ont-data clean docker-build-eval docker all default docker models embeddings single-target multi-target no-rag sbert-rag hit-rag ont-rag docker-build docker-init docker-test docker-snomed docker-mirage docker-sample tests docker-embeddings docker-models docker-single-target docker-multi-target docker-axioms docker-no-rag docker-hit-rag docker-ont-rag docker-sbert-rag
 
 init:
 	@echo "[INIT] Initialising project enviornment variables and .env"
@@ -101,21 +103,61 @@ tests:
 	pytest
 
 docker-build:
-	docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t uom-thesis-dev .
+	docker build --build-arg BASE_IMAGE=nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu22.04 --build-arg GPU=1 --build-arg ENV_NAME=knowledge-retrieval-env -t uom-thesis:gpu .
 
-docker-run-dry:
-	docker run --rm -it --env-file ./.env -v $$PWD:/work -w /work uom-thesis-dev
+docker-test:
+	docker run --rm -it --gpus all -v "$PWD":/work --env-file ./.env uom-thesis:gpu bash -lc 'python -c "import torch; print(\"CUDA:\", torch.cuda.is_available())";'
 
-docker-make:
-	docker run --rm -it --env-file ./.env -v $$PWD:/work -w /work uom-thesis-dev make
+docker-init:	
+	docker run --rm -it -v $$PWD:/work -w /work $(IMAGE) make init
+
+docker-snomed:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make snomed
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make process-snomed
+
+docker-mirage:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make process-mirage
+
+docker-sample:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make sample
+
+docker-eval:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make build-eval
+
+docker-models:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make models
+
+docker-embeddings:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make embeddings
 
 docker-single-target:
-	docker run --rm -it --env-file ./.env -v $$PWD:/work -w /work uom-thesis-dev bash -lc "make init; make env; make snomed; make process-snomed; make process-mirage; make models; make embeddings; make single-target;"
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make single-target
 
 docker-multi-target:
-	docker run --rm -it --env-file ./.env -v $$PWD:/work -w /work uom-thesis-dev bash -lc "make init; make env; make snomed; make process-snomed; make process-mirage; make models; make embeddings; make multi-target;"
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make multi-target
 
-all: init env snomed eval hit-data ont-data
-	@echo "[ALL] Finished running data prep pipeline!"
+docker-axioms:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make verb-axioms
+
+docker-no-rag:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make no-rag
+
+docker-sbert-rag:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make sbert-rag
+
+docker-hit-rag:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make hit-rag
+
+docker-ont-rag:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make ont-rag
+
+docker-make:
+	docker run --rm -it --gpus all --env-file ./.env -v $$PWD:/work -w /work $(IMAGE) make docker-all
+
+docker-all: init snomed process-snomed process-mirage sample models embeddings single-target multi-target verb-axioms no-rag sbert-rag hit-rag ont-rag
+	@echo "[ALL] Finished running entire pipeline! ... for docker"
+
+all: init env snomed process-snomed process-mirage sample models embeddings single-target multi-target verb-axioms no-rag sbert-rag hit-rag ont-rag
+	@echo "[ALL] Finished running entire pipeline!"
 
 default: all

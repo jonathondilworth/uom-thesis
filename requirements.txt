@@ -96,8 +96,8 @@ more-itertools==10.7.0
 mpld3==0.5.10
 munkres==1.1.4
 nmslib-metabrainz==2.1.3
-nvidia-cublas-cu12==12.9.1.4
-nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cublas-cu12
+nvidia-cuda-runtime-cu12
 omegaconf==2.3.0
 onnxruntime==1.22.1
 openai==1.99.5
@@ -121,7 +121,7 @@ pygtrie==2.5.0
 python-dotenv==1.1.1
 python-liquid==2.0.2
 python-multipart==0.0.20
-pytorch_revgrad==0.2.0
+pytorch_revgrad
 PyWavelets==1.8.0
 rank-bm25==0.2.2
 requests-toolbelt==1.0.0
@@ -152,7 +152,7 @@ tiktoken==0.10.0
 timm==1.0.19
 toml==0.10.2
 tomlkit==0.13.3
-torchvision==0.22.1
+torchvision
 transformer-smaller-training-vocab==0.4.2
 transformers==4.55.0
 typer==0.16.0

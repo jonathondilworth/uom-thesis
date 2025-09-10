@@ -25,6 +25,22 @@ export PYTHONPATH="$project_root/lib${PYTHONPATH:+:$PYTHONPATH}"
 
 echo ""
 
+# ADDED TO SUPPORT DOCKER:
+
+# Resolve a ROBOT runner
+ROBOT_LOCAL="./robot/bin/robot"
+if [[ -x "$ROBOT_LOCAL" ]]; then
+  ROBOT="$ROBOT_LOCAL"
+elif command -v robot >/dev/null 2>&1; then
+  ROBOT="$(command -v robot)"
+elif [[ -n "${ROBOT_JAR:-}" && -f "$ROBOT_JAR" ]]; then
+  ROBOT=(java -jar "$ROBOT_JAR")
+else
+  echo "[ERROR] ROBOT not found: tried ./robot/bin/robot, 'robot' on PATH, and \$ROBOT_JAR." >&2
+  exit 1
+fi
+# END OF DOCKER SUPPORT
+
 echo "[Step 1/4] Extracting SNOMED CT entity lexicon (requires HierarchyTransformers) ... "
 
 echo "" | conda run -n "$AUTO_ENV_NAME" --no-capture-output python ./scripts/load_taxonomy.py
@@ -50,15 +66,15 @@ VERY_VERBOSE=1
 
 # in some cases, we will need to use .ttl (due to an issue with the conversion from RF2 -> OWL)
 
-./robot/bin/robot convert \
-    --input ./data/snomedct-international.owl \
-    --output ./data/snomedct-international.ttl
+"${ROBOT[@]}" convert \
+  --input ./data/snomedct-international.owl \
+  --output ./data/snomedct-international.ttl
 
 echo "CONVERSION FINITO!."
 
 echo "[Step 4/4] Reasoning to produce inferred view via ELK (requires ROBOT, see bootstrap.sh) ... "
 
-./robot/bin/robot reason \
+"${ROBOT[@]}" reason \
   --reasoner ELK \
   --input ./data/snomedct-international.owl \
   --equivalent-classes-allowed all \
