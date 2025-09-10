@@ -25,24 +25,6 @@ make docker-build
 make docker-all
 ```
 
-Alternatively, you can:
-
-1. First build the docker container: `make docker-build`
-2. Initialise the neccesary environment variables: `make docker-init`
-    * Note: should you wish to use the latest SNOMED CT release, include your NHS TRUD API key under `NHS_API_KEY=<API_KEY_HERE>` within `.env`.
-3. Download, then process SNOMED: `make docker-snomed`
-4. Download, then process MIRAGE: `make docker-mirage`
-5. Deterministically sample and rebuild the evaluation dataset: `make docker-sample && make docker-eval`
-6. Obtain the neccesary models: `make docker-models`
-7. Produce the neccesary embeddings for use in the experiments: `make docker-embeddings`
-8. Run single target experiments: `make docker-single-target`
-9. Run multiple target experiments: `make docker-multi-target`
-10. Verbalise SNOMED axioms: `make docker-axioms`
-11. Run QA experiments without RAG (baselines): `make docker-no-rag`
-12. Run SBERT RAG Experiments: `make docker-sbert-rag`
-13. Run HiT RAG Experiments: `make docker-hit-rag`
-14. Run OnT RAG Experiments: `make docker-ont-rag`
-
 *For specific commands and script call sequence, see [Makefile](./Makefile) and [scripts](./scripts).*
 
 #### Run via Bare Metal (with Makefile)
@@ -67,8 +49,6 @@ Simply run `pytest`.
 
 
 
-
-
 ## Models (Encoders)
 
 Models can be conviently downloaded using `gdown` or via the `make models` command. Encoders leveraged by the experiments include: HiT SNOMED Full, OnT SNOMED Full, OnT ANATOMY (prediction), OnT GALEN (prediction), OnT GO (prediction), OnT Miniature SNOMED (M-32, M-64, M-128).
@@ -89,21 +69,7 @@ See [the original OnT paper](https://www.arxiv.org/abs/2507.14334) and the assoc
 
 ### Training Models
 
-To re-train the models used within the thesis, modify the config provided under `./lib/hierarchy_transformers/scripts/config.yaml` and `./lib/OnT/config.yaml` and change the batch size to `32`, `64`, or `128`, then run:
-
-#### HiT
-
-`make hit-data`
-
-`make hit-train`
-
-#### OnT
-
-`make ont-data`
-
-`make ont-train`
-
-
+To re-train the models used within the thesis (first ensure the requisite training data has been generated with `make hit-data` and/or `make ont-data`, then) modify the config provided under `./lib/hierarchy_transformers/scripts/config.yaml` and `./lib/OnT/config.yaml` (changing the batch size to `32`, `64`, or `128`), then run: `make hit-train` or `make ont-train`. Training for additional models is only supported via bare metal deployments.
 
 
 
@@ -132,6 +98,17 @@ make eval # for bare metal deployments
 Failing to include the `NHS_API_KEY` in `.env` will cause the scripts to fallback to use a publicly available version of SNOMED~CT, provided under [Zenodo](https://zenodo.org/records/14036213). In such cases, you will obtain similar results to those reported in the paper, with some small deviations.
 
 ### Single & Multi Target Knowledge Retrieval Experiments
+
+1. First build the docker container: `make docker-build`
+2. Initialise the neccesary environment variables: `make docker-init`
+    * Note: should you wish to use the latest SNOMED CT release, include your NHS TRUD API key under `NHS_API_KEY=<API_KEY_HERE>` within `.env`.
+3. Download, then process SNOMED: `make docker-snomed`
+4. Download, then process MIRAGE: `make docker-mirage`
+5. Deterministically sample and rebuild the evaluation dataset: `make docker-sample && make docker-eval`
+6. Obtain the neccesary models: `make docker-models`
+7. Produce the neccesary embeddings for use in the experiments: `make docker-embeddings`
+8. Run single target experiments: `make docker-single-target`
+9. Run multiple target experiments: `make docker-multi-target`
 
 See Usage. For additional experimental intution, see the included [notebook](./notebooks/retrieval-notebook.ipynb).
 
@@ -172,8 +149,6 @@ Now you can simply run any of the following commands:
 
 
 
-
-
 ## Web Interface
 
 To interface with the embedding store in an intuitive fashion, we provide a simple web interface. The web application leverages a react-based front-end and a FastAPI python wrapper around the project utilities found under `./src/thesis/utils`, specifically the `llm_utils.py` and `retrievers.py`. The purpose of the web interface is to demonstrate the application of transformer-based (language model-based) ontology embeddings to web-search and for retrieval augmented generation.
@@ -183,6 +158,8 @@ To interface with the embedding store in an intuitive fashion, we provide a simp
 [!img][./docs/imgs/search.png]
 
 [!img][./docs/imgs/rag.png]
+
+For additional screenshots, see [the included images](./docs/imgs).
 
 #### Usage
 
