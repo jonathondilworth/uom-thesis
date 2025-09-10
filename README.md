@@ -4,6 +4,8 @@
 
 TODO
 
+
+
 ## Usage
 
 Host system requirements for running containerised experiments:
@@ -41,11 +43,22 @@ make
 
 **Requirements:**
 
-* TODO
+* JDK: `sudo apt install openjdk-17-jdk`
+* Maven: `sudo apt install maven`
+* ROBOT: `git clone git@github.com:ontodev/robot.git` *see: (https://robot.obolibrary.org/)[https://robot.obolibrary.org/]*
+* snomed-owl-toolkit: `git clone git@github.com:IHTSDO/snomed-owl-toolkit.git` and:
+    * `cd snomed-owl-toolkit`
+    * `wget https://github.com/IHTSDO/snomed-owl-toolkit/releases/download/5.3.0/snomed-owl-toolkit-5.3.0-executable.jar`
+
+**For manual build processes, see [docs](./docs/).**
 
 #### Tests
 
-Simply run `pytest`.
+Simply run:
+
+```
+pytest
+```
 
 
 
@@ -55,15 +68,11 @@ Models can be conviently downloaded using `gdown` or via the `make models` comma
 
 ### SNOMED-CT Tuned Models
 
-Manual download link:
-
-URL: [https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view](https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view)
+Manual download link: [https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view](https://drive.google.com/file/d/1cQOqFVOHqBKkSirepzF7ga6mRYPP-LnT/view)
 
 ### Pre-trained OnT Encoders
 
-Manual download link:
-
-URL: [https://drive.google.com/file/d/1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR/view](https://drive.google.com/file/d/1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR/view)
+Manual download link: [https://drive.google.com/file/d/1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR/view](https://drive.google.com/file/d/1t9xWcLHoEE55F0bOPMCw5jltWBxHc2vR/view)
 
 See [the original OnT paper](https://www.arxiv.org/abs/2507.14334) and the associated [GitHub](https://github.com/HuiYang1997/OnT).
 
@@ -155,9 +164,9 @@ To interface with the embedding store in an intuitive fashion, we provide a simp
 
 #### Screenshots
 
-[!img][./docs/imgs/search.png]
+![img][./docs/imgs/search.png]
 
-[!img][./docs/imgs/rag.png]
+![img][./docs/imgs/rag.png]
 
 For additional screenshots, see [the included images](./docs/imgs).
 
@@ -165,4 +174,20 @@ For additional screenshots, see [the included images](./docs/imgs).
 
 To launch the web interface UI, you'll need to have `npm` installed (see [Downloading and installing node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)).
 
-Additionally, to launch the backend FastAPI service, you must have already aquired the models (`make models`, or `make docker-models`), have FastAPI within your local python environment (`pip install fastapi`) and have produced the embeddings (`make embeddings or `/`make docker-embeddings`).
+```
+cd src/frontend_web_ui
+npm install
+npm run dev
+```
+
+Additionally, to launch the backend FastAPI service, you must have already aquired the models (`make models`, or `make docker-models`), have FastAPI within your local python environment (`pip install fastapi`) and have produced the embeddings (`make embeddings or `/`make docker-embeddings`); then, run the following command from the project root:
+
+```
+conda activate knowledge-retrieval-env
+uvicorn thesis.app.serve_single_host:app --host 0.0.0.0 --port 8000
+```
+
+
+
+## License
+
