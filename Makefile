@@ -28,7 +28,7 @@ process-mirage:
 sample:
 	@echo "[SAMPLE] Sampling processed datasets (SNOMED CT and MIRAGE)..."
 	./scripts/process_diff_and_sample.sh
-	./verify-annotaton.sh
+	./scripts/verify-annotaton.sh
 
 build-eval:
 	@echo "[BUILD-EVAL] Building evaluation data..."
