@@ -1,10 +1,4 @@
-# TODO TITLE
-
-## About
-
-TODO
-
-
+# Hierarchical Knowledge Retrieval using Transformer-based Ontology Embeddings (HiT, OnT) in SNOMED CT
 
 ## Usage
 
