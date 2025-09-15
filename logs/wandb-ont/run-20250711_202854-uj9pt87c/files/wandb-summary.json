@@ -1,0 +1,1 @@
+{"train/exist_loss":0.5011,"_timestamp":1.752272344223414e+09,"train/learning_rate":2.7529607313525867e-08,"train/grad_norm":3.6674513816833496,"_step":196,"train/loss":0.5503,"train/epoch":0.9973673552045362,"_wandb":{"runtime":6765},"train/global_step":19700,"train/cluster_loss":0.0094,"_runtime":6765,"train/conj_loss":0.0012,"train/centri_loss":0.0386}

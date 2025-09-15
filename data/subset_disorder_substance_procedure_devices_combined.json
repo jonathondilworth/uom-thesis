@@ -1,0 +1,2190 @@
+[
+  {
+    "internal_id": "mc-04",
+    "source_dataset": "medqa",
+    "question_id": "0750",
+    "question": "A 34-year-old man with acute lymphocytic leukemia presents for follow-up in the oncology clinic after his second cycle of chemotherapy. In addition to intermittent nausea, he has mild weakness, tingling, and numbness in his left hand. With his affected hand, he is able to grip, but occasionally drops small objects. His oncologist tells him that one of his chemotherapy agents likely caused his neuropathy given its strong association with neurotoxicity. He was recently treated with cyclophosphamide, vincristine, doxorubicin, dexamethasone, and dasatinib. The culprit medication works by which of the following mechanisms of action?",
+    "entity_mention": {
+      "entity_literal": "acute lymphocytic leukemia",
+      "start_position": 23,
+      "end_position": 49,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/91857003",
+      "rdfs:label": "Acute lymphoid leukemia, disease (disorder)",
+      "skos:prefLabel": "Acute lymphoid leukaemia",
+      "skos:altLabels": [
+        "ALL - Acute lymphoblastic leukemia",
+        "Acute lymphoid leukaemia, disease",
+        "ALL - Acute lymphoblastic leukaemia",
+        "Acute lymphoid leukemia, disease"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/1172709000",
+        "rdfs:label": "Lymphoid leukemia (morphologic abnormality)",
+        "skos:prefLabel": "Lymphoid leukaemia",
+        "skos:altLabels": [
+          "Lymphatic leukaemia",
+          "Lymphatic leukemia",
+          "Lymphocytic leukaemia",
+          "Lymphocytic leukemia"
+        ],
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/24072005",
+        "rdfs:label": "Acute leukemia (morphologic abnormality)",
+        "skos:prefLabel": "Acute leukaemia",
+        "skos:altLabels": [
+          "Acute leukaemia, morphology, including blast cell OR undifferentiated leukaemia",
+          "Acute leukemia, morphology, including blast cell OR undifferentiated leukemia",
+          "Blast cell leukaemia",
+          "Blast cell leukemia",
+          "Stem cell leukaemia",
+          "Stem cell leukemia",
+          "Undifferentiated leukaemia",
+          "Undifferentiated leukemia"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/108369006",
+        "rdfs:label": "Neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Neoplasm",
+        "skos:altLabels": [
+          "Tumor",
+          "Tumour"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/1162768007",
+        "rdfs:label": "Leukemia (morphologic abnormality)",
+        "skos:prefLabel": "Leukaemia",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/1172709000",
+        "rdfs:label": "Lymphoid leukemia (morphologic abnormality)",
+        "skos:prefLabel": "Lymphoid leukaemia",
+        "skos:altLabels": [
+          "Lymphatic leukaemia",
+          "Lymphatic leukemia",
+          "Lymphocytic leukaemia",
+          "Lymphocytic leukemia"
+        ],
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/118956008",
+        "rdfs:label": "Body structure, altered from its original anatomical structure (morphologic abnormality)",
+        "skos:prefLabel": "Morphologically altered structure",
+        "skos:altLabels": [
+          "Body structure, altered from its original anatomical structure",
+          "Morphologic alteration",
+          "Morphologic change"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/123037004",
+        "rdfs:label": "Body structure (body structure)",
+        "skos:prefLabel": "Body structure",
+        "skos:altLabels": [
+          "Body structures"
+        ],
+        "depth": 9
+      },
+      {
+        "iri": "http://snomed.info/id/1240414004",
+        "rdfs:label": "Malignant neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Malignant neoplasm",
+        "skos:altLabels": [
+          "Blastoma",
+          "Cancer",
+          "Malignancy",
+          "Malignant neoplasm morphology",
+          "Malignant tumor",
+          "Malignant tumour",
+          "Unclassified malignant tumor",
+          "Unclassified malignant tumour"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 10
+      },
+      {
+        "iri": "http://snomed.info/id/24072005",
+        "rdfs:label": "Acute leukemia (morphologic abnormality)",
+        "skos:prefLabel": "Acute leukaemia",
+        "skos:altLabels": [
+          "Acute leukaemia, morphology, including blast cell OR undifferentiated leukaemia",
+          "Acute leukemia, morphology, including blast cell OR undifferentiated leukemia",
+          "Blast cell leukaemia",
+          "Blast cell leukemia",
+          "Stem cell leukaemia",
+          "Stem cell leukemia",
+          "Undifferentiated leukaemia",
+          "Undifferentiated leukemia"
+        ],
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/30217000",
+        "rdfs:label": "Proliferation (morphologic abnormality)",
+        "skos:prefLabel": "Proliferation",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/400177003",
+        "rdfs:label": "Neoplasm and/or hamartoma (morphologic abnormality)",
+        "skos:prefLabel": "Neoplasm and/or hamartoma",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/414388001",
+        "rdfs:label": "Hematopoietic neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Haematopoietic neoplasm",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/414628006",
+        "rdfs:label": "Lymphoid neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Lymphoid neoplasm",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/414629003",
+        "rdfs:label": "Lymphoproliferative disorder (morphologic abnormality)",
+        "skos:prefLabel": "Lymphoproliferative disorder",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/414644002",
+        "rdfs:label": "Malignant hematopoietic neoplasm (morphologic abnormality)",
+        "skos:prefLabel": "Malignant haematopoietic neoplasm",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/4147007",
+        "rdfs:label": "Mass (morphologic abnormality)",
+        "skos:prefLabel": "Mass",
+        "skos:altLabels": [
+          "Localised mass",
+          "Localized mass",
+          "Lump"
+        ],
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/415181008",
+        "rdfs:label": "Proliferation of hematopoietic cell type (morphologic abnormality)",
+        "skos:prefLabel": "Proliferation of haematopoietic cell type",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/416939005",
+        "rdfs:label": "Proliferative mass (morphologic abnormality)",
+        "skos:prefLabel": "Proliferative mass",
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/49755003",
+        "rdfs:label": "Morphologically abnormal structure (morphologic abnormality)",
+        "skos:prefLabel": "Morphologically abnormal structure",
+        "skos:altLabels": [
+          "Abnormal tissue appearance"
+        ],
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/52988006",
+        "rdfs:label": "Lesion (morphologic abnormality)",
+        "skos:prefLabel": "Lesion",
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/57697001",
+        "rdfs:label": "Growth alteration (morphologic abnormality)",
+        "skos:prefLabel": "Growth alteration",
+        "skos:altLabels": [
+          "Disturbance of growth"
+        ],
+        "depth": 6
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-10",
+    "source_dataset": "pubmedqa",
+    "question_id": "15053041",
+    "question": "Do acute changes in heart rate by isoproterenol affect aortic stiffness in patients with hypertension?",
+    "entity_mention": {
+      "entity_literal": "isoproterenol",
+      "start_position": 34,
+      "end_position": 47,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/372781009",
+      "rdfs:label": "Isoprenaline (substance)",
+      "skos:prefLabel": "Isoprenaline",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/34582008",
+        "rdfs:label": "Catecholamine (substance)",
+        "skos:prefLabel": "Catecholamine",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/372884008",
+        "rdfs:label": "Sympathomimetic agent (substance)",
+        "skos:prefLabel": "Sympathomimetic agent",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/11257001",
+        "rdfs:label": "Nitrogen compound (substance)",
+        "skos:prefLabel": "Nitrogen compound",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/299979007",
+        "rdfs:label": "Organic nitrogen compound (substance)",
+        "skos:prefLabel": "Organic nitrogen compound",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/301457005",
+        "rdfs:label": "Amine and/or amine derivative (substance)",
+        "skos:prefLabel": "Amine and/or amine derivative",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/304366009",
+        "rdfs:label": "Catecholamine and/or catecholamine derivative (substance)",
+        "skos:prefLabel": "Catecholamine and/or catecholamine derivative",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/34582008",
+        "rdfs:label": "Catecholamine (substance)",
+        "skos:prefLabel": "Catecholamine",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/372884008",
+        "rdfs:label": "Sympathomimetic agent (substance)",
+        "skos:prefLabel": "Sympathomimetic agent",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/373289004",
+        "rdfs:label": "Autonomic agent (substance)",
+        "skos:prefLabel": "Autonomic agent",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/410942007",
+        "rdfs:label": "Drug or medicament (substance)",
+        "skos:prefLabel": "Drug or medicament",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/767307008",
+        "rdfs:label": "Nitrogen and/or nitrogen compound (substance)",
+        "skos:prefLabel": "Nitrogen and/or nitrogen compound",
+        "depth": 6
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "annotation_note": "'Calculus of Bile Duct' is defined as an equiv class using the following expression: 'Disease (disorder)' and ('Role group (attribute)' some (('Associated morphology (attribute)' some 'Calculus (morphologic abnormality)') and ('Finding site (attribute)' some 'Bile duct structure (body structure)'))). This equiv class defines a more accurate target axiom for the entity mention when the entity mention is taken in isolation. However, in the context of being related to the gallbladder (which they are), a potentially more accurate target entity would be 'gallbladder and bile duct calculi', this may actually point to aspects of SNOMED CT that are lacking. Furthermore, if one were to define a **new** axiom for 'bile duct stone' or 'bile duct stones' as a clinical finding: ''Clinical Finding (finding)' and ('Role group (attribute)' some  (('Associated morphology (attribute)' some 'Calculus (morphologic abnormality)') and ('Finding site (attribute)' some 'Bile duct structure (body structure)'))) with an associated verbalisation: 'clinical finding and role group something that some associated morphology some calculus and finding site some bile duct structure', we would see OnTr vastly outperforming other embedding models (even though the axiom does not currently exist within SNOMED CT).",
+    "internal_id": "mc-11",
+    "source_dataset": "pubmedqa",
+    "question_id": "17342562",
+    "question": "The clinical significance of bile duct sludge: is it different from bile duct stones?",
+    "entity_mention": {
+      "entity_literal": "bile duct stones",
+      "start_position": 68,
+      "end_position": 84,
+      "entity_type": "ORGANISM"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/30093007",
+      "rdfs:label": "Calculus of bile duct (disorder)",
+      "skos:prefLabel": "Calculus of bile duct",
+      "skos:altLabels": [],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-12",
+    "source_dataset": "medqa",
+    "question_id": "0244",
+    "question": "An unidentified surgical specimen is received for histopathologic analysis. A portion of the specimen is cut and stained with hematoxylin and eosin. The remainder is analyzed and is found to contains type II collagen and chondroitin sulfate. Which of the following structures is most likely the origin of this surgical specimen?",
+    "entity_mention": {
+      "entity_literal": "type II collagen",
+      "start_position": 200,
+      "end_position": 216,
+      "entity_type": "GENE_OR_GENE_PRODUCT"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/61944000",
+      "rdfs:label": "Collagen type II (substance)",
+      "skos:prefLabel": "Collagen type II",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/61472002",
+        "rdfs:label": "Collagen (substance)",
+        "skos:prefLabel": "Collagen",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/11257001",
+        "rdfs:label": "Nitrogen compound (substance)",
+        "skos:prefLabel": "Nitrogen compound",
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/115668003",
+        "rdfs:label": "Biological substance (substance)",
+        "skos:prefLabel": "Biological substance",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/299979007",
+        "rdfs:label": "Organic nitrogen compound (substance)",
+        "skos:prefLabel": "Organic nitrogen compound",
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/299987008",
+        "rdfs:label": "Amide and/or amide derivative (substance)",
+        "skos:prefLabel": "Amide and/or amide derivative",
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/304381003",
+        "rdfs:label": "Structural protein (substance)",
+        "skos:prefLabel": "Structural protein",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 11
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 9
+      },
+      {
+        "iri": "http://snomed.info/id/372681003",
+        "rdfs:label": "Hemostatic agent (substance)",
+        "skos:prefLabel": "Haemostatic agent",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/373708006",
+        "rdfs:label": "Hematologic agent (substance)",
+        "skos:prefLabel": "Haematologic agent",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/410942007",
+        "rdfs:label": "Drug or medicament (substance)",
+        "skos:prefLabel": "Drug or medicament",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/415664003",
+        "rdfs:label": "Substituted amide (substance)",
+        "skos:prefLabel": "Substituted amide",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 10
+      },
+      {
+        "iri": "http://snomed.info/id/61472002",
+        "rdfs:label": "Collagen (substance)",
+        "skos:prefLabel": "Collagen",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/70354003",
+        "rdfs:label": "Polypeptide (substance)",
+        "skos:prefLabel": "Polypeptide",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/735252001",
+        "rdfs:label": "Protein and/or protein derivative (substance)",
+        "skos:prefLabel": "Protein and/or protein derivative",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/767307008",
+        "rdfs:label": "Nitrogen and/or nitrogen compound (substance)",
+        "skos:prefLabel": "Nitrogen and/or nitrogen compound",
+        "depth": 9
+      },
+      {
+        "iri": "http://snomed.info/id/88878007",
+        "rdfs:label": "Protein (substance)",
+        "skos:prefLabel": "Protein",
+        "depth": 3
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-13",
+    "source_dataset": "medqa",
+    "question_id": "0837",
+    "question": "A 56-year-old woman is brought to the emergency department by her husband because of increasing confusion, generalized fatigue, and irritability for the past week. She has been unable to recall her husband's name or their address. She has had insomnia and daytime sleepiness during this period. Her last bowel movement was 3 days ago. One month ago, she underwent a transjugular intrahepatic portal shunt (TIPS) placement. She has alcoholic liver cirrhosis. Current medications include spironolactone and furosemide. She used to drink over a pint of vodka daily but quit 2 months ago. She is oriented to place and person. Her temperature is 37.3°C (99.1°F), pulse is 88/min, and blood pressure is 102/64 mm Hg. Examination shows scleral icterus and jaundice. There are several telangiectasias over the chest and back. Palmar erythema is present. The abdomen is mildly distended and nontender. Shifting dullness is present. There is a flapping tremor of both hands when outstretched and dorsiflexed. Neurologic examination shows no other focal findings. She completes the number connection test slower than the age-normalized standard. Which of the following is the most appropriate next step in management?",
+    "entity_mention": {
+      "entity_literal": "transjugular intrahepatic portal shunt",
+      "start_position": 366,
+      "end_position": 391,
+      "entity_type": "PATHOLOGICAL_FORMATION"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/233445008",
+      "rdfs:label": "Transjugular intrahepatic portosystemic shunt (procedure)",
+      "skos:prefLabel": "Transjugular intrahepatic portosystemic shunt",
+      "skos:altLabels": [
+        "TIPS - Transjugular intrahepatic portosystemic shunt"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/233444007",
+        "rdfs:label": "Portosystemic shunt operation (procedure)",
+        "skos:prefLabel": "Portosystemic shunt operation",
+        "skos:altLabels": [
+          "Liver shunting operation",
+          "Portal shunt"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/233444007",
+        "rdfs:label": "Portosystemic shunt operation (procedure)",
+        "skos:prefLabel": "Portosystemic shunt operation",
+        "skos:altLabels": [
+          "Liver shunting operation",
+          "Portal shunt"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-21",
+    "source_dataset": "medqa",
+    "question_id": "0655",
+    "question": "A 62-year-old woman with a pancreatic insulinoma is being prepared for a laparoscopic enucleation of the tumor. After induction of general anesthesia, preparation of a sterile surgical field, and port placement, the surgeon needs to enter the space posterior to the stomach to access the pancreatic tumor. Which of the following ligaments must be cut in order to access this space?",
+    "entity_mention": {
+      "entity_literal": "pancreatic tumor",
+      "original_entity_literal": "pancreatic tumor",
+      "start_position": 288,
+      "end_position": 304,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/126859007",
+      "rdfs:label": "Neoplasm of pancreas (disorder)",
+      "skos:prefLabel": "Neoplasm of pancreas",
+      "skos:altLabels": [
+        "Tumor of pancreas",
+        "Tumour of pancreas"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-22",
+    "source_dataset": "medqa",
+    "question_id": "0752",
+    "question": "A 47-year-old woman with metastatic breast cancer who is undergoing chemotherapy comes to the physician for a follow-up exam. She reports extreme fatigue since beginning her chemotherapy regimen. Her pulse is 98/min, respirations are 16/min, and blood pressure is 132/84 mm Hg. Her hemoglobin is 10.4 g/dL, leukocyte count is 800/mm3 with 5% monocytes, and platelet count is 50,000/mm3. The patient is started on a new medication. One week later, serum studies show a hemoglobin of 10.6 g/dL, a leukocyte count of 2,000/mm3 with 2% monocytes, and a platelet count of 56,000/mm3. Which of the following drugs is the most likely cause of these findings?",
+    "entity_mention": {
+      "entity_literal": "metastatic breast cancer",
+      "start_position": 70,
+      "end_position": 94,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/145501000119108",
+      "rdfs:label": "Metastatic malignant neoplasm to breast (disorder)",
+      "skos:prefLabel": "Metastatic malignant neoplasm to breast",
+      "skos:altLabels": [
+        "Metastatic malignant neoplasm of breast",
+        "Secondary malignant neoplasm of breast"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-23",
+    "source_dataset": "pubmedqa",
+    "question_id": "15708048",
+    "question": "Does prior benign prostate biopsy predict outcome for patients treated with radical perineal prostatectomy?",
+    "entity_mention": {
+      "entity_literal": "benign prostate biopsy",
+      "start_position": 11,
+      "end_position": 33,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/65575008",
+      "rdfs:label": "Biopsy of prostate (procedure)",
+      "skos:prefLabel": "Biopsy of prostate",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/86273004",
+        "rdfs:label": "Biopsy (procedure)",
+        "skos:prefLabel": "Biopsy",
+        "skos:altLabels": [
+          "Removal of tissue for diagnostic examination."
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/71388002",
+        "rdfs:label": "Procedure (procedure)",
+        "skos:prefLabel": "Procedure",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-24",
+    "source_dataset": "medqa",
+    "question_id": "1104",
+    "question": "A 62-year-old man presents with bright red blood in his stool which occurred 2 times this week. He denies fever, weight loss, pain, pruritus or urinary symptoms. Past medical history is significant for gastroesophageal reflux disease, and recent appendicitis, status post laparoscopic appendectomy complicated by delirium tremens. His vitals are a temperature of 37.0°C (98.6°F), blood pressure of 130/80 mm Hg, pulse of 78/min, and respiratory rate of 12/min. Physical examination reveals a distended abdomen with shifting dullness on percussion. In addition, multiple purple spider web-like lesions are present on the chest and arms, which blanch when pressure is applied. Fecal occult blood test is negative. On anoscopy, a non-tender, dilated vascular protrusion is noted superior to the pectinate line. Which of the following is most likely true about this patient’s current symptoms?",
+    "entity_mention": {
+      "entity_literal": "gastroesophageal reflux",
+      "start_position": 202,
+      "end_position": 225,
+      "entity_type": "PATHOLOGICAL_FORMATION"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/235595009",
+      "rdfs:label": "Gastroesophageal reflux disease (disorder)",
+      "skos:prefLabel": "Gastroesophageal reflux disease",
+      "skos:altLabels": [
+        "GERD - Gastro-esophageal reflux disease",
+        "GOR - Gastro-esophageal reflux",
+        "GOR - Gastro-oesophageal reflux",
+        "GORD - Gastro-esophageal reflux disease",
+        "GORD - Gastro-oesophageal reflux disease",
+        "Gastro-esophageal reflux",
+        "Gastro-esophageal reflux disease",
+        "Gastro-oesophageal reflux",
+        "Gastro-oesophageal reflux disease"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-26",
+    "source_dataset": "medmcqa",
+    "question_id": "f860085a-f00e-4031-9d00-0bb4879c3023",
+    "question": "All of the following statements of nasal fractures are true except:",
+    "entity_mention": {
+      "entity_literal": "nasal fractures",
+      "start_position": 35,
+      "end_position": 50,
+      "entity_type": "PATHOLOGICAL_FORMATION"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/263171005",
+      "rdfs:label": "Fractured nasal bones (disorder)",
+      "skos:prefLabel": "Fractured nasal bones",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-27",
+    "source_dataset": "medqa",
+    "question_id": "0159",
+    "question": "A 9-year-old boy is brought to a physician by his mother for evaluation of generalized weakness, increased urination, and increased thirst. The mother mentions that her boy is always tired, and seems to be getting worse. He prefers watching television rather than going out and playing with other kids. Furthermore, he has had frequent episodes of constipation since birth. Except for frequent cravings for salty foods, the boy eats a regular diet. The patient was delivered healthy and is fully immunized. The medical history is unremarkable, and he takes no medications. He has no siblings. His father is a banker and his mother is a librarian. The pulse is 90/min, the blood pressure is 110/75 mm Hg, and the respiratory rate is 15/min. He is in the bottom 10th percentile for height and weight according to his age. The remainder of the physical examination is unremarkable. He recently had a urinalysis that showed elevated urinary calcium excretion.\nAdditional lab testing results are as follows:\nSerum electrolytes\nSodium 135 mEq/L\nPotassium 3.2 mEq/L\nChloride 95 mEq/L\nPlasma renin activity 10 ng/mL/hr (normal, 0.5–3.3 ng/mL/hr)\nPlasma aldosterone concentration 20 ng/dL (normal, 2–9 ng/dL)\nWhat is the most likely diagnosis?",
+    "entity_mention": {
+      "entity_literal": "plasma aldosterone",
+      "start_position": 1138,
+      "end_position": 1156,
+      "entity_type": "ORGANISM_SUBSTANCE"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/407693005",
+      "rdfs:label": "Plasma aldosterone/renin ratio (procedure)",
+      "skos:prefLabel": "Plasma aldosterone/renin ratio",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/71388002",
+        "rdfs:label": "Procedure (procedure)",
+        "skos:prefLabel": "Procedure",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/71388002",
+        "rdfs:label": "Procedure (procedure)",
+        "skos:prefLabel": "Procedure",
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-29",
+    "source_dataset": "medmcqa",
+    "question_id": "4135c1a9-44e4-4872-a329-3cc4b7c1a587",
+    "question": "Which of the following is common to both zinc eugenol cement and polycarboxylate cement?",
+    "entity_mention": {
+      "entity_literal": "polycarboxylate cement",
+      "start_position": 65,
+      "end_position": 87,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/277873005",
+      "rdfs:label": "Zinc polycarboxylate dental cement (substance)",
+      "skos:prefLabel": "Zinc polycarboxylate dental cement",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/54563006",
+        "rdfs:label": "Dental cement (substance)",
+        "skos:prefLabel": "Dental cement",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/255922001",
+        "rdfs:label": "Dental material (substance)",
+        "skos:prefLabel": "Dental material",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/260769002",
+        "rdfs:label": "Material (substance)",
+        "skos:prefLabel": "Material",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/54563006",
+        "rdfs:label": "Dental cement (substance)",
+        "skos:prefLabel": "Dental cement",
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-30",
+    "source_dataset": "medmcqa",
+    "question_id": "b0db4fac-bf20-4a54-8efa-0ff926e03a9b",
+    "question": "Polyglycolic acid suture material (\"vicryl/Dexon\") is an:",
+    "entity_mention": {
+      "entity_literal": "polyglycolic acid",
+      "start_position": 0,
+      "end_position": 17,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/45737001",
+      "rdfs:label": "Glycolic acid (substance)",
+      "skos:prefLabel": "Glycolic acid",
+      "skos:altLabels": [
+        "Hydroxyacetic acid"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/42907009",
+        "rdfs:label": "Carboxylic acid (substance)",
+        "skos:prefLabel": "Carboxylic acid",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 9
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/42907009",
+        "rdfs:label": "Carboxylic acid (substance)",
+        "skos:prefLabel": "Carboxylic acid",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/765174005",
+        "rdfs:label": "Organic acid and/or organic acid derivative (substance)",
+        "skos:prefLabel": "Organic acid and/or organic acid derivative",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/767530001",
+        "rdfs:label": "Carboxylic acid and/or carboxylic acid derivative (substance)",
+        "skos:prefLabel": "Carboxylic acid and/or carboxylic acid derivative",
+        "depth": 2
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-34",
+    "source_dataset": "medqa",
+    "question_id": "0024",
+    "question": "A 6-year-old boy is brought to the emergency department by his mother for worsening wheezing and shortness of breath over the past day. He has not had a fever, cough, vomiting, or diarrhea. He has asthma and eczema. He uses a glucocorticoid inhaler and an albuterol inhaler but has missed his medications for the past week while on vacation. He appears uncomfortable. His temperature is 36°C (96.8°F), pulse is 120/min, respirations are 40/min, and blood pressure is 100/80. Expiratory and inspiratory wheezing is heard throughout both lung fields. There are moderate intercostal and subcostal retractions and a decreased inspiratory to expiratory ratio. Nebulized albuterol and ipratropium treatments and intravenous methylprednisolone are given in the emergency department for a presumed asthma exacerbation. One hour later, the child is limp and lethargic. Magnesium sulfate is administered. His temperature is 36°C (96.8°F), pulse is 150/min, respirations are 22/min, and blood pressure is 100/70. No wheezing is heard on repeat pulmonary examination. Which of the following is the most appropriate next step in management?",
+    "entity_mention": {
+      "entity_literal": "intravenous methylprednisolone",
+      "start_position": 706,
+      "end_position": 736,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/116593003",
+      "rdfs:label": "Methylprednisolone (substance)",
+      "skos:prefLabel": "Methylprednisolone",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/126090008",
+        "rdfs:label": "Pregnane (substance)",
+        "skos:prefLabel": "Pregnane",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/419933005",
+        "rdfs:label": "Glucocorticoid (substance)",
+        "skos:prefLabel": "Glucocorticoid",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/116566001",
+        "rdfs:label": "Steroid (substance)",
+        "skos:prefLabel": "Steroid",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/126090008",
+        "rdfs:label": "Pregnane (substance)",
+        "skos:prefLabel": "Pregnane",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/304275008",
+        "rdfs:label": "Corticosteroid and/or corticosteroid derivative (substance)",
+        "skos:prefLabel": "Corticosteroid and/or corticosteroid derivative",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/410942007",
+        "rdfs:label": "Drug or medicament (substance)",
+        "skos:prefLabel": "Drug or medicament",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/417174002",
+        "rdfs:label": "Polycyclic compound (substance)",
+        "skos:prefLabel": "Polycyclic compound",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/419933005",
+        "rdfs:label": "Glucocorticoid (substance)",
+        "skos:prefLabel": "Glucocorticoid",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/767844004",
+        "rdfs:label": "Organic cyclic compound (substance)",
+        "skos:prefLabel": "Organic cyclic compound",
+        "depth": 4
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-35",
+    "source_dataset": "pubmedqa",
+    "question_id": "24270957",
+    "question": "Is combined therapy more effective than growth hormone or hyperbaric oxygen alone in the healing of left ischemic and non-ischemic colonic anastomoses?",
+    "entity_mention": {
+      "entity_literal": "hyperbaric oxygen",
+      "start_position": 58,
+      "end_position": 75,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/18678000",
+      "rdfs:label": "Hyperbaric oxygen therapy (procedure)",
+      "skos:prefLabel": "Hyperbaric oxygen therapy",
+      "skos:altLabels": [
+        "HOT - Hyperbaric oxygen therapy",
+        "Hyperbaric oxygenation"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/243138001",
+        "rdfs:label": "High ambient pressure therapy (procedure)",
+        "skos:prefLabel": "High ambient pressure therapy",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/243138001",
+        "rdfs:label": "High ambient pressure therapy (procedure)",
+        "skos:prefLabel": "High ambient pressure therapy",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/53950000",
+        "rdfs:label": "Respiratory therapy (procedure)",
+        "skos:prefLabel": "Respiratory therapy",
+        "skos:altLabels": [
+          "Pulmonary care",
+          "Respiratory care"
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/71388002",
+        "rdfs:label": "Procedure (procedure)",
+        "skos:prefLabel": "Procedure",
+        "depth": 3
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-36",
+    "source_dataset": "medqa",
+    "question_id": "0342",
+    "question": "A 55-year-old woman with a history of HIV presents to the emergency department with progressive dyspnea, fever, and dry cough for the past 4 days. She has not been compliant with antiretroviral or prophylactic medication. On evaluation, the patient is in moderate respiratory distress. The temperature is 38.8°C (102.0°F), the blood pressure is 124/82 mm Hg, the pulse is 96/min, and the respiratory rate is 20/min. Pulse oximetry is 92% on 4 L oxygen by nasal cannula. Her CD4 count is 180 cells/μL. IV antibiotics and glucocorticoids are administered. After 30 minutes, the patient develops severe respiratory distress. Repeat vital signs show: temperature 38.3°C (101.0°F), blood pressure 80/50 mm Hg, pulse 104/min, respiration rate 32/min and pulse oximetry 85% on nasal cannula. The trachea deviates to the left. Breath sounds are absent on the right side and the neck veins are distended. Telemetry shows sinus tachycardia. Which of the following is the best next step in the management of this patient?",
+    "entity_mention": {
+      "entity_literal": "Glucocorticoids",
+      "start_position": 0,
+      "end_position": 15,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/419933005",
+      "rdfs:label": "Glucocorticoid (substance)",
+      "skos:prefLabel": "Glucocorticoid",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/304275008",
+        "rdfs:label": "Corticosteroid and/or corticosteroid derivative (substance)",
+        "skos:prefLabel": "Corticosteroid and/or corticosteroid derivative",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/116566001",
+        "rdfs:label": "Steroid (substance)",
+        "skos:prefLabel": "Steroid",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/304275008",
+        "rdfs:label": "Corticosteroid and/or corticosteroid derivative (substance)",
+        "skos:prefLabel": "Corticosteroid and/or corticosteroid derivative",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/410942007",
+        "rdfs:label": "Drug or medicament (substance)",
+        "skos:prefLabel": "Drug or medicament",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/417174002",
+        "rdfs:label": "Polycyclic compound (substance)",
+        "skos:prefLabel": "Polycyclic compound",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/767844004",
+        "rdfs:label": "Organic cyclic compound (substance)",
+        "skos:prefLabel": "Organic cyclic compound",
+        "depth": 4
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-37",
+    "source_dataset": "medqa",
+    "question_id": "0162",
+    "question": "A 59-year-old man presents to his primary care provider with fatigue, a progressively worsening cough with flecks of blood, shortness of breath, and dark urine. He reports feeling ill for the past 3 weeks. Past medical history is significant for hypertension and hyperlipidemia. He takes chlorthalidone and atorvastatin. Family history is noncontributory. He has smoked 20–30 cigarettes daily for the past 26 years. Anti-glomerular basement membrane serologies are positive. Which of the following is a specific feature for this patient’s condition?",
+    "entity_mention": {
+      "entity_literal": "anti-glomerular basement membrane",
+      "start_position": 416,
+      "end_position": 449,
+      "entity_type": "CELLULAR_COMPONENT"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/788613004",
+      "rdfs:label": "Anti-glomerular basement membrane disease (disorder)",
+      "skos:prefLabel": "Anti-glomerular basement membrane disease",
+      "skos:altLabels": [
+        "Anti GBM - antiglomerular basement membrane disease",
+        "Goodpasture disease",
+        "Goodpasture's disease"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-39",
+    "source_dataset": "medqa",
+    "question_id": "0323",
+    "question": "A 16-month-old boy is brought to the physician by his mother for a regular check-up. His mother says that he has not yet begun to walk. He is exclusively breastfed. He is at the 20th percentile for length, 10th percentile for weight, and 50th percentile for head circumference. Physical examination shows erosion of the enamel on the lingual surface of the incisors and carious molars. He has frontal bossing. His wrists are widened, his legs appear bowed, and there is beading of the ribs. Which of the following is the most likely underlying cause of this patient's condition?",
+    "entity_mention": {
+      "entity_literal": "carious molars",
+      "start_position": 370,
+      "end_position": 384,
+      "entity_type": "PATHOLOGICAL_FORMATION"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/699683004",
+      "rdfs:label": "Nonrestorable carious tooth (disorder)",
+      "skos:prefLabel": "Nonrestorable carious tooth",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/442231009",
+        "rdfs:label": "Caries involving multiple surfaces of tooth (disorder)",
+        "skos:prefLabel": "Caries involving multiple surfaces of tooth",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/442231009",
+        "rdfs:label": "Caries involving multiple surfaces of tooth (disorder)",
+        "skos:prefLabel": "Caries involving multiple surfaces of tooth",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 2
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-44",
+    "source_dataset": "medmcqa",
+    "question_id": "d2198d20-fa7b-4abd-a3f6-d849ee0973fb",
+    "question": "A patient is undergoing MRND for laryngeal malignancy; while dissecting the venous tributaries the surgeon elevated the internal jugular vein for ligation. Suddenly the patients EtCO2 dropped from 3g mmHg to 12 mmHg and the patient developed hypotension along with cardiac arrhythmia. Which of the following is most likely cause??",
+    "entity_mention": {
+      "entity_literal": "laryngeal malignancy",
+      "start_position": 33,
+      "end_position": 53,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/363429002",
+      "rdfs:label": "Malignant neoplasm of larynx (disorder)",
+      "skos:prefLabel": "Malignant neoplasm of larynx",
+      "skos:altLabels": [
+        "Cancer of larynx",
+        "Laryngeal cancer",
+        "Malignant tumor of larynx",
+        "Malignant tumour of larynx"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-46",
+    "source_dataset": "medmcqa",
+    "question_id": "2674faba-e6d7-4790-b13e-97c597408919",
+    "question": "Most common mediastinal tumor:",
+    "entity_mention": {
+      "entity_literal": "mediastinal tumor",
+      "start_position": 12,
+      "end_position": 29,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/126725000",
+      "rdfs:label": "Neoplasm of mediastinum (disorder)",
+      "skos:prefLabel": "Neoplasm of mediastinum",
+      "skos:altLabels": [
+        "Tumor of mediastinum",
+        "Tumour of mediastinum"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-47",
+    "source_dataset": "medmcqa",
+    "question_id": "6370f514-0f67-4a88-835d-9d94a6ffa24d",
+    "question": "Most common pathognomonic sign of mandibular fracture:",
+    "entity_mention": {
+      "entity_literal": "mandibular fracture",
+      "start_position": 34,
+      "end_position": 53,
+      "entity_type": "MULTI_TISSUE_STRUCTURE"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/263172003",
+      "rdfs:label": "Fracture of mandible (disorder)",
+      "skos:prefLabel": "Fracture of mandible",
+      "skos:altLabels": [
+        "Fracture of lower jaw"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-48",
+    "source_dataset": "medqa",
+    "question_id": "1126",
+    "question": "A 34-year-old woman is brought to the emergency department following a high-speed motor vehicle collision in which she was the restrained driver. On arrival, she has a cervical collar in place and is unresponsive. Her temperature is 36.7°C (98°F), pulse is 70/min, and blood pressure is 131/76 mm Hg. Her pupils are dilated and not reactive to light. She is unresponsive to noxious stimuli. She is intubated, and mechanical ventilation is begun. Serum concentrations of electrolytes, urea nitrogen, and creatinine are within the reference range. Toxicology screening is negative. A CT scan of the head without contrast shows a massive intracranial bleed and a cervical spine injury at the level of C3. Which of the following is the most appropriate next step in diagnosing brain death?",
+    "entity_mention": {
+      "entity_literal": "intracranial bleed",
+      "start_position": 635,
+      "end_position": 653,
+      "entity_type": "PATHOLOGICAL_FORMATION"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/1386000",
+      "rdfs:label": "Intracranial hemorrhage (disorder)",
+      "skos:prefLabel": "Intracranial haemorrhage",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/404684003",
+        "rdfs:label": "Clinical finding (finding)",
+        "skos:prefLabel": "Clinical finding",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/64572001",
+        "rdfs:label": "Disease (disorder)",
+        "skos:prefLabel": "Disease",
+        "skos:altLabels": [
+          "Clinical disease AND/OR syndrome",
+          "Diseases",
+          "Disorder",
+          "Disorders",
+          "Syndrome"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+    {
+    "internal_id": "mc-45",
+    "source_dataset": "medqa",
+    "question_id": "0519",
+    "question": "A 36-year-old man is brought to the emergency department 40 minutes after being involved in a shooting. He sustained a gunshot wound in an altercation outside of a bar. On arrival, he is oriented to person but not to place or time. His temperature is 37.3°C (99.1°F), pulse is 116/min, respirations are 18/min, and blood pressure is 79/42 mm Hg. Pulse oximetry on room air shows an oxygen saturation of 97%. Examination shows multiple abrasions over the arms and thorax. There is a 1-cm (0.4-in) entry wound with minimal bleeding on the right side of the chest in the 6th intercostal space at the midclavicular line. Cardiopulmonary examination shows no abnormalities. Abdominal examination shows diffuse mild tenderness to palpation with no guarding or rebound. A focused assessment with sonography shows no obvious free fluid in the pericardium; assessment of the abdomen is equivocal. An x-ray of the chest shows mild opacification of the right lower lobe. Two large-bore cannulas are inserted and intravenous fluid resuscitation is begun. The patient is intubated and mechanical ventilation is begun. Which of the following is the most appropriate next step in management?",
+    "entity_mention": {
+      "entity_literal": "large-bore cannulas",
+      "start_position": 964,
+      "end_position": 983,
+      "entity_type": "MULTI_TISSUE_STRUCTURE"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/12150006",
+      "rdfs:label": "Cannula, device (physical object)",
+      "skos:prefLabel": "Cannula",
+      "skos:altLabels": [
+        "Cannula, device"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/63653004",
+        "rdfs:label": "Biomedical device (physical object)",
+        "skos:prefLabel": "Biomedical device",
+        "skos:altLabels": [
+          "Clinical device",
+          "Medical device"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/260787004",
+        "rdfs:label": "Physical object (physical object)",
+        "skos:prefLabel": "Physical object",
+        "skos:altLabels": [
+          "Artefact",
+          "Artifact",
+          "Objects",
+          "Physical objects"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/272181003",
+        "rdfs:label": "Clinical equipment and/or device (physical object)",
+        "skos:prefLabel": "Clinical equipment and/or device",
+        "skos:altLabels": [
+          "Clinical equipment and devices"
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/49062001",
+        "rdfs:label": "Device (physical object)",
+        "skos:prefLabel": "Device",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/63653004",
+        "rdfs:label": "Biomedical device (physical object)",
+        "skos:prefLabel": "Biomedical device",
+        "skos:altLabels": [
+          "Clinical device",
+          "Medical device"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-49",
+    "source_dataset": "mmlu",
+    "question_id": "professional_medicine-209",
+    "question": "A 31-year-old woman, gravida 3, para 2, who is at 32 weeks' gestation, is admitted to the hospital because of a 1-week history of progressive dyspnea and wheezing. She says her heart is \"racing\" and she is coughing up a small amount of bloodstreaked sputum. Medical history is significant for hypothyroidism, for which she takes levothyroxine. An intravenous catheter is placed. Vital signs are temperature 36.9°C (98.4°F), pulse 132/min, respirations 32/min, and blood pressure 135/78 mm Hg. Pulse oximetry on 100% oxygen via nasal cannula shows an oxygen saturation of 92%. Auscultation of the lungs discloses decreased breath sounds at the bases with expiratory crackles bilaterally. Cardiac examination discloses an irregularly irregular rhythm, an indistinct point of maximal impulse, and a loud S1. A grade 3/6, low-pitched, diastolic, rumbling murmur is audible at the apex; a distinct snapping sound precedes the murmur. Fetal heart rate is 144/min. Which of the following is the most likely cause of the findings in this patient?",
+    "entity_mention": {
+      "entity_literal": "intravenous catheter",
+      "start_position": 347,
+      "end_position": 367,
+      "entity_type": "IMMATERIAL_ANATOMICAL_ENTITY"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/82449006",
+      "rdfs:label": "Peripheral intravenous catheter, device (physical object)",
+      "skos:prefLabel": "Peripheral intravenous catheter",
+      "skos:altLabels": [
+        "IV catheter",
+        "Peripheral intravenous catheter, device"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/446559007",
+        "rdfs:label": "Peripheral vascular catheter (physical object)",
+        "skos:prefLabel": "Peripheral vascular catheter",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/19923001",
+        "rdfs:label": "Catheter, device (physical object)",
+        "skos:prefLabel": "Catheter",
+        "skos:altLabels": [
+          "Catheter, device"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/258623008",
+        "rdfs:label": "Vascular catheter (physical object)",
+        "skos:prefLabel": "Vascular catheter",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/260787004",
+        "rdfs:label": "Physical object (physical object)",
+        "skos:prefLabel": "Physical object",
+        "skos:altLabels": [
+          "Artefact",
+          "Artifact",
+          "Objects",
+          "Physical objects"
+        ],
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/272181003",
+        "rdfs:label": "Clinical equipment and/or device (physical object)",
+        "skos:prefLabel": "Clinical equipment and/or device",
+        "skos:altLabels": [
+          "Clinical equipment and devices"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/303607000",
+        "rdfs:label": "Biomedical equipment (physical object)",
+        "skos:prefLabel": "Biomedical equipment",
+        "skos:altLabels": [
+          "Clinical equipment",
+          "Medical equipment"
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/34362008",
+        "rdfs:label": "Vascular device (physical object)",
+        "skos:prefLabel": "Vascular device",
+        "skos:altLabels": [
+          "Vascular surgery device"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/37759000",
+        "rdfs:label": "Surgical instrument, device (physical object)",
+        "skos:prefLabel": "Surgical instrument",
+        "skos:altLabels": [
+          "Operative instrument",
+          "Surgical instrument, device"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/423954007",
+        "rdfs:label": "Peripheral catheter (physical object)",
+        "skos:prefLabel": "Peripheral catheter",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/446559007",
+        "rdfs:label": "Peripheral vascular catheter (physical object)",
+        "skos:prefLabel": "Peripheral vascular catheter",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/49062001",
+        "rdfs:label": "Device (physical object)",
+        "skos:prefLabel": "Device",
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/57134006",
+        "rdfs:label": "Instrument, device (physical object)",
+        "skos:prefLabel": "Instrument",
+        "skos:altLabels": [
+          "Clinical instrument",
+          "Instrument, device"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/63653004",
+        "rdfs:label": "Biomedical device (physical object)",
+        "skos:prefLabel": "Biomedical device",
+        "skos:altLabels": [
+          "Clinical device",
+          "Medical device"
+        ],
+        "depth": 4
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  }
+]

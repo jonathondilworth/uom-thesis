@@ -1,0 +1,235 @@
+[
+  {
+    "internal_id": "mc-45",
+    "source_dataset": "medqa",
+    "question_id": "0519",
+    "question": "A 36-year-old man is brought to the emergency department 40 minutes after being involved in a shooting. He sustained a gunshot wound in an altercation outside of a bar. On arrival, he is oriented to person but not to place or time. His temperature is 37.3°C (99.1°F), pulse is 116/min, respirations are 18/min, and blood pressure is 79/42 mm Hg. Pulse oximetry on room air shows an oxygen saturation of 97%. Examination shows multiple abrasions over the arms and thorax. There is a 1-cm (0.4-in) entry wound with minimal bleeding on the right side of the chest in the 6th intercostal space at the midclavicular line. Cardiopulmonary examination shows no abnormalities. Abdominal examination shows diffuse mild tenderness to palpation with no guarding or rebound. A focused assessment with sonography shows no obvious free fluid in the pericardium; assessment of the abdomen is equivocal. An x-ray of the chest shows mild opacification of the right lower lobe. Two large-bore cannulas are inserted and intravenous fluid resuscitation is begun. The patient is intubated and mechanical ventilation is begun. Which of the following is the most appropriate next step in management?",
+    "entity_mention": {
+      "entity_literal": "large-bore cannulas",
+      "start_position": 964,
+      "end_position": 983,
+      "entity_type": "MULTI_TISSUE_STRUCTURE"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/12150006",
+      "rdfs:label": "Cannula, device (physical object)",
+      "skos:prefLabel": "Cannula",
+      "skos:altLabels": [
+        "Cannula, device"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/63653004",
+        "rdfs:label": "Biomedical device (physical object)",
+        "skos:prefLabel": "Biomedical device",
+        "skos:altLabels": [
+          "Clinical device",
+          "Medical device"
+        ],
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/260787004",
+        "rdfs:label": "Physical object (physical object)",
+        "skos:prefLabel": "Physical object",
+        "skos:altLabels": [
+          "Artefact",
+          "Artifact",
+          "Objects",
+          "Physical objects"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/272181003",
+        "rdfs:label": "Clinical equipment and/or device (physical object)",
+        "skos:prefLabel": "Clinical equipment and/or device",
+        "skos:altLabels": [
+          "Clinical equipment and devices"
+        ],
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/49062001",
+        "rdfs:label": "Device (physical object)",
+        "skos:prefLabel": "Device",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/63653004",
+        "rdfs:label": "Biomedical device (physical object)",
+        "skos:prefLabel": "Biomedical device",
+        "skos:altLabels": [
+          "Clinical device",
+          "Medical device"
+        ],
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-49",
+    "source_dataset": "mmlu",
+    "question_id": "professional_medicine-209",
+    "question": "A 31-year-old woman, gravida 3, para 2, who is at 32 weeks' gestation, is admitted to the hospital because of a 1-week history of progressive dyspnea and wheezing. She says her heart is \"racing\" and she is coughing up a small amount of bloodstreaked sputum. Medical history is significant for hypothyroidism, for which she takes levothyroxine. An intravenous catheter is placed. Vital signs are temperature 36.9°C (98.4°F), pulse 132/min, respirations 32/min, and blood pressure 135/78 mm Hg. Pulse oximetry on 100% oxygen via nasal cannula shows an oxygen saturation of 92%. Auscultation of the lungs discloses decreased breath sounds at the bases with expiratory crackles bilaterally. Cardiac examination discloses an irregularly irregular rhythm, an indistinct point of maximal impulse, and a loud S1. A grade 3/6, low-pitched, diastolic, rumbling murmur is audible at the apex; a distinct snapping sound precedes the murmur. Fetal heart rate is 144/min. Which of the following is the most likely cause of the findings in this patient?",
+    "entity_mention": {
+      "entity_literal": "intravenous catheter",
+      "start_position": 347,
+      "end_position": 367,
+      "entity_type": "IMMATERIAL_ANATOMICAL_ENTITY"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/82449006",
+      "rdfs:label": "Peripheral intravenous catheter, device (physical object)",
+      "skos:prefLabel": "Peripheral intravenous catheter",
+      "skos:altLabels": [
+        "IV catheter",
+        "Peripheral intravenous catheter, device"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/446559007",
+        "rdfs:label": "Peripheral vascular catheter (physical object)",
+        "skos:prefLabel": "Peripheral vascular catheter",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/19923001",
+        "rdfs:label": "Catheter, device (physical object)",
+        "skos:prefLabel": "Catheter",
+        "skos:altLabels": [
+          "Catheter, device"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/258623008",
+        "rdfs:label": "Vascular catheter (physical object)",
+        "skos:prefLabel": "Vascular catheter",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/260787004",
+        "rdfs:label": "Physical object (physical object)",
+        "skos:prefLabel": "Physical object",
+        "skos:altLabels": [
+          "Artefact",
+          "Artifact",
+          "Objects",
+          "Physical objects"
+        ],
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/272181003",
+        "rdfs:label": "Clinical equipment and/or device (physical object)",
+        "skos:prefLabel": "Clinical equipment and/or device",
+        "skos:altLabels": [
+          "Clinical equipment and devices"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/303607000",
+        "rdfs:label": "Biomedical equipment (physical object)",
+        "skos:prefLabel": "Biomedical equipment",
+        "skos:altLabels": [
+          "Clinical equipment",
+          "Medical equipment"
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/34362008",
+        "rdfs:label": "Vascular device (physical object)",
+        "skos:prefLabel": "Vascular device",
+        "skos:altLabels": [
+          "Vascular surgery device"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/37759000",
+        "rdfs:label": "Surgical instrument, device (physical object)",
+        "skos:prefLabel": "Surgical instrument",
+        "skos:altLabels": [
+          "Operative instrument",
+          "Surgical instrument, device"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/423954007",
+        "rdfs:label": "Peripheral catheter (physical object)",
+        "skos:prefLabel": "Peripheral catheter",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/446559007",
+        "rdfs:label": "Peripheral vascular catheter (physical object)",
+        "skos:prefLabel": "Peripheral vascular catheter",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/49062001",
+        "rdfs:label": "Device (physical object)",
+        "skos:prefLabel": "Device",
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/57134006",
+        "rdfs:label": "Instrument, device (physical object)",
+        "skos:prefLabel": "Instrument",
+        "skos:altLabels": [
+          "Clinical instrument",
+          "Instrument, device"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/63653004",
+        "rdfs:label": "Biomedical device (physical object)",
+        "skos:prefLabel": "Biomedical device",
+        "skos:altLabels": [
+          "Clinical device",
+          "Medical device"
+        ],
+        "depth": 4
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  }
+]

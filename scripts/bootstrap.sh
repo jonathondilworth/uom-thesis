@@ -1,0 +1,212 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+CONDA_DIR="${CONDA_DIR:-$HOME/miniconda}"
+ENV_FILE="${ENV_FILE:-environment.yml}"
+REQ_FILE="${REQ_FILE:-requirements.txt}"
+INSTALLER="${INSTALLER:-/tmp/miniconda.sh}"
+UPDATE_MINICONDA="${UPDATE_MINICONDA:-false}"
+MINICONDA_URL="${MINICONDA_URL:-https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh}"
+
+# --
+# bootstrap script
+# --
+
+# run as root (TODO: consider removing this)
+if [[ "${EUID:-$(id -u)}" -ne 0 ]]; then 
+    SUDO="sudo"; 
+else 
+    SUDO=""; 
+fi
+
+# removing the installer from /tmp/ upon cleanup
+cleanup() { [[ -f "$INSTALLER" ]] && rm -f "$INSTALLER" || true; }
+trap cleanup EXIT
+
+# sanity check
+echo "OS Version: $(lsb_release -sd 2>/dev/null || echo unknown)"
+echo "CONDA_DIR=$CONDA_DIR | ENV_FILE=$ENV_FILE | REQ_FILE=$REQ_FILE"
+
+# update apt-get & certs
+if command -v apt-get >/dev/null 2>&1; then
+  echo "[Step 0] Installing prerequisites (curl, ca-certificates) ... "
+  DEBIAN_FRONTEND=noninteractive $SUDO apt-get update -yqq
+  DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -yqq curl ca-certificates jq wget unzip
+fi
+
+# --
+# CUDA & CONTAINER COMPATABILITY CHECK
+# --
+
+IN_CONTAINER=0
+
+if [[ -f "/.dockerenv" ]] || grep -qaE 'docker|containerd|kubepods' /proc/1/cgroup 2>/dev/null; then
+  IN_CONTAINER=1
+fi
+
+HAS_NVCC=0
+
+if command -v nvcc >/dev/null 2>&1; then
+  HAS_NVCC=1
+elif [[ -x "/usr/local/cuda/bin/nvcc" ]]; then
+  export CUDA_HOME="/usr/local/cuda"
+  export PATH="/usr/local/cuda/bin:${PATH}"
+  HAS_NVCC=1
+fi
+
+# --
+# set-up project dependencies
+# --
+
+echo "[Step 1/7] Downloading Miniconda ... "
+
+if [[ ! -d "$CONDA_DIR" ]]; then
+  INSTALLER=/tmp/miniconda.sh
+  wget -qO "$INSTALLER" https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  chmod +x "$INSTALLER"
+  # sanity check
+  head -n1 "$INSTALLER"
+else
+  echo "Miniconda already present at $CONDA_DIR — skipping download ... "
+fi
+
+echo "[Step 2/7] Installing Miniconda to $CONDA_DIR ... "
+
+if [[ ! -x "$CONDA_DIR/bin/conda" ]]; then
+  echo "[Miniconda] fresh install to $CONDA_DIR ... "
+  /bin/bash "$INSTALLER" -b -p "$CONDA_DIR"
+else
+  if [[ "$UPDATE_MINICONDA" == "true" ]]; then
+    echo "[Miniconda] updating in place (-u) ... "
+    rm -rf "$CONDA_DIR"/pkgs/*.conda "$CONDA_DIR"/pkgs/*.tar.bz2 || true
+    conda clean --all -y || true 2>/dev/null
+    /bin/bash "$INSTALLER" -b -u -p "$CONDA_DIR"
+  else
+    echo "[Miniconda] present — skipping update ... "
+  fi
+fi
+
+# load conda for this shell & prepare for subsequent cmds
+source "$CONDA_DIR/etc/profile.d/conda.sh"
+conda config --set always_yes yes --set changeps1 no
+conda config --set auto_activate_base false
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main || true
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r    || true
+
+echo "[Step 3] Syncing conda environment from $ENV_FILE..."
+
+if [[ ! -f "$ENV_FILE" ]]; then
+  echo "ERROR: $ENV_FILE not found in $(pwd)" >&2
+  exit 1
+fi
+
+# extract env name
+ENV_NAME="${ENV_NAME:-$(awk -F': *' '/^[[:space:]]*name:[[:space:]]*/ {print $2; exit}' "$ENV_FILE" || true)}"
+if [[ -n "${ENV_NAME:-}" ]]; then
+  conda env update -n "$ENV_NAME" -f "$ENV_FILE" --prune
+else
+  # if no name in environment.yml, exit
+  echo "ERROR: $ENV_FILE does not specify an environment name." >&2
+  exit 1
+fi
+
+# success?
+if [[ -z "${ENV_NAME:-}" ]]; then
+  echo "ERROR: Could not determine conda environment name." >&2
+  exit 1 # nope!
+fi
+echo "Using env: $ENV_NAME" # yep!
+
+echo "[Step 4] Verifying environment ... "
+
+conda run -n "$ENV_NAME" --no-capture-output python -V >/dev/null
+
+echo "[Step 5] Installing pip requirements ... "
+
+if [[ -f "$REQ_FILE" ]]; then
+  conda run -n "$ENV_NAME" --no-capture-output python -m pip install --upgrade pip
+  conda run -n "$ENV_NAME" --no-capture-output python -m pip install -r "$REQ_FILE"
+else
+  echo "No $REQ_FILE — skipping."
+fi
+
+echo "[Step 6] Installing OpenJDK 17 ... "
+
+if command -v apt-get >/dev/null 2>&1; then
+  DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -yqq openjdk-17-jdk
+else
+  echo "apt-get not found; install OpenJDK 17 manually." >&2
+fi
+
+echo "[Step 7] Installing Maven ... "
+
+if command -v apt-get >/dev/null 2>&1; then
+  DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -yqq maven
+else
+  echo "apt-get not found; install Maven manually." >&2
+fi
+
+echo "[Step 8] Install final python packages ... "
+
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install phonemizer
+
+if [[ "$HAS_NVCC" -eq 1 ]]; then
+  echo "nvcc found; attempting flash_attn build ... "
+  conda run -n "$ENV_NAME" --no-capture-output python -m pip install --no-build-isolation flash_attn==2.8.3 || {
+    echo "[WARN] flash_attn build failed; continuing without it ... "
+  }
+else
+  echo "[WARN] No CUDA toolchain found (nvcc missing). Skipping flash_attn."
+fi
+
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install sentencepiece
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install pysbd
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install geoopt
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install deeponto
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install latextable
+
+# now we should already have all the dependencies we need for packages:
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install scispacy --no-deps
+
+echo "[Step 9] Install ROBOT for CLI-based reasoning ... "
+
+git clone https://github.com/ontodev/robot.git
+cd robot
+mvn clean package
+cd ..
+
+# -- IMPORTANT: write the $ENV_NAME to the .env file (enables the remaining build scripts to run)
+
+# echo "AUTO_ENV_NAME=$ENV_NAME" >> .env # adds a duplicate AUTO_ENV_NAME if one already exists
+
+# better approach likely is only write if not already set:
+if ! grep -q '^AUTO_ENV_NAME=' .env 2>/dev/null; then
+  echo "AUTO_ENV_NAME=$ENV_NAME" >> .env
+fi
+
+# Additional step (register the vendor forks in lib and project src in ./src/thesis)
+
+conda run -n "$ENV_NAME" --no-capture-output python -m pip install -e .
+
+# fin!
+
+echo "DONE!"
+
+echo ""
+
+echo "For interactive use, run:"
+
+echo ""
+
+echo "  source \"$CONDA_DIR/etc/profile.d/conda.sh\" && conda activate \"$ENV_NAME\""
+
+echo ""
+
+echo "Versions:"
+conda run -n "$ENV_NAME" --no-capture-output python -V
+java -version
+mvn -v
+
+echo ""
+
+echo "finished ... "

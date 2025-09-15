@@ -1,0 +1,366 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            5m8l7o37sbkjnw2n925difj5inthy83l:
+                args:
+                    - --config_file
+                    - ./HierarchyTransformers/scripts/training/hit/config_hit.yaml
+                codePath: HierarchyTransformers/scripts/training/hit/training_hit.py
+                codePathLocal: HierarchyTransformers/scripts/training/hit/training_hit.py
+                cpu_count: 48
+                cpu_count_logical: 96
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "982240026624"
+                        used: "289870651392"
+                email: jonathon.dilworth@postgrad.manchester.ac.uk
+                executable: /home/jon/miniforge3/envs/msc-new-env/bin/python
+                gpu: NVIDIA RTX A5000
+                gpu_count: 2
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 8192
+                      memoryTotal: "25757220864"
+                      name: NVIDIA RTX A5000
+                      uuid: GPU-c4db3a41-dc16-21b2-3239-b8a7164bdb99
+                    - architecture: Ampere
+                      cudaCores: 8192
+                      memoryTotal: "25757220864"
+                      name: NVIDIA RTX A5000
+                      uuid: GPU-c5faf962-ebde-862a-7552-54e8515294ef
+                host: ubnt-ngpu-box
+                memory:
+                    total: "134514667520"
+                os: Linux-6.11.0-29-generic-x86_64-with-glibc2.39
+                program: /home/jon/pipeline_10_07_25/HierarchyTransformers/scripts/training/hit/training_hit.py
+                python: CPython 3.12.11
+                root: /home/jon/pipeline_10_07_25
+                startedAt: "2025-07-13T03:58:03.875060Z"
+                writerId: 5m8l7o37sbkjnw2n925difj5inthy83l
+        m:
+            - "1": train/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": '*'
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.12.11
+        t:
+            "1":
+                - 1
+                - 5
+                - 6
+                - 11
+                - 33
+                - 41
+                - 49
+                - 51
+                - 53
+                - 71
+                - 75
+                - 105
+            "2":
+                - 1
+                - 5
+                - 6
+                - 11
+                - 33
+                - 41
+                - 49
+                - 51
+                - 53
+                - 71
+                - 75
+                - 105
+            "3":
+                - 7
+                - 13
+                - 66
+            "4": 3.12.11
+            "5": 0.21.0
+            "6": 4.53.1
+            "9":
+                "1": transformers_trainer
+            "12": 0.21.0
+            "13": linux-x86_64
+accelerator_config:
+    value:
+        dispatch_batches: null
+        even_batches: true
+        gradient_accumulation_kwargs: null
+        non_blocking: false
+        split_batches: false
+        use_seedable_sampler: true
+adafactor:
+    value: false
+adam_beta1:
+    value: 0.9
+adam_beta2:
+    value: 0.999
+adam_epsilon:
+    value: 1e-08
+auto_find_batch_size:
+    value: false
+average_tokens_across_devices:
+    value: false
+batch_eval_metrics:
+    value: false
+batch_sampler:
+    value: batch_sampler
+bf16:
+    value: false
+bf16_full_eval:
+    value: false
+data_seed:
+    value: null
+dataloader_drop_last:
+    value: false
+dataloader_num_workers:
+    value: 0
+dataloader_persistent_workers:
+    value: false
+dataloader_pin_memory:
+    value: true
+dataloader_prefetch_factor:
+    value: null
+ddp_backend:
+    value: null
+ddp_broadcast_buffers:
+    value: false
+ddp_bucket_cap_mb:
+    value: null
+ddp_find_unused_parameters:
+    value: null
+ddp_timeout:
+    value: 1800
+debug:
+    value: []
+deepspeed:
+    value: null
+disable_tqdm:
+    value: false
+do_eval:
+    value: true
+do_predict:
+    value: false
+do_train:
+    value: false
+eval_accumulation_steps:
+    value: null
+eval_delay:
+    value: 0
+eval_do_concat_batches:
+    value: true
+eval_on_start:
+    value: false
+eval_steps:
+    value: null
+eval_strategy:
+    value: epoch
+eval_use_gather_object:
+    value: false
+fp16:
+    value: false
+fp16_backend:
+    value: auto
+fp16_full_eval:
+    value: false
+fp16_opt_level:
+    value: O1
+fsdp:
+    value: []
+fsdp_config:
+    value:
+        min_num_params: 0
+        xla: false
+        xla_fsdp_grad_ckpt: false
+        xla_fsdp_v2: false
+fsdp_min_num_params:
+    value: 0
+fsdp_transformer_layer_cls_to_wrap:
+    value: null
+full_determinism:
+    value: false
+gradient_accumulation_steps:
+    value: 1
+gradient_checkpointing:
+    value: false
+gradient_checkpointing_kwargs:
+    value: null
+greater_is_better:
+    value: true
+group_by_length:
+    value: false
+half_precision_backend:
+    value: auto
+hub_always_push:
+    value: false
+hub_model_id:
+    value: null
+hub_private_repo:
+    value: null
+hub_revision:
+    value: null
+hub_strategy:
+    value: every_save
+hub_token:
+    value: <HUB_TOKEN>
+ignore_data_skip:
+    value: false
+include_for_metrics:
+    value: []
+include_inputs_for_metrics:
+    value: false
+include_num_input_tokens_seen:
+    value: false
+include_tokens_per_second:
+    value: false
+jit_mode_eval:
+    value: false
+label_names:
+    value: null
+label_smoothing_factor:
+    value: 0
+learning_rate:
+    value: 1e-05
+length_column_name:
+    value: length
+liger_kernel_config:
+    value: null
+load_best_model_at_end:
+    value: true
+local_rank:
+    value: 0
+log_level:
+    value: passive
+log_level_replica:
+    value: warning
+log_on_each_node:
+    value: true
+logging_dir:
+    value: experiments/HiT-checkpoint-13000-hit_dataset-mixed/runs/Jul13_04-58-01_ubnt-ngpu-box
+logging_first_step:
+    value: false
+logging_nan_inf_filter:
+    value: true
+logging_steps:
+    value: 100
+logging_strategy:
+    value: steps
+lr_scheduler_type:
+    value: linear
+max_grad_norm:
+    value: 1
+max_steps:
+    value: -1
+metric_for_best_model:
+    value: f1
+mp_parameters:
+    value: ""
+multi_dataset_batch_sampler:
+    value: proportional
+neftune_noise_alpha:
+    value: null
+no_cuda:
+    value: false
+num_train_epochs:
+    value: 20
+optim:
+    value: adamw_torch
+optim_args:
+    value: null
+optim_target_modules:
+    value: null
+output_dir:
+    value: experiments/HiT-checkpoint-13000-hit_dataset-mixed
+overwrite_output_dir:
+    value: false
+past_index:
+    value: -1
+per_device_eval_batch_size:
+    value: 512
+per_device_train_batch_size:
+    value: 256
+per_gpu_eval_batch_size:
+    value: null
+per_gpu_train_batch_size:
+    value: null
+prediction_loss_only:
+    value: true
+prompts:
+    value: null
+push_to_hub:
+    value: false
+push_to_hub_model_id:
+    value: null
+push_to_hub_organization:
+    value: null
+push_to_hub_token:
+    value: <PUSH_TO_HUB_TOKEN>
+ray_scope:
+    value: last
+remove_unused_columns:
+    value: true
+report_to:
+    value:
+        - tensorboard
+        - wandb
+restore_callback_states_from_checkpoint:
+    value: false
+resume_from_checkpoint:
+    value: null
+run_name:
+    value: experiments/HiT-checkpoint-13000-hit_dataset-mixed
+save_on_each_node:
+    value: false
+save_only_model:
+    value: false
+save_safetensors:
+    value: true
+save_steps:
+    value: 500
+save_strategy:
+    value: epoch
+save_total_limit:
+    value: 2
+seed:
+    value: 42
+skip_memory_metrics:
+    value: true
+tf32:
+    value: null
+torch_compile:
+    value: false
+torch_compile_backend:
+    value: null
+torch_compile_mode:
+    value: null
+torch_empty_cache_steps:
+    value: null
+torchdynamo:
+    value: null
+tpu_metrics_debug:
+    value: false
+tpu_num_cores:
+    value: null
+use_cpu:
+    value: false
+use_ipex:
+    value: false
+use_legacy_prediction_loop:
+    value: false
+use_liger_kernel:
+    value: false
+use_mps_device:
+    value: false
+warmup_ratio:
+    value: 0
+warmup_steps:
+    value: 500
+weight_decay:
+    value: 0

@@ -1,0 +1,226 @@
+timestamp,run_id,dataset,model,use_rag,retriever,rank_metric,shuffle_options,permute_options,retrieval_k,append_k,top_k,correct,incorrect,total,accuracy
+2025-08-15T10:18:38+01:00Z,pubmedqa-1755249518,pubmedqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,213,287,500,42.6
+2025-08-15T10:20:12+01:00Z,bioasq-1755249612,bioasq,BioMistral/BioMistral-7B,False,False,False,True,True,,,,368,250,618,59.55
+2025-08-15T10:22:07+01:00Z,mmlu-1755249727,mmlu,BioMistral/BioMistral-7B,False,False,False,True,True,,,,547,542,1089,50.23
+2025-08-15T10:25:56+01:00Z,medqa-1755249956,medqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,518,755,1273,40.69
+2025-08-15T10:31:19+01:00Z,medmcqa-1755250279,medmcqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,1512,2671,4183,36.15
+2025-08-15T10:44:46+01:00Z,pubmedqa-1755251086,pubmedqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,235,265,500,47.0
+2025-08-15T10:46:20+01:00Z,bioasq-1755251180,bioasq,BioMistral/BioMistral-7B,False,False,False,True,True,,,,361,257,618,58.41
+2025-08-15T10:48:15+01:00Z,mmlu-1755251295,mmlu,BioMistral/BioMistral-7B,False,False,True,True,,,,534,555,1089,49.04
+2025-08-15T10:52:04+01:00Z,medqa-1755251524,medqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,482,791,1273,37.86
+2025-08-15T10:57:26+01:00Z,medmcqa-1755251846,medmcqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,1545,2638,4183,36.94
+2025-08-15T11:10:56+01:00Z,pubmedqa-1755252656,pubmedqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,225,275,500,45.0
+2025-08-15T11:12:30+01:00Z,bioasq-1755252750,bioasq,BioMistral/BioMistral-7B,False,False,True,False,True,,,,369,249,618,59.71
+2025-08-15T11:14:25+01:00Z,mmlu-1755252865,mmlu,BioMistral/BioMistral-7B,False,False,False,True,True,,,,524,565,1089,48.12
+2025-08-15T11:18:14+01:00Z,medqa-1755253094,medqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,526,747,1273,41.32
+2025-08-15T11:23:37+01:00Z,medmcqa-1755253417,medmcqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,1542,2641,4183,36.86
+2025-08-15T11:37:03+01:00Z,pubmedqa-1755254223,pubmedqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,218,282,500,43.6
+2025-08-15T11:38:38+01:00Z,bioasq-1755254318,bioasq,BioMistral/BioMistral-7B,False,False,False,True,True,,,,362,256,618,58.58
+2025-08-15T11:40:33+01:00Z,mmlu-1755254433,mmlu,BioMistral/BioMistral-7B,False,False,False,True,True,,,,534,555,1089,49.04
+2025-08-15T11:44:24+01:00Z,medqa-1755254664,medqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,490,783,1273,38.49
+2025-08-15T11:49:49+01:00Z,medmcqa-1755254989,medmcqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,1560,2623,4183,37.29
+2025-08-15T12:03:22+01:00Z,pubmedqa-1755255802,pubmedqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,236,264,500,47.2
+2025-08-15T12:04:57+01:00Z,bioasq-1755255897,bioasq,BioMistral/BioMistral-7B,False,False,False,True,True,,,,364,254,618,58.9
+2025-08-15T12:06:52+01:00Z,mmlu-1755256012,mmlu,BioMistral/BioMistral-7B,False,False,False,True,True,,,,535,554,1089,49.13
+2025-08-15T12:10:41+01:00Z,medqa-1755256241,medqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,518,755,1273,40.69
+2025-08-15T12:16:05+01:00Z,medmcqa-1755256565,medmcqa,BioMistral/BioMistral-7B,False,False,False,True,True,,,,1541,2642,4183,36.84
+2025-08-15T15:24:48+01:00Z,pubmedqa-1755267888,pubmedqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,206,294,500,41.2
+2025-08-15T15:33:23+01:00Z,bioasq-1755268403,bioasq,BioMistral/BioMistral-7B,True,,SBERTRetriever,cos-sim,True,True,100,10,1,378,240,618,61.17
+2025-08-15T15:44:01+01:00Z,mmlu-1755269041,mmlu,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,537,552,1089,49.31
+2025-08-15T16:05:06+01:00Z,medqa-1755270306,medqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,525,748,1273,41.24
+2025-08-15T16:38:42+01:00Z,medmcqa-1755272322,medmcqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,1524,2659,4183,36.43
+2025-08-15T17:50:53+01:00Z,pubmedqa-1755276653,pubmedqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,226,274,500,45.2
+2025-08-15T17:59:27+01:00Z,bioasq-1755277167,bioasq,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,374,244,618,60.52
+2025-08-15T18:10:05+01:00Z,mmlu-1755277805,mmlu,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,549,540,1089,50.41
+2025-08-15T18:31:08+01:00Z,medqa-1755279068,medqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,505,768,1273,39.67
+2025-08-15T19:04:20+01:00Z,medmcqa-1755281060,medmcqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,1502,2681,4183,35.91
+2025-08-15T20:16:38+01:00Z,pubmedqa-1755285398,pubmedqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,216,284,500,43.2
+2025-08-15T20:25:17+01:00Z,bioasq-1755285917,bioasq,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,373,245,618,60.36
+2025-08-15T20:35:55+01:00Z,mmlu-1755286555,mmlu,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,559,530,1089,51.33
+2025-08-15T20:57:02+01:00Z,medqa-1755287822,medqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,506,767,1273,39.75
+2025-08-15T21:30:24+01:00Z,medmcqa-1755289824,medmcqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,1564,2619,4183,37.39
+2025-08-15T22:42:31+01:00Z,pubmedqa-1755294151,pubmedqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,212,288,500,42.4
+2025-08-15T22:51:05+01:00Z,bioasq-1755294665,bioasq,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,365,253,618,59.06
+2025-08-15T23:01:43+01:00Z,mmlu-1755295303,mmlu,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,548,541,1089,50.32
+2025-08-15T23:22:45+01:00Z,medqa-1755296565,medqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,522,751,1273,41.01
+2025-08-15T23:55:56+01:00Z,medmcqa-1755298556,medmcqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,1535,2648,4183,36.7
+2025-08-16T01:08:26+01:00Z,pubmedqa-1755302906,pubmedqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,240,260,500,48.0
+2025-08-16T01:17:03+01:00Z,bioasq-1755303423,bioasq,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,354,264,618,57.28
+2025-08-16T01:27:44+01:00Z,mmlu-1755304064,mmlu,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,556,533,1089,51.06
+2025-08-16T01:48:56+01:00Z,medqa-1755305336,medqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,511,762,1273,40.14
+2025-08-16T02:22:06+01:00Z,medmcqa-1755307326,medmcqa,BioMistral/BioMistral-7B,True,SBERTRetriever,cos-sim,True,True,100,10,1,1517,2666,4183,36.27
+2025-08-16T07:59:56+01:00Z,pubmedqa-1755327596,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,247,253,500,49.40
+2025-08-16T08:01:37+01:00Z,bioasq-1755327697,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,356,262,618,57.61
+2025-08-16T08:03:40+01:00Z,mmlu-1755327820,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,535,554,1089,49.13
+2025-08-16T08:07:57+01:00Z,medqa-1755328077,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,513,760,1273,40.30
+2025-08-16T08:14:52+01:00Z,medmcqa-1755328492,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1501,2682,4183,35.88
+2025-08-16T08:29:12+01:00Z,pubmedqa-1755329352,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,209,291,500,41.80
+2025-08-16T08:30:52+01:00Z,bioasq-1755329452,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,363,255,618,58.74
+2025-08-16T08:32:56+01:00Z,mmlu-1755329576,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,543,546,1089,49.86
+2025-08-16T08:37:13+01:00Z,medqa-1755329833,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,507,766,1273,39.83
+2025-08-16T08:44:06+01:00Z,medmcqa-1755330246,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1477,2706,4183,35.31
+2025-08-16T08:58:26+01:00Z,pubmedqa-1755331106,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,232,268,500,46.40
+2025-08-16T09:00:07+01:00Z,bioasq-1755331207,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,374,244,618,60.52
+2025-08-16T09:02:10+01:00Z,mmlu-1755331330,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,546,543,1089,50.14
+2025-08-16T09:06:27+01:00Z,medqa-1755331587,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,501,772,1273,39.36
+2025-08-16T09:13:21+01:00Z,medmcqa-1755332001,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1535,2648,4183,36.70
+2025-08-16T09:27:40+01:00Z,pubmedqa-1755332860,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,223,277,500,44.60
+2025-08-16T09:29:20+01:00Z,bioasq-1755332960,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,368,250,618,59.55
+2025-08-16T09:31:23+01:00Z,mmlu-1755333083,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,517,572,1089,47.47
+2025-08-16T09:35:41+01:00Z,medqa-1755333341,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,529,744,1273,41.56
+2025-08-16T09:42:35+01:00Z,medmcqa-1755333755,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1539,2644,4183,36.79
+2025-08-16T09:56:54+01:00Z,pubmedqa-1755334614,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,226,274,500,45.20
+2025-08-16T09:58:34+01:00Z,bioasq-1755334714,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,373,245,618,60.36
+2025-08-16T10:00:38+01:00Z,mmlu-1755334838,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,538,551,1089,49.40
+2025-08-16T10:04:55+01:00Z,medqa-1755335095,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,511,762,1273,40.14
+2025-08-16T10:11:49+01:00Z,medmcqa-1755335509,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1511,2672,4183,36.12
+2025-08-16T10:30:03+01:00Z,pubmedqa-1755336603,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,226,274,500,45.20
+2025-08-16T10:31:43+01:00Z,bioasq-1755336703,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,368,250,618,59.55
+2025-08-16T10:33:46+01:00Z,mmlu-1755336826,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,535,554,1089,49.13
+2025-08-16T10:38:03+01:00Z,medqa-1755337083,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,525,748,1273,41.24
+2025-08-16T10:44:57+01:00Z,medmcqa-1755337497,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1522,2661,4183,36.39
+2025-08-16T10:59:15+01:00Z,pubmedqa-1755338355,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,217,283,500,43.40
+2025-08-16T11:00:55+01:00Z,bioasq-1755338455,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,356,262,618,57.61
+2025-08-16T11:02:58+01:00Z,mmlu-1755338578,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,556,533,1089,51.06
+2025-08-16T11:07:15+01:00Z,medqa-1755338835,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,515,758,1273,40.46
+2025-08-16T11:14:09+01:00Z,medmcqa-1755339249,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1544,2639,4183,36.91
+2025-08-16T11:28:27+01:00Z,pubmedqa-1755340107,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,206,294,500,41.20
+2025-08-16T11:30:07+01:00Z,bioasq-1755340207,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,368,250,618,59.55
+2025-08-16T11:32:10+01:00Z,mmlu-1755340330,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,525,564,1089,48.21
+2025-08-16T11:36:27+01:00Z,medqa-1755340587,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,514,759,1273,40.38
+2025-08-16T11:43:21+01:00Z,medmcqa-1755341001,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1533,2650,4183,36.65
+2025-08-16T11:57:39+01:00Z,pubmedqa-1755341859,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,230,270,500,46.00
+2025-08-16T11:59:19+01:00Z,bioasq-1755341959,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,346,272,618,55.99
+2025-08-16T12:01:22+01:00Z,mmlu-1755342082,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,535,554,1089,49.13
+2025-08-16T12:05:39+01:00Z,medqa-1755342339,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,501,772,1273,39.36
+2025-08-16T12:12:33+01:00Z,medmcqa-1755342753,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1506,2677,4183,36.00
+2025-08-16T12:26:49+01:00Z,pubmedqa-1755343609,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,220,280,500,44.00
+2025-08-16T12:28:29+01:00Z,bioasq-1755343709,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,383,235,618,61.97
+2025-08-16T12:30:32+01:00Z,mmlu-1755343832,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,554,535,1089,50.87
+2025-08-16T12:34:48+01:00Z,medqa-1755344088,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,503,770,1273,39.51
+2025-08-16T12:41:42+01:00Z,medmcqa-1755344502,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1567,2616,4183,37.46
+2025-08-16T13:11:51+01:00Z,pubmedqa-1755346311,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,225,275,500,45.00
+2025-08-16T13:13:32+01:00Z,bioasq-1755346412,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,360,258,618,58.25
+2025-08-16T13:15:35+01:00Z,mmlu-1755346535,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,557,532,1089,51.15
+2025-08-16T13:19:53+01:00Z,medqa-1755346793,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,542,731,1273,42.58
+2025-08-16T13:26:48+01:00Z,medmcqa-1755347208,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1505,2678,4183,35.98
+2025-08-16T13:41:11+01:00Z,pubmedqa-1755348071,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,226,274,500,45.20
+2025-08-16T13:42:52+01:00Z,bioasq-1755348172,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,366,252,618,59.22
+2025-08-16T13:44:55+01:00Z,mmlu-1755348295,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,546,543,1089,50.14
+2025-08-16T13:49:13+01:00Z,medqa-1755348553,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,495,778,1273,38.88
+2025-08-16T13:56:08+01:00Z,medmcqa-1755348968,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1492,2691,4183,35.67
+2025-08-16T14:10:30+01:00Z,pubmedqa-1755349830,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,236,264,500,47.20
+2025-08-16T14:12:11+01:00Z,bioasq-1755349931,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,358,260,618,57.93
+2025-08-16T14:14:14+01:00Z,mmlu-1755350054,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,538,551,1089,49.40
+2025-08-16T14:18:32+01:00Z,medqa-1755350312,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,520,753,1273,40.85
+2025-08-16T14:25:27+01:00Z,medmcqa-1755350727,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1491,2692,4183,35.64
+2025-08-16T14:39:49+01:00Z,pubmedqa-1755351589,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,218,282,500,43.60
+2025-08-16T14:41:30+01:00Z,bioasq-1755351690,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,370,248,618,59.87
+2025-08-16T14:43:34+01:00Z,mmlu-1755351814,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,541,548,1089,49.68
+2025-08-16T14:47:52+01:00Z,medqa-1755352072,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,481,792,1273,37.78
+2025-08-16T14:54:47+01:00Z,medmcqa-1755352487,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1523,2660,4183,36.41
+2025-08-16T15:09:10+01:00Z,pubmedqa-1755353350,pubmedqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,218,282,500,43.60
+2025-08-16T15:10:51+01:00Z,bioasq-1755353451,bioasq,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,351,267,618,56.80
+2025-08-16T15:12:54+01:00Z,mmlu-1755353574,mmlu,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,562,527,1089,51.61
+2025-08-16T15:17:12+01:00Z,medqa-1755353832,medqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,504,769,1273,39.59
+2025-08-16T15:24:07+01:00Z,medmcqa-1755354247,medmcqa,BioMistral/BioMistral-7B,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1504,2679,4183,35.96
+2025-08-16T15:47:27+01:00Z,pubmedqa-1755355647,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,146,354,500,29.20
+2025-08-16T15:49:02+01:00Z,bioasq-1755355742,bioasq,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,422,196,618,68.28
+2025-08-16T15:51:01+01:00Z,mmlu-1755355861,mmlu,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,669,420,1089,61.43
+2025-08-16T15:54:51+01:00Z,medqa-1755356091,medqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,620,653,1273,48.70
+2025-08-16T16:00:13+01:00Z,medmcqa-1755356413,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,1859,2324,4183,44.44
+2025-08-16T16:13:42+01:00Z,pubmedqa-1755357222,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,159,341,500,31.80
+2025-08-16T16:15:16+01:00Z,bioasq-1755357316,bioasq,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,424,194,618,68.61
+2025-08-16T16:17:12+01:00Z,mmlu-1755357432,mmlu,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,679,410,1089,62.35
+2025-08-16T16:21:00+01:00Z,medqa-1755357660,medqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,612,661,1273,48.08
+2025-08-16T16:26:22+01:00Z,medmcqa-1755357982,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,1859,2324,4183,44.44
+2025-08-16T16:39:50+01:00Z,pubmedqa-1755358790,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,157,343,500,31.40
+2025-08-16T16:41:25+01:00Z,bioasq-1755358885,bioasq,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,423,195,618,68.45
+2025-08-16T16:43:21+01:00Z,mmlu-1755359001,mmlu,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,685,404,1089,62.90
+2025-08-16T16:47:09+01:00Z,medqa-1755359229,medqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,619,654,1273,48.63
+2025-08-16T16:52:30+01:00Z,medmcqa-1755359550,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,1820,2363,4183,43.51
+2025-08-16T17:05:56+01:00Z,pubmedqa-1755360356,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,150,350,500,30.00
+2025-08-16T17:07:30+01:00Z,bioasq-1755360450,bioasq,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,428,190,618,69.26
+2025-08-16T17:09:26+01:00Z,mmlu-1755360566,mmlu,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,688,401,1089,63.18
+2025-08-16T17:13:14+01:00Z,medqa-1755360794,medqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,627,646,1273,49.25
+2025-08-16T17:18:36+01:00Z,medmcqa-1755361116,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,1835,2348,4183,43.87
+2025-08-16T17:32:03+01:00Z,pubmedqa-1755361923,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,153,347,500,30.60
+2025-08-16T17:33:37+01:00Z,bioasq-1755362017,bioasq,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,422,196,618,68.28
+2025-08-16T17:35:33+01:00Z,mmlu-1755362133,mmlu,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,667,422,1089,61.25
+2025-08-16T17:39:22+01:00Z,medqa-1755362362,medqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,643,630,1273,50.51
+2025-08-16T17:44:43+01:00Z,medmcqa-1755362683,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,False,False,False,True,True,,,,1837,2346,4183,43.92
+2025-08-16T18:45:54+01:00Z,pubmedqa-1755366354,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,160,340,500,32.00
+2025-08-16T18:48:35+01:00Z,bioasq-1755366515,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,427,191,618,69.09
+2025-08-16T18:51:56+01:00Z,mmlu-1755366716,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,685,404,1089,62.90
+2025-08-16T19:00:13+01:00Z,medqa-1755367213,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,624,649,1273,49.02
+2025-08-16T19:18:32+01:00Z,medmcqa-1755368312,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,1883,2300,4183,45.02
+2025-08-16T19:41:27+01:00Z,pubmedqa-1755369687,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,153,347,500,30.60
+2025-08-16T19:44:09+01:00Z,bioasq-1755369849,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,422,196,618,68.28
+2025-08-16T19:47:29+01:00Z,mmlu-1755370049,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,681,408,1089,62.53
+2025-08-16T19:55:46+01:00Z,medqa-1755370546,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,620,653,1273,48.70
+2025-08-16T20:14:06+01:00Z,medmcqa-1755371646,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,1873,2310,4183,44.78
+2025-08-16T20:37:01+01:00Z,pubmedqa-1755373021,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,155,345,500,31.00
+2025-08-16T20:39:43+01:00Z,bioasq-1755373183,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,427,191,618,69.09
+2025-08-16T20:43:04+01:00Z,mmlu-1755373384,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,668,421,1089,61.34
+2025-08-16T20:51:21+01:00Z,medqa-1755373881,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,611,662,1273,48.00
+2025-08-16T21:09:40+01:00Z,medmcqa-1755374980,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,1854,2329,4183,44.32
+2025-08-16T21:32:35+01:00Z,pubmedqa-1755376355,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,150,350,500,30.00
+2025-08-16T21:35:17+01:00Z,bioasq-1755376517,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,424,194,618,68.21
+2025-08-16T21:38:38+01:00Z,mmlu-1755376718,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,683,406,1089,62.72
+2025-08-16T21:46:55+01:00Z,medqa-1755377215,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,623,650,1273,48.80
+2025-08-16T22:05:15+01:00Z,medmcqa-1755378315,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,1870,2313,4183,44.7
+2025-08-16T22:28:11+01:00Z,pubmedqa-1755379691,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,161,339,500,32.20
+2025-08-16T22:30:53+01:00Z,bioasq-1755379853,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,434,184,618,70.23
+2025-08-16T22:34:14+01:00Z,mmlu-1755380054,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,661,428,1089,60.70
+2025-08-16T22:42:31+01:00Z,medqa-1755380551,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,633,640,1273,49.73
+2025-08-16T23:00:49+01:00Z,medmcqa-1755381649,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'retrievers.SBERTRetriever'>,batch_cosine_similarity,True,True,100,10,1,1868,2315,4183,44.66
+2025-08-16T23:51:34+01:00Z,pubmedqa-1755384694,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,152,348,500,30.40
+2025-08-16T23:53:14+01:00Z,bioasq-1755384794,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,420,198,618,67.96
+2025-08-16T23:55:18+01:00Z,mmlu-1755384918,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,683,406,1089,62.72
+2025-08-16T23:59:35+01:00Z,medqa-1755385175,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,626,647,1273,49.18
+2025-08-17T00:06:28+01:00Z,medmcqa-1755385588,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1839,2344,4183,43.96
+2025-08-17T00:20:49+01:00Z,pubmedqa-1755386449,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,147,353,500,29.40
+2025-08-17T00:22:29+01:00Z,bioasq-1755386549,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,430,188,618,69.58
+2025-08-17T00:24:33+01:00Z,mmlu-1755386673,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,671,418,1089,61.62
+2025-08-17T00:28:50+01:00Z,medqa-1755386930,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,628,645,1273,49.33
+2025-08-17T00:35:43+01:00Z,medmcqa-1755387343,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1821,2362,4183,43.53
+2025-08-17T00:50:03+01:00Z,pubmedqa-1755388203,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,145,355,500,29.00
+2025-08-17T00:51:44+01:00Z,bioasq-1755388304,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,424,194,618,68.61
+2025-08-17T00:53:48+01:00Z,mmlu-1755388428,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,670,419,1089,61.52
+2025-08-17T00:58:04+01:00Z,medqa-1755388684,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,623,650,1273,48.94
+2025-08-17T01:04:57+01:00Z,medmcqa-1755389097,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1872,2311,4183,44.75
+2025-08-17T01:19:18+01:00Z,pubmedqa-1755389958,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,162,338,500,32.40
+2025-08-17T01:20:58+01:00Z,bioasq-1755390058,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,424,194,618,68.61
+2025-08-17T01:23:02+01:00Z,mmlu-1755390182,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,677,412,1089,62.17
+2025-08-17T01:27:19+01:00Z,medqa-1755390439,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,627,646,1273,49.25
+2025-08-17T01:34:12+01:00Z,medmcqa-1755390852,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1841,2342,4183,44.01
+2025-08-17T01:48:32+01:00Z,pubmedqa-1755391712,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,146,354,500,29.20
+2025-08-17T01:50:13+01:00Z,bioasq-1755391813,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,427,191,618,69.09
+2025-08-17T01:52:17+01:00Z,mmlu-1755391937,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,674,415,1089,61.89
+2025-08-17T01:56:34+01:00Z,medqa-1755392194,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,613,660,1273,48.15
+2025-08-17T02:03:26+01:00Z,medmcqa-1755392606,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUHiTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1847,2336,4183,44.15
+2025-08-17T07:50:29+01:00Z,pubmedqa-1755413429,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,156,344,500,31.20
+2025-08-17T07:52:09+01:00Z,bioasq-1755413529,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,427,191,618,69.21
+2025-08-17T07:54:13+01:00Z,mmlu-1755413653,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,688,401,1089,63.18
+2025-08-17T07:58:29+01:00Z,medqa-1755413909,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,624,649,1273,49.02
+2025-08-17T08:05:23+01:00Z,medmcqa-1755414323,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1841,2342,4183,44.01
+2025-08-17T08:19:51+01:00Z,pubmedqa-1755415191,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,165,335,500,33.00
+2025-08-17T08:21:33+01:00Z,bioasq-1755415293,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,422,196,618,68.28
+2025-08-17T08:23:39+01:00Z,mmlu-1755415419,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,694,395,1089,63.73
+2025-08-17T08:27:58+01:00Z,medqa-1755415678,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,634,639,1273,49.80
+2025-08-17T08:34:57+01:00Z,medmcqa-1755416097,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1881,2302,4183,44.97
+2025-08-17T08:49:30+01:00Z,pubmedqa-1755416970,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,142,358,500,28.40
+2025-08-17T08:51:12+01:00Z,bioasq-1755417072,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,418,200,618,67.78
+2025-08-17T08:53:18+01:00Z,mmlu-1755417198,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,668,421,1089,61.34
+2025-08-17T08:57:43+01:00Z,medqa-1755417463,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,624,649,1273,49.02
+2025-08-17T09:04:42+01:00Z,medmcqa-1755417882,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1860,2323,4183,44.47
+2025-08-17T09:19:07+01:00Z,pubmedqa-1755418747,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,157,343,500,31.40
+2025-08-17T09:20:48+01:00Z,bioasq-1755418848,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,419,199,618,67.80
+2025-08-17T09:22:52+01:00Z,mmlu-1755418972,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,683,406,1089,62.72
+2025-08-17T09:27:09+01:00Z,medqa-1755419229,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,628,645,1273,49.33
+2025-08-17T09:34:01+01:00Z,medmcqa-1755419641,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1831,2352,4183,43.78
+2025-08-17T09:48:21+01:00Z,pubmedqa-1755420501,pubmedqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,162,338,500,32.40
+2025-08-17T09:50:02+01:00Z,bioasq-1755420602,bioasq,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,428,190,618,69.26
+2025-08-17T09:52:06+01:00Z,mmlu-1755420726,mmlu,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,666,423,1089,61.21
+2025-08-17T09:56:23+01:00Z,medqa-1755420983,medqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,632,641,1273,49.65
+2025-08-17T10:03:15+01:00Z,medmcqa-1755421395,medmcqa,mistralai/Mistral-7B-Instruct-v0.3,True,<class 'gpu_retrievers.GPUOnTRetriever'>,BaseModelRetriever._poincare_geodesic_distance,True,True,100,10,1,1857,2326,4183,44.40

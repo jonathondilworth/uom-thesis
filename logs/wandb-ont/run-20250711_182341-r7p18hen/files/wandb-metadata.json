@@ -1,0 +1,51 @@
+{
+  "os":  "Linux-6.11.0-29-generic-x86_64-with-glibc2.39",
+  "python":  "CPython 3.12.11",
+  "startedAt":  "2025-07-11T17:23:41.103646Z",
+  "args":  [
+    "--config_file",
+    "./config.yaml"
+  ],
+  "program":  "/home/jon/msc-thesis-monorepo/implementation/pipeline_10_07_25/OnT/train_ont.py",
+  "codePath":  "train_ont.py",
+  "codePathLocal":  "train_ont.py",
+  "git":  {
+    "remote":  "git@github.com:HuiYang1997/OnT.git",
+    "commit":  "86f5040c3976bba8b9a37c06056f893c1eeb1763"
+  },
+  "email":  "jonathon.dilworth@postgrad.manchester.ac.uk",
+  "root":  "/home/jon/msc-thesis-monorepo/implementation/pipeline_10_07_25/OnT",
+  "host":  "ubnt-ngpu-box",
+  "executable":  "/home/jon/miniforge3/envs/msc-new-env/bin/python",
+  "cpu_count":  48,
+  "cpu_count_logical":  96,
+  "gpu":  "NVIDIA RTX A5000",
+  "gpu_count":  2,
+  "disk":  {
+    "/":  {
+      "total":  "982240026624",
+      "used":  "262063374336"
+    }
+  },
+  "memory":  {
+    "total":  "134514667520"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA RTX A5000",
+      "memoryTotal":  "25757220864",
+      "cudaCores":  8192,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-c4db3a41-dc16-21b2-3239-b8a7164bdb99"
+    },
+    {
+      "name":  "NVIDIA RTX A5000",
+      "memoryTotal":  "25757220864",
+      "cudaCores":  8192,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-c5faf962-ebde-862a-7552-54e8515294ef"
+    }
+  ],
+  "cudaVersion":  "12.2",
+  "writerId":  "z7ytl92lygvuz92xxounneq7v75we5c6"
+}

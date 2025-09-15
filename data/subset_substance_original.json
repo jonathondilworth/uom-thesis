@@ -1,0 +1,738 @@
+[
+  {
+    "internal_id": "mc-10",
+    "source_dataset": "pubmedqa",
+    "question_id": "15053041",
+    "question": "Do acute changes in heart rate by isoproterenol affect aortic stiffness in patients with hypertension?",
+    "entity_mention": {
+      "entity_literal": "isoproterenol",
+      "start_position": 34,
+      "end_position": 47,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/372781009",
+      "rdfs:label": "Isoprenaline (substance)",
+      "skos:prefLabel": "Isoprenaline",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/34582008",
+        "rdfs:label": "Catecholamine (substance)",
+        "skos:prefLabel": "Catecholamine",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/372884008",
+        "rdfs:label": "Sympathomimetic agent (substance)",
+        "skos:prefLabel": "Sympathomimetic agent",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/11257001",
+        "rdfs:label": "Nitrogen compound (substance)",
+        "skos:prefLabel": "Nitrogen compound",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/299979007",
+        "rdfs:label": "Organic nitrogen compound (substance)",
+        "skos:prefLabel": "Organic nitrogen compound",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/301457005",
+        "rdfs:label": "Amine and/or amine derivative (substance)",
+        "skos:prefLabel": "Amine and/or amine derivative",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/304366009",
+        "rdfs:label": "Catecholamine and/or catecholamine derivative (substance)",
+        "skos:prefLabel": "Catecholamine and/or catecholamine derivative",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/34582008",
+        "rdfs:label": "Catecholamine (substance)",
+        "skos:prefLabel": "Catecholamine",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/372884008",
+        "rdfs:label": "Sympathomimetic agent (substance)",
+        "skos:prefLabel": "Sympathomimetic agent",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/373289004",
+        "rdfs:label": "Autonomic agent (substance)",
+        "skos:prefLabel": "Autonomic agent",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/410942007",
+        "rdfs:label": "Drug or medicament (substance)",
+        "skos:prefLabel": "Drug or medicament",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/767307008",
+        "rdfs:label": "Nitrogen and/or nitrogen compound (substance)",
+        "skos:prefLabel": "Nitrogen and/or nitrogen compound",
+        "depth": 6
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-12",
+    "source_dataset": "medqa",
+    "question_id": "0244",
+    "question": "An unidentified surgical specimen is received for histopathologic analysis. A portion of the specimen is cut and stained with hematoxylin and eosin. The remainder is analyzed and is found to contains type II collagen and chondroitin sulfate. Which of the following structures is most likely the origin of this surgical specimen?",
+    "entity_mention": {
+      "entity_literal": "type II collagen",
+      "start_position": 200,
+      "end_position": 216,
+      "entity_type": "GENE_OR_GENE_PRODUCT"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/61944000",
+      "rdfs:label": "Collagen type II (substance)",
+      "skos:prefLabel": "Collagen type II",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/61472002",
+        "rdfs:label": "Collagen (substance)",
+        "skos:prefLabel": "Collagen",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/11257001",
+        "rdfs:label": "Nitrogen compound (substance)",
+        "skos:prefLabel": "Nitrogen compound",
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/115668003",
+        "rdfs:label": "Biological substance (substance)",
+        "skos:prefLabel": "Biological substance",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/299979007",
+        "rdfs:label": "Organic nitrogen compound (substance)",
+        "skos:prefLabel": "Organic nitrogen compound",
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/299987008",
+        "rdfs:label": "Amide and/or amide derivative (substance)",
+        "skos:prefLabel": "Amide and/or amide derivative",
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/304381003",
+        "rdfs:label": "Structural protein (substance)",
+        "skos:prefLabel": "Structural protein",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 11
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 9
+      },
+      {
+        "iri": "http://snomed.info/id/372681003",
+        "rdfs:label": "Hemostatic agent (substance)",
+        "skos:prefLabel": "Haemostatic agent",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/373708006",
+        "rdfs:label": "Hematologic agent (substance)",
+        "skos:prefLabel": "Haematologic agent",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/410942007",
+        "rdfs:label": "Drug or medicament (substance)",
+        "skos:prefLabel": "Drug or medicament",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/415664003",
+        "rdfs:label": "Substituted amide (substance)",
+        "skos:prefLabel": "Substituted amide",
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 10
+      },
+      {
+        "iri": "http://snomed.info/id/61472002",
+        "rdfs:label": "Collagen (substance)",
+        "skos:prefLabel": "Collagen",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/70354003",
+        "rdfs:label": "Polypeptide (substance)",
+        "skos:prefLabel": "Polypeptide",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/735252001",
+        "rdfs:label": "Protein and/or protein derivative (substance)",
+        "skos:prefLabel": "Protein and/or protein derivative",
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/767307008",
+        "rdfs:label": "Nitrogen and/or nitrogen compound (substance)",
+        "skos:prefLabel": "Nitrogen and/or nitrogen compound",
+        "depth": 9
+      },
+      {
+        "iri": "http://snomed.info/id/88878007",
+        "rdfs:label": "Protein (substance)",
+        "skos:prefLabel": "Protein",
+        "depth": 3
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-29",
+    "source_dataset": "medmcqa",
+    "question_id": "4135c1a9-44e4-4872-a329-3cc4b7c1a587",
+    "question": "Which of the following is common to both zinc eugenol cement and polycarboxylate cement?",
+    "entity_mention": {
+      "entity_literal": "polycarboxylate cement",
+      "start_position": 65,
+      "end_position": 87,
+      "entity_type": "CANCER"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/277873005",
+      "rdfs:label": "Zinc polycarboxylate dental cement (substance)",
+      "skos:prefLabel": "Zinc polycarboxylate dental cement",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/54563006",
+        "rdfs:label": "Dental cement (substance)",
+        "skos:prefLabel": "Dental cement",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/255922001",
+        "rdfs:label": "Dental material (substance)",
+        "skos:prefLabel": "Dental material",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/260769002",
+        "rdfs:label": "Material (substance)",
+        "skos:prefLabel": "Material",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/54563006",
+        "rdfs:label": "Dental cement (substance)",
+        "skos:prefLabel": "Dental cement",
+        "depth": 1
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-30",
+    "source_dataset": "medmcqa",
+    "question_id": "b0db4fac-bf20-4a54-8efa-0ff926e03a9b",
+    "question": "Polyglycolic acid suture material (\"vicryl/Dexon\") is an:",
+    "entity_mention": {
+      "entity_literal": "polyglycolic acid",
+      "start_position": 0,
+      "end_position": 17,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/45737001",
+      "rdfs:label": "Glycolic acid (substance)",
+      "skos:prefLabel": "Glycolic acid",
+      "skos:altLabels": [
+        "Hydroxyacetic acid"
+      ],
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/42907009",
+        "rdfs:label": "Carboxylic acid (substance)",
+        "skos:prefLabel": "Carboxylic acid",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 9
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/42907009",
+        "rdfs:label": "Carboxylic acid (substance)",
+        "skos:prefLabel": "Carboxylic acid",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/765174005",
+        "rdfs:label": "Organic acid and/or organic acid derivative (substance)",
+        "skos:prefLabel": "Organic acid and/or organic acid derivative",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/767530001",
+        "rdfs:label": "Carboxylic acid and/or carboxylic acid derivative (substance)",
+        "skos:prefLabel": "Carboxylic acid and/or carboxylic acid derivative",
+        "depth": 2
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-34",
+    "source_dataset": "medqa",
+    "question_id": "0024",
+    "question": "A 6-year-old boy is brought to the emergency department by his mother for worsening wheezing and shortness of breath over the past day. He has not had a fever, cough, vomiting, or diarrhea. He has asthma and eczema. He uses a glucocorticoid inhaler and an albuterol inhaler but has missed his medications for the past week while on vacation. He appears uncomfortable. His temperature is 36°C (96.8°F), pulse is 120/min, respirations are 40/min, and blood pressure is 100/80. Expiratory and inspiratory wheezing is heard throughout both lung fields. There are moderate intercostal and subcostal retractions and a decreased inspiratory to expiratory ratio. Nebulized albuterol and ipratropium treatments and intravenous methylprednisolone are given in the emergency department for a presumed asthma exacerbation. One hour later, the child is limp and lethargic. Magnesium sulfate is administered. His temperature is 36°C (96.8°F), pulse is 150/min, respirations are 22/min, and blood pressure is 100/70. No wheezing is heard on repeat pulmonary examination. Which of the following is the most appropriate next step in management?",
+    "entity_mention": {
+      "entity_literal": "intravenous methylprednisolone",
+      "start_position": 706,
+      "end_position": 736,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/116593003",
+      "rdfs:label": "Methylprednisolone (substance)",
+      "skos:prefLabel": "Methylprednisolone",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/126090008",
+        "rdfs:label": "Pregnane (substance)",
+        "skos:prefLabel": "Pregnane",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/419933005",
+        "rdfs:label": "Glucocorticoid (substance)",
+        "skos:prefLabel": "Glucocorticoid",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/116566001",
+        "rdfs:label": "Steroid (substance)",
+        "skos:prefLabel": "Steroid",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/126090008",
+        "rdfs:label": "Pregnane (substance)",
+        "skos:prefLabel": "Pregnane",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/304275008",
+        "rdfs:label": "Corticosteroid and/or corticosteroid derivative (substance)",
+        "skos:prefLabel": "Corticosteroid and/or corticosteroid derivative",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/410942007",
+        "rdfs:label": "Drug or medicament (substance)",
+        "skos:prefLabel": "Drug or medicament",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/417174002",
+        "rdfs:label": "Polycyclic compound (substance)",
+        "skos:prefLabel": "Polycyclic compound",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/419933005",
+        "rdfs:label": "Glucocorticoid (substance)",
+        "skos:prefLabel": "Glucocorticoid",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/767844004",
+        "rdfs:label": "Organic cyclic compound (substance)",
+        "skos:prefLabel": "Organic cyclic compound",
+        "depth": 4
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  },
+  {
+    "internal_id": "mc-36",
+    "source_dataset": "medqa",
+    "question_id": "0342",
+    "question": "A 55-year-old woman with a history of HIV presents to the emergency department with progressive dyspnea, fever, and dry cough for the past 4 days. She has not been compliant with antiretroviral or prophylactic medication. On evaluation, the patient is in moderate respiratory distress. The temperature is 38.8°C (102.0°F), the blood pressure is 124/82 mm Hg, the pulse is 96/min, and the respiratory rate is 20/min. Pulse oximetry is 92% on 4 L oxygen by nasal cannula. Her CD4 count is 180 cells/μL. IV antibiotics and glucocorticoids are administered. After 30 minutes, the patient develops severe respiratory distress. Repeat vital signs show: temperature 38.3°C (101.0°F), blood pressure 80/50 mm Hg, pulse 104/min, respiration rate 32/min and pulse oximetry 85% on nasal cannula. The trachea deviates to the left. Breath sounds are absent on the right side and the neck veins are distended. Telemetry shows sinus tachycardia. Which of the following is the best next step in the management of this patient?",
+    "entity_mention": {
+      "entity_literal": "Glucocorticoids",
+      "start_position": 0,
+      "end_position": 15,
+      "entity_type": "SIMPLE_CHEMICAL"
+    },
+    "target_entity": {
+      "iri": "http://snomed.info/id/419933005",
+      "rdfs:label": "Glucocorticoid (substance)",
+      "skos:prefLabel": "Glucocorticoid",
+      "depth": 0
+    },
+    "parent_entities": [
+      {
+        "iri": "http://snomed.info/id/304275008",
+        "rdfs:label": "Corticosteroid and/or corticosteroid derivative (substance)",
+        "skos:prefLabel": "Corticosteroid and/or corticosteroid derivative",
+        "depth": 1
+      }
+    ],
+    "ancestors": [
+      {
+        "iri": "http://snomed.info/id/105590001",
+        "rdfs:label": "Substance (substance)",
+        "skos:prefLabel": "Substance",
+        "skos:altLabels": [
+          "Substances"
+        ],
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/116566001",
+        "rdfs:label": "Steroid (substance)",
+        "skos:prefLabel": "Steroid",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/138875005",
+        "rdfs:label": "SNOMED CT Concept (SNOMED RT+CTV3)",
+        "skos:prefLabel": "SNOMED CT Concept",
+        "skos:altLabels": [
+          "SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.",
+          "SNOMED Clinical Terms version: 20250701 [R] (July 2025 Release)",
+          "© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. \"SNOMED\" and \"SNOMED CT\" are registered trademarks of the IHTSDO."
+        ],
+        "depth": 4
+      },
+      {
+        "iri": "http://snomed.info/id/304275008",
+        "rdfs:label": "Corticosteroid and/or corticosteroid derivative (substance)",
+        "skos:prefLabel": "Corticosteroid and/or corticosteroid derivative",
+        "depth": 1
+      },
+      {
+        "iri": "http://snomed.info/id/312413002",
+        "rdfs:label": "Substance categorized by structure (substance)",
+        "skos:prefLabel": "Substance categorised by structure",
+        "skos:altLabels": [
+          "Substance categorised structurally",
+          "Substance categorized structurally"
+        ],
+        "depth": 8
+      },
+      {
+        "iri": "http://snomed.info/id/312415009",
+        "rdfs:label": "Chemical categorized by structure (substance)",
+        "skos:prefLabel": "Chemical categorised by structure",
+        "skos:altLabels": [
+          "Chemical categorised structurally",
+          "Chemical categorized structurally"
+        ],
+        "depth": 6
+      },
+      {
+        "iri": "http://snomed.info/id/410942007",
+        "rdfs:label": "Drug or medicament (substance)",
+        "skos:prefLabel": "Drug or medicament",
+        "depth": 2
+      },
+      {
+        "iri": "http://snomed.info/id/41175001",
+        "rdfs:label": "Organic compound (substance)",
+        "skos:prefLabel": "Organic compound",
+        "skos:altLabels": [
+          "Organic chemical"
+        ],
+        "depth": 5
+      },
+      {
+        "iri": "http://snomed.info/id/417174002",
+        "rdfs:label": "Polycyclic compound (substance)",
+        "skos:prefLabel": "Polycyclic compound",
+        "depth": 3
+      },
+      {
+        "iri": "http://snomed.info/id/441900009",
+        "rdfs:label": "Chemical (substance)",
+        "skos:prefLabel": "Chemical",
+        "depth": 7
+      },
+      {
+        "iri": "http://snomed.info/id/767844004",
+        "rdfs:label": "Organic cyclic compound (substance)",
+        "skos:prefLabel": "Organic cyclic compound",
+        "depth": 4
+      }
+    ],
+    "anonymous_ancestors": [],
+    "equivalent_classes": []
+  }
+]
