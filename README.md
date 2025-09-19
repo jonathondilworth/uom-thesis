@@ -1,5 +1,7 @@
 # Hierarchical Knowledge Retrieval using Transformer-based Ontology Embeddings (HiT, OnT) in SNOMED CT
 
+**Singular Line Post-Submission Modification of README.md:** The continuation of the work performed post-submission of the thesis will now be made available under the following GitHub repo: [https://github.com/jonathondilworth/depth-driven-knowledge-retrieval](https://github.com/jonathondilworth/depth-driven-knowledge-retrieval); to avoid affecting the integrity of the timestamps within this repository (except for this one-line modification). The purpose of this new repository is to continue the existing work, perform additional experiments, and conduct further research.
+
 ## Usage
 
 Host system requirements for running containerised experiments:
